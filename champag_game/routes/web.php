@@ -14,3 +14,15 @@
 Route::get('/', function () {
     return view('home');
 });
+
+Route::get('/test', function(){
+  return view('welcome');
+});
+
+Route::get('/user', function(){
+  return view('user_manager');
+});
+
+Route::get('/fb', function(){
+  return view('football');
+});
