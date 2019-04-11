@@ -23,3 +23,12 @@ Route::get('/addinformation', function () {
 Route::get('/Addsporttype', function () {
     return view('Addsporttype');
 });
+
+
+Route::get('/login', function () {
+    return view('login');
+});
+
+Route::get('/EditData', function () {
+    return view('EditData');
+});

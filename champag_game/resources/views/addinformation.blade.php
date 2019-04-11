@@ -11,7 +11,7 @@
 
 
 
-    <title>Document</title>
+    <title>Addinformation</title>
 </head>
 <body>
 <div class="py-5">
@@ -20,7 +20,7 @@
         <div class="col-md-6" >
 
         <form action="" method="get">
-        <div class="form-group"> <label>กรอกข้อมูล</label>
+        <div class="form-group"> <label>กรอกข้อมูล</label></div>
         <div class="form-group"> <label>ชื่อ</label> <input type="first_name" class="form-control" placeholder="กรุณากรอก ชื่อ"></div>
         <div class="form-group"> <label>นามสกุล</label> <input type="last_name" class="form-control" placeholder="กรุณากรอก นามสกุล"></div>
         <div class="form-group"> <label>รหัสนักศึกษา</label> <input type="user_id" class="form-control" placeholder="กรุณากรอก รหัสนักศึกษา"></div>
