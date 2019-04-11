@@ -35,7 +35,18 @@ class FootballController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $new_Football = new Football();
+        $new_Football->team = $request['team'];
+        $new_Football->date = $request['date'];
+        $new_Football->pair = $request['pair'];
+        $new_Football->category = $request['category'];
+        $new_Football->between = $request['between'];
+        $new_Football->around = $request['around'];
+        $new_Football->line = $request['line'];
+        $new_Football->time = $request['time'];
+        $new_Football->results = $request['results'];
+        $new_Football->save();
+        return redirect();
     }
 
     /**
@@ -69,7 +80,18 @@ class FootballController extends Controller
      */
     public function update(Request $request, Football $football)
     {
-        //
+        $Football = Football::find($id);
+        $Football->team = $request['team'];
+        $Football->date = $request['date'];
+        $Football->pair = $request['pair'];
+        $Football->category = $request['category'];
+        $Football->between = $request['between'];
+        $Football->around = $request['around'];
+        $Football->line = $request['line'];
+        $Football->time = $request['time'];
+        $Football->results = $request['results'];
+        $Football->save();
+        return redirect();
     }
 
     /**

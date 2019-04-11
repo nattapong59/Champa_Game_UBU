@@ -15,6 +15,15 @@ class CreateFutsalsTable extends Migration
     {
         Schema::create('futsals', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('team');
+            $table->date('date');
+            $table->integer('pair');
+            $table->enum('category', array('M', 'W'));
+            $table->string('between');
+            $table->string('around');
+            $table->enum('line',array('A','B'));
+            $table->time('time');
+            $table->enum('results',array('W','D','L'));
             $table->timestamps();
         });
     }
