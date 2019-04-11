@@ -14,6 +14,7 @@
 Route::get('/', function () {
     return view('home');
 });
+Route::resource('add','UserController');
 
 Route::get('/addinformation', function () {
     return view('addinformation');

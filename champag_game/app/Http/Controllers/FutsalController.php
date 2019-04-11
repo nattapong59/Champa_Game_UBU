@@ -35,7 +35,18 @@ class FutsalController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $new_Futsal = new Futsal();
+        $new_Futsal->team = $request['team'];
+        $new_Futsal->date = $request['date'];
+        $new_Futsal->pair = $request['pair'];
+        $new_Futsal->category = $request['category'];
+        $new_Futsal->between = $request['between'];
+        $new_Futsal->around = $request['around'];
+        $new_Futsal->line = $request['line'];
+        $new_Futsal->time = $request['time'];
+        $new_Futsal->results = $request['results'];
+        $new_Futsal->save();
+        return redirect();
     }
 
     /**
@@ -69,7 +80,18 @@ class FutsalController extends Controller
      */
     public function update(Request $request, Futsal $futsal)
     {
-        //
+        $Futsal = Futsal::find($id);
+        $Futsal->team = $request['team'];
+        $Futsal->date = $request['date'];
+        $Futsal->pair = $request['pair'];
+        $Futsal->category = $request['category'];
+        $Futsal->between = $request['between'];
+        $Futsal->around = $request['around'];
+        $Futsal->line = $request['line'];
+        $Futsal->time = $request['time'];
+        $Futsal->results = $request['results'];
+        $Futsal->save();
+        return redirect();
     }
 
     /**

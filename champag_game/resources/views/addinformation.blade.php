@@ -19,25 +19,26 @@
       <div class="row">
         <div class="col-md-6" >
 
-        <form action="" method="get">
+        <form class=" " action="/add" method="POST">
+          @csrf
         <div class="form-group"> <label>กรอกข้อมูล</label>
-        <div class="form-group"> <label>ชื่อ</label> <input type="first_name" class="form-control" placeholder="กรุณากรอก ชื่อ"></div>
-        <div class="form-group"> <label>นามสกุล</label> <input type="last_name" class="form-control" placeholder="กรุณากรอก นามสกุล"></div>
-        <div class="form-group"> <label>รหัสนักศึกษา</label> <input type="user_id" class="form-control" placeholder="กรุณากรอก รหัสนักศึกษา"></div>
+        <div class="form-group"> <label>ชื่อ</label> <input type=" " name="name" value="" class="form-control" placeholder="กรุณากรอก ชื่อ"></div>
+        <div class="form-group"> <label>รหัส</label> <input type="password" name="password" value="" class="form-control" placeholder="password"></div>
+        <div class="form-group"> <label>รหัสนักศึกษา</label> <input name="user_id" value=" " class="form-control" placeholder="กรุณากรอก รหัสนักศึกษา"></div>
 
-        <select class="custom-select">
-       <option selected>ชั้นปี</option>
+        <select name="year" class="custom-select">
+       <option selected >ชั้นปี</option>
       <option value="1">ชั้นปีที่1</option>
       <option value="2">ชั้นปีที่2</option>
         <option value="3">ชั้นปีที่3</option>
         <option value="4">ชั้นปีที่4</option>
         </select>
 
-        <div class="form-group"> <label>สาขา</label> <input type="Branch" class="form-control" placeholder="สาขา"></div>
+        <div class="form-group"> <label>สาขา</label> <input name="branch" value="" class="form-control" placeholder="สาขา"></div>
 
-        <div class="form-group"> <label>หมายเลขโทรศัพท์</label> <input type="phonenumber" class="form-control" placeholder="กรุณากรอก หมายเลขโทรศัพท์">  </div>
+        <div class="form-group"> <label>หมายเลขโทรศัพท์</label> <input name="phonenumber" value="" class="form-control" placeholder="กรุณากรอก หมายเลขโทรศัพท์">  </div>
 
-        <div class="form-group"> <label>Email address</label> <input type="email" class="form-control" placeholder="กรุณากรอก email">  </div>
+        <div class="form-group"> <label>Email address</label> <input name="email" value="" class="form-control" placeholder="กรุณากรอก email">  </div>
             
              <button type="submit" class="btn btn-primary">ตกลง</button>
         </form>
