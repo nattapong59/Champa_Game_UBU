@@ -32,3 +32,7 @@ Route::get('/login', function () {
 Route::get('/EditData', function () {
     return view('EditData');
 });
+
+Route::get('/ShowTable', function () {
+    return view('ShowTable');
+});
