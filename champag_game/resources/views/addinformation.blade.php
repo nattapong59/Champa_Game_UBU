@@ -11,7 +11,7 @@
 
 
 
-    <title>Document</title>
+    <title>Addinformation</title>
 </head>
 <body>
 <div class="py-5">
@@ -19,12 +19,14 @@
       <div class="row">
         <div class="col-md-6" >
 
-        <form class=" " action="/add" method="POST">
+
+        <form calss="" action="/add" method="POST">
           @csrf
-        <div class="form-group"> <label>กรอกข้อมูล</label>
-        <div class="form-group"> <label>ชื่อ</label> <input type=" " name="name" value="" class="form-control" placeholder="กรุณากรอก ชื่อ"></div>
-        <div class="form-group"> <label>รหัส</label> <input type="password" name="password" value="" class="form-control" placeholder="password"></div>
-        <div class="form-group"> <label>รหัสนักศึกษา</label> <input name="user_id" value=" " class="form-control" placeholder="กรุณากรอก รหัสนักศึกษา"></div>
+        <div class="form-group"> <label>กรอกข้อมูล</label></div>
+        <div class="form-group"> <label>ชื่อ</label> <input type="" name="first_name" value="" class="form-control" placeholder="กรุณากรอก ชื่อ"></div>
+        <div class="form-group"> <label>นามสกุล</label> <input type="" name="last_name" value="" class="form-control" placeholder="กรุณากรอก นามสกุล"></div>
+        <div class="form-group"> <label>รหัสนักศึกษา</label> <input type="" name="user_id" value="" class="form-control" placeholder="กรุณากรอก รหัสนักศึกษา"></div>
+
 
         <select name="year" class="custom-select">
        <option selected >ชั้นปี</option>
@@ -38,8 +40,11 @@
 
         <div class="form-group"> <label>หมายเลขโทรศัพท์</label> <input name="phonenumber" value="" class="form-control" placeholder="กรุณากรอก หมายเลขโทรศัพท์">  </div>
 
+
         <div class="form-group"> <label>Email address</label> <input name="email" value="" class="form-control" placeholder="กรุณากรอก email">  </div>
-            
+        <div class="form-group"> <label>Password</label> <input type="Password" name="password" value="" class="form-control" placeholder="กรุณากรอก Password">  </div>
+
+
              <button type="submit" class="btn btn-primary">ตกลง</button>
         </form>
 

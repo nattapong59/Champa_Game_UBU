@@ -38,14 +38,15 @@ class UserController extends Controller
     {
         $new_User = new User();
         $new_User->user_id = $request['user_id'];
-        $new_User->name = $request['name'];
+        $new_User->first_name = $request['first_name'];
+        $new_User->last_name = $request['last_name'];
         $new_User->email = $request['email'];
         $new_User->password = $request['password'];
         $new_User->branch = $request['branch'];
         $new_User->year = $request['year'];
         $new_User->phonenumber = $request['phonenumber'];
         $new_User->save();
-        return redirect('/');
+        return redirect('add');
     }
 
     /**
@@ -81,14 +82,15 @@ class UserController extends Controller
     {
         $User = User::find($id);
         $User->user_id = $request['user_id'];
-        $User->name = $request['name'];
+        $User->first_name = $request['first_name'];
+        $User->last_name = $request['last_name'];
         $User->email = $request['email'];
         $User->password = $request['password'];
         $User->branch = $request['branch'];
         $User->year = $request['year'];
         $User->phonenumber = $request['phonenumber'];
         $User->save();
-        return redirect('/');
+        return redirect('add');
     }
 
     /**
