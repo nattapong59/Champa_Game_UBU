@@ -23,6 +23,7 @@ class CreateFootballsTable extends Migration
             $table->string('around');
             $table->enum('line',array('A','B'));
             $table->time('time');
+            $table->enum('results',array('W','D','L'));
             $table->timestamps();
         });
     }
