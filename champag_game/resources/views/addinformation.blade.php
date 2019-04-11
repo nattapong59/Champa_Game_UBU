@@ -38,7 +38,8 @@
         <div class="form-group"> <label>หมายเลขโทรศัพท์</label> <input type="phonenumber" class="form-control" placeholder="กรุณากรอก หมายเลขโทรศัพท์">  </div>
 
         <div class="form-group"> <label>Email address</label> <input type="email" class="form-control" placeholder="กรุณากรอก email">  </div>
-            
+        <div class="form-group"> <label>Password</label> <input type="Password" class="form-control" placeholder="กรุณากรอก Password">  </div>
+
              <button type="submit" class="btn btn-primary">ตกลง</button>
         </form>
 

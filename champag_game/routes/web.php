@@ -19,3 +19,7 @@ Route::get('/addinformation', function () {
     return view('addinformation');
 });
 
+
+Route::get('/Addsporttype', function () {
+    return view('Addsporttype');
+});
