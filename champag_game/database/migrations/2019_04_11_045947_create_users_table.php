@@ -12,14 +12,12 @@ class CreateUsersTable extends Migration
      * @return void
      */
     public function up()
-    {
+    {   
         Schema::create('users', function (Blueprint $table) {
             $table->bigIncrements('id');
-
-            $table->char('user_id',11);
             $table->string('first_name');
             $table->string('last_name');
-            $table->string('email');
+            $table->string('email')->unique();
             $table->string('password');
             $table->string('branch');
             $table->char('year',1);
@@ -30,7 +28,7 @@ class CreateUsersTable extends Migration
     }
 
     /**
-     * Reverse the migrations.
+     * Reverse the migrationscd
      *
      * @return void
      */

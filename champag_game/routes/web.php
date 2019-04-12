@@ -34,12 +34,20 @@ Route::get('/addinformation', function () {
 Route::get('/Addsporttype', function () {
     return view('Addsporttype');
 });
-Route::get('/login', function () {
-    return view('login');
-});
+
 Route::get('/EditData', function () {
     return view('EditData');
 });
 Route::get('/ShowTable', function () {
     return view('ShowTable');
 });
+
+
+Route::get('/main', 'MainController@index');
+Route::post('/main/checklogin', 'MainController@checklogin');
+Route::get('main/successlogin', 'MainController@successlogin');
+Route::get('main/logout', 'MainController@logout');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

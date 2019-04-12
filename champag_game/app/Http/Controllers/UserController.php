@@ -14,9 +14,6 @@ class UserController extends Controller
      */
     public function index()
     {
-
-        //$user = User::all();
-        //return view('post',['the_post'=>$user]);
     }
 
     /**
@@ -66,7 +63,7 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        //
+
     }
 
     /**
