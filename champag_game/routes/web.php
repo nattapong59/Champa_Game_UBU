@@ -41,9 +41,7 @@ Route::get('/login', function () {
 Route::get('/EditData', function () {
     return view('EditData');
 });
-Route::get('/ShowTable', function () {
-    return view('ShowTable');
-});
+
 
 
 Route::get('/ShowUser', function () {
@@ -67,4 +65,6 @@ Route::resource('/addvolleyball', 'VolleyballController');
 
 
 Route::resource('/addbadminton', 'BadmintonController');
+
+Route::resource('/ShowTable', 'ShowTableController');
 
