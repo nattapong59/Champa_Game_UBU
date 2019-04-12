@@ -86,7 +86,7 @@
 
 
 
-<form class="container" action="/program" method="POST">
+<form class="container" action="/addesport" method="POST">
   @csrf
     <div class="row justify-content-md-center">
         <div class="col-md-auto">

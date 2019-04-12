@@ -39,14 +39,13 @@ class VolleyballController extends Controller
         $new_Volleyball->team = $request['team'];
         $new_Volleyball->date = $request['date'];
         $new_Volleyball->pair = $request['pair'];
-        $new_Volleyball->category = $request['category'];
-        $new_Volleyball->between = $request['between'];
+        $new_Volleyball->category = $request['category']; 
         $new_Volleyball->around = $request['around'];
         $new_Volleyball->line = $request['line'];
         $new_Volleyball->time = $request['time'];
-        $new_Volleyball->results = $request['results'];
+        
         $new_Volleyball->save();
-        return redirect();
+        return redirect('addvolleyball');
     }
 
     /**
@@ -84,14 +83,12 @@ class VolleyballController extends Controller
         $Volleyball->team = $request['team'];
         $Volleyball->date = $request['date'];
         $Volleyball->pair = $request['pair'];
-        $Volleyball->category = $request['category'];
-        $Volleyball->between = $request['between'];
+        $Volleyball->category = $request['category'];  
         $Volleyball->around = $request['around'];
         $Volleyball->line = $request['line'];
         $Volleyball->time = $request['time'];
-        $Volleyball->results = $request['results'];
         $Volleyball->save();
-        return redirect();
+        return redirect('addvolleyball');
     }
 
     /**

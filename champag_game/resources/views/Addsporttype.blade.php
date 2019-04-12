@@ -28,43 +28,31 @@
                 <tr>
                   <th>ลำดับ</th>
                   <th>สาขา</th>
-                  
-                  <th>สาย</th>
-                  
+                  <th>สาย</th>  
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <th>1</th>
-                  
                   <td>Comsci</td>
-                  <td>A</td>
-                  
+                  <td>A</td> 
                 </tr>
                 <tr>
                   <th>2</th>
-                  
                   <td>Mico</td>
                   <td>B</td>
-                  
                 </tr>
                 <tr>
                   <th>3</th>
-                  
                   <td>IT</td>
                   <td>A</td>
-                  
                 </tr>
-                
-                
               </tbody>
             </table>
           </div>
         </div>
       </div>
-
       <button type="submit" class="btn btn-primary">เพิ่มชนิดกีฬา</button>  <button type="submit" class="btn btn-primary">ลบชนิดกีฬา</button>
-
       </form>
 </div>
     </div>

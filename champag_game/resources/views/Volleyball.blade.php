@@ -86,7 +86,7 @@
 
 
 
-<form class="container" action="/program" method="POST">
+<form class="container" action="/addvolleyball" method="POST">
   @csrf
     <div class="row justify-content-md-center">
         <div class="col-md-auto">
@@ -94,23 +94,26 @@
           </div>
     </div>
     <div class="form-row align-items-center">
+        <div class="col-auto my-1">    
+            <input type="date" name="date">
+          </div>
       <div class="col-auto my-1">
         <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
         <select class="custom-select mr-sm-2"  name="time" id="inlineFormCustomSelect">
           <option selected>..เวลา..</option>
-          <option value="1">16.00</option>
-          <option value="2">16.30</option>
-          <option value="3">16.45</option>
-          <option value="4">17.00</option>
-          <option value="5">17.30</option>
-          <option value="6">17.45</option>
-          <option value="7">18.00</option>
-          <option value="8">18.30</option>
-          <option value="9">18.45</option>
-          <option value="10">19.00</option>
-          <option value="11">19.30</option>
-          <option value="12">19.45</option>
-          <option value="13">20.00</option>
+          <option value="16.00">16.00</option>
+          <option value="16.30">16.30</option>
+          <option value="16.45">16.45</option>
+          <option value="17.00">17.00</option>
+          <option value="17.30">17.30</option>
+          <option value="17.45">17.45</option>
+          <option value="18.00">18.00</option>
+          <option value="18.30">18.30</option>
+          <option value="18.45">18.45</option>
+          <option value="19.00">19.00</option>
+          <option value="19.30">19.30</option>
+          <option value="19.45">19.45</option>
+          <option value="20.00">20.00</option>
         </select>
       </div>
      
@@ -119,8 +122,8 @@
         <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
         <select class="custom-select mr-sm-2" name="category" id="inlineFormCustomSelect">
           <option selected>..ประเภท..</option>
-          <option value="1">ชาย</option>
-          <option value="2">หญิง</option>
+          <option value="M">ชาย</option>
+          <option value="W">หญิง</option>
           
         </select>
       </div>
@@ -128,44 +131,53 @@
         <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
         <select class="custom-select mr-sm-2" name="line" id="inlineFormCustomSelect">
           <option selected>..สาย..</option>
-          <option value="1">A</option>
-          <option value="2">B</option>
+          <option value="A">A</option>
+          <option value="B">B</option>
           
         </select>
       </div>
-      
+      <div class="col-auto my-1">
+          <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
+          <select class="custom-select mr-sm-2" name="around" id="inlineFormCustomSelect">
+            <option selected>..รอบการแข่งขัน..</option>
+            <option value="รอบแรก">รอบแรก</option>
+            <option value="รอบสอง">รอบสอง</option>
+            <option value="รอบรองชนะเริศ">รอบรองชนะเริศ</option>
+            <option value="รอบชิงชนะเริศ">รอบชิงชนะเริศ</option>
+          </select>
+        </div>
 
       <div class="col-auto my-1">
-          <label class="mr-sm-2 sr-only" name="team" for="inlineFormCustomSelect">Preference</label>
-          <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+          <label class="mr-sm-2 sr-only"  for="inlineFormCustomSelect">Preference</label>
+          <select class="custom-select mr-sm-2" name="team" id="inlineFormCustomSelect">
             <option selected>..ทีม1..</option>
-            <option value="1">Phy</option>
-            <option value="2">Chem</option>
-            <option value="3">Bio</option>
-            <option value="4">Rpt</option>
-            <option value="5">Math</option>
-            <option value="6">Com</option>
-            <option value="7">It</option>
-            <option value="8">Occ</option>
-            <option value="9">Mico</option>
-            <option value="10">Envi</option>
+            <option value="Phy">Phy</option>
+            <option value="Chem">Chem</option>
+            <option value="Bio">Bio</option>
+            <option value="Rpt">Rpt</option>
+            <option value="Math">Math</option>
+            <option value="Com">Com</option>
+            <option value="It">It</option>
+            <option value="Occ">Occ</option>
+            <option value="Mico">Mico</option>
+            <option value="Envi">Envi</option>
           </select>
         </div>
         <h4>VS</h4>
         <div class="col-auto my-1">
           <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
           <select class="custom-select mr-sm-2" name="pair" id="inlineFormCustomSelect">
-              <option selected >..ทีม2..</option>
-              <option value="1">Phy</option>
-              <option value="2">Chem</option>
-              <option value="3">Bio</option>
-              <option value="4">Rpt</option>
-              <option value="5">Math</option>
-              <option value="6">Com</option>
-              <option value="7">It</option>
-              <option value="8">Occ</option>
-              <option value="9">Mico</option>
-              <option value="10">Envi</option>
+            <option selected >..ทีม2..</option>
+            <option value="Phy">Phy</option>
+            <option value="Chem">Chem</option>
+            <option value="Bio">Bio</option>
+            <option value="Rpt">Rpt</option>
+            <option value="Math">Math</option>
+            <option value="Com">Com</option>
+            <option value="It">It</option>
+            <option value="Occ">Occ</option>
+            <option value="Mico">Mico</option>
+            <option value="Envi">Envi</option>
           </select>
         </div>
       <div class="col-auto my-1">
@@ -189,7 +201,7 @@
             <th>ประเภท</th>
             <th>สาย</th>
             <th>รอบ</th>
-            <th>ผลการแข่งขัน</th>
+          
           </tr>
         </thead>
         <tbody>
@@ -203,28 +215,6 @@
             <td>ชาย</td>
             <td>A</td>
             <td>รอบแรก</td>
-            <td><div class="col-auto my-1">
-                <button type="submit" onclick="openForm()" class="btn btn-primary">ผล</button>
-                <div class="form-popup" id="myForm">
-                  <form action="/action_page.php" class="form-container">
-                    <h1>ผลหารแข่งขัน</h1>
-                
-                    <label><b>ผลหารแข่งขัน</b></label>
-                    <div class="form-row">
-                      <div class="col">
-                        <input type="text" class="form-control" placeholder="First name">
-                      </div>
-                      <div class="col">
-                        <input type="text" class="form-control" placeholder="Last name">
-                      </div>
-                    </div>
-                
-    
-                    <button type="submit" class="btn">ตกลง</button>
-                    <button type="button" class="btn cancel" onclick="closeForm()">กลับ</button>
-                  </form>
-                </div>
-              </div></td>
           </tr>
           <tr>
 

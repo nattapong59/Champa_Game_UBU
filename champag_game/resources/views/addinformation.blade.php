@@ -7,7 +7,7 @@
       <div class="row">
         <div class="col-md-6" >
 
-        <form action="" method="get">
+        <form action="addbasketball" method="get">
         <div class="form-group"> <label>กรอกข้อมูล</label></div>
         <div class="form-group"> <label>ชื่อ</label> <input type="first_name" class="form-control" placeholder="กรุณากรอก ชื่อ"></div>
         <div class="form-group"> <label>นามสกุล</label> <input type="last_name" class="form-control" placeholder="กรุณากรอก นามสกุล"></div>

@@ -40,13 +40,11 @@ class BadmintonController extends Controller
         $new_Badminton->date = $request['date'];
         $new_Badminton->pair = $request['pair'];
         $new_Badminton->category = $request['category'];
-        $new_Badminton->between = $request['between'];
         $new_Badminton->around = $request['around'];
         $new_Badminton->line = $request['line'];
         $new_Badminton->time = $request['time'];
-        $new_Badminton->results = $request['results'];
         $new_Badminton->save();
-        return redirect();
+        return redirect('addbadminton');
     }
 
     /**
@@ -85,13 +83,11 @@ class BadmintonController extends Controller
         $Badminton->date = $request['date'];
         $Badminton->pair = $request['pair'];
         $Badminton->category = $request['category'];
-        $Badminton->between = $request['between'];
         $Badminton->around = $request['around'];
         $Badminton->line = $request['line'];
         $Badminton->time = $request['time'];
-        $Badminton->results = $request['results'];
         $Badminton->save();
-        return redirect();
+        return redirect('addbadminton');
     }
 
     /**

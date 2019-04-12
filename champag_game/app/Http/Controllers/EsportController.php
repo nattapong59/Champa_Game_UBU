@@ -40,13 +40,11 @@ class EsportController extends Controller
         $new_Esport->date = $request['date'];
         $new_Esport->pair = $request['pair'];
         $new_Esport->category = $request['category'];
-        $new_Esport->between = $request['between'];
         $new_Esport->around = $request['around'];
         $new_Esport->line = $request['line'];
         $new_Esport->time = $request['time'];
-        $new_Esport->results = $request['results'];
         $new_Esport->save();
-        return redirect();
+        return redirect('addesport');
     }
 
     /**
@@ -85,13 +83,11 @@ class EsportController extends Controller
         $Esport->date = $request['date'];
         $Esport->pair = $request['pair'];
         $Esport->category = $request['category'];
-        $Esport->between = $request['between'];
         $Esport->around = $request['around'];
         $Esport->line = $request['line'];
         $Esport->time = $request['time'];
-        $Esport->results = $request['results'];
         $Esport->save();
-        return redirect();
+        return redirect('addesport');
     }
 
     /**

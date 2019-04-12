@@ -40,13 +40,11 @@ class FutsalController extends Controller
         $new_Futsal->date = $request['date'];
         $new_Futsal->pair = $request['pair'];
         $new_Futsal->category = $request['category'];
-        $new_Futsal->between = $request['between'];
         $new_Futsal->around = $request['around'];
         $new_Futsal->line = $request['line'];
         $new_Futsal->time = $request['time'];
-        $new_Futsal->results = $request['results'];
         $new_Futsal->save();
-        return redirect();
+        return redirect('addfutsal');
     }
 
     /**
@@ -85,13 +83,11 @@ class FutsalController extends Controller
         $Futsal->date = $request['date'];
         $Futsal->pair = $request['pair'];
         $Futsal->category = $request['category'];
-        $Futsal->between = $request['between'];
         $Futsal->around = $request['around'];
         $Futsal->line = $request['line'];
         $Futsal->time = $request['time'];
-        $Futsal->results = $request['results'];
         $Futsal->save();
-        return redirect();
+        return redirect('addfutsal');
     }
 
     /**

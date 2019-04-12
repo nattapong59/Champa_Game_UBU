@@ -15,15 +15,13 @@ class CreateEsportsTable extends Migration
     {
         Schema::create('esports', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('team');
-            $table->date('date');
-            $table->integer('pair');
-            $table->enum('category', array('M', 'W'));
-            $table->string('between');
             $table->string('around');
+            $table->string('team');
+            $table->string('pair');
             $table->enum('line',array('A','B'));
+            $table->date('date');
             $table->time('time');
-            $table->enum('results',array('W','D','L'));
+            $table->enum('category', array('M', 'W'));
             $table->timestamps();
         });
     }
