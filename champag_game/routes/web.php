@@ -43,3 +43,7 @@ Route::get('/EditData', function () {
 Route::get('/ShowTable', function () {
     return view('ShowTable');
 });
+
+Route::get('/ShowUser', function () {
+  return view('ShowUser');
+});
