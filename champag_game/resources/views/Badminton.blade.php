@@ -86,7 +86,7 @@
 
 
 
-<form class="container" action="/addvolleyball" method="POST">
+<form class="container" action="/addbadminton" method="POST">
   @csrf
     <div class="row justify-content-md-center">
         <div class="col-md-auto">
@@ -98,23 +98,7 @@
             <input type="date" name="date">
           </div>
       <div class="col-auto my-1">
-        <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
-        <select class="custom-select mr-sm-2"  name="time" id="inlineFormCustomSelect">
-          <option selected>..เวลา..</option>
-          <option value="16.00">16.00</option>
-          <option value="16.30">16.30</option>
-          <option value="16.45">16.45</option>
-          <option value="17.00">17.00</option>
-          <option value="17.30">17.30</option>
-          <option value="17.45">17.45</option>
-          <option value="18.00">18.00</option>
-          <option value="18.30">18.30</option>
-          <option value="18.45">18.45</option>
-          <option value="19.00">19.00</option>
-          <option value="19.30">19.30</option>
-          <option value="19.45">19.45</option>
-          <option value="20.00">20.00</option>
-        </select>
+          <input type="time" name="time">
       </div>
      
       
@@ -185,14 +169,18 @@
       </div>
     </div>
   </form>
+  <br>
+  <br>
 
 <div class="row">
   <div class="col-md-12">
     <div class="table-responsive">
-      <table class="table table-bordered ">
+      <table class="table table-bordered container">
         <thead class="thead-dark">
+           
           <tr>
             <th>ลำดับ</th>
+            <th>วันที่</th>
             <th>เวลา</th>
             
             <th>ทีมที่1</th>
@@ -205,22 +193,38 @@
           </tr>
         </thead>
         <tbody>
+            @foreach($post_badminton as $badminton)
           <tr>
-            <th>1</th>
-            <td>18.00-18.45</td>
-            
-            <td>Math</td>
+
+              
+            <th>{{$badminton->id}}</th>
+            <td>{{$badminton->time}}</td>
+            <td>{{$badminton->date}}</td>
+            <td>{{$badminton->team}}</td>
+
             <td>VS</td>
-            <td>COMSCI</td>
-            <td>ชาย</td>
-            <td>A</td>
-            <td>รอบแรก</td>
+            <td>{{$badminton->pair}}</td>
+            <td>{{$badminton->category}}</td>
+            <td>{{$badminton->line}}</td>
+            <td>{{$badminton->around}}</td>
+            <td>
+                <a class="btn btn-success" href="addbadminton/{{$badminton->id}}/edit" >แก้ไข</a>
+            </td>
+            <td>
+                <form action="addbadminton/{{$badminton->id}}" method="post">
+                  @csrf
+                  @method('DELETE')
+                  <button class="btn btn-danger" type="submit">ลบ</button>
+                </form>
+               
+            </td>
           </tr>
           <tr>
 
-          
+              @endforeach
         </tbody>
       </table>
+
     </div>
   </div>
 </div>

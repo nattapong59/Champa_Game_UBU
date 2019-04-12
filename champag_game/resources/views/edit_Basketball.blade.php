@@ -86,35 +86,36 @@
 
 
 
-<form class="container" action="/addfutsal" method="POST">
-  @csrf
+<form class="container" action="/addbasketball/{{$basketball->id}}" method="POST">
+    @csrf
+    @method('PUT')
     <div class="row justify-content-md-center">
         <div class="col-md-auto">
-            <label ><b>ตารางแข่งขันฟุตซอล</b></label>
+            <label ><b>แก้ไขตารางแข่งขันบาสเกสบอล</b></label>
           </div>
     </div>
     <div class="form-row align-items-center">
         <div class="col-auto my-1">    
-            <input type="date" name="date">
+            <input type="date" name="date" value="{{$basketball->date}}">
           </div>
       <div class="col-auto my-1">
-          <input type="time" name="time">
+          <input type="time" name="time" value="{{$basketball->time}}">
       </div>
      
       
       <div class="col-auto my-1">
         <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
         <select class="custom-select mr-sm-2" name="category" id="inlineFormCustomSelect">
-          <option selected>..ประเภท..</option>
-          <option value="M">ชาย</option>
-          <option value="W">หญิง</option>
+          <option selected>{{$basketball->category}}</option>
+          <option value="ชาย">ชาย</option>
+          <option value="หญิง">หญิง</option>
           
         </select>
       </div>
       <div class="col-auto my-1">
         <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
         <select class="custom-select mr-sm-2" name="line" id="inlineFormCustomSelect">
-          <option selected>..สาย..</option>
+          <option selected>{{$basketball->line}}</option>
           <option value="A">A</option>
           <option value="B">B</option>
           
@@ -123,7 +124,7 @@
       <div class="col-auto my-1">
           <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
           <select class="custom-select mr-sm-2" name="around" id="inlineFormCustomSelect">
-            <option selected>..รอบการแข่งขัน..</option>
+            <option selected>{{$basketball->around}}</option>
             <option value="รอบแรก">รอบแรก</option>
             <option value="รอบสอง">รอบสอง</option>
             <option value="รอบรองชนะเริศ">รอบรองชนะเริศ</option>
@@ -134,8 +135,8 @@
       <div class="col-auto my-1">
           <label class="mr-sm-2 sr-only"  for="inlineFormCustomSelect">Preference</label>
           <select class="custom-select mr-sm-2" name="team" id="inlineFormCustomSelect">
-            <option selected>..ทีม1..</option>
-            <option value="Phy">Phy</option>
+            <option selected>{{$basketball->team}}</option>
+            <option value="">Phy</option>
             <option value="Chem">Chem</option>
             <option value="Bio">Bio</option>
             <option value="Rpt">Rpt</option>
@@ -151,8 +152,8 @@
         <div class="col-auto my-1">
           <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
           <select class="custom-select mr-sm-2" name="pair" id="inlineFormCustomSelect">
-            <option selected >..ทีม2..</option>
-            <option value="Phy">Phy</option>
+            <option selected >{{$basketball->pair}}</option>
+            <option value="">Phy</option>
             <option value="Chem">Chem</option>
             <option value="Bio">Bio</option>
             <option value="Rpt">Rpt</option>
@@ -165,76 +166,16 @@
           </select>
         </div>
       <div class="col-auto my-1">
-        <button type="submit" class="btn btn-primary">เพิ่มการแข่ง</button>
+        <button type="submit" class="btn btn-primary">ตกลง</button>
       </div>
     </div>
   </form>
-  <br>
-  <br>
 
-<div class="row">
-  <div class="col-md-12">
-    <div class="table-responsive">
-      <table class="table table-bordered container">
-        <thead class="thead-dark">
-           
-          <tr>
-            <th>ลำดับ</th>
-            <th>วันที่</th>
-            <th>เวลา</th>
-            
-            <th>ทีมที่1</th>
-            <th>พบ</th>
-            <th>ทีมที่2</th>
-            <th>ประเภท</th>
-            <th>สาย</th>
-            <th>รอบ</th>
-          
-          </tr>
-        </thead>
-        <tbody>
-            @foreach($post_Futsal as $Futsal)
-          <tr>
 
-              
-            <th>{{$Futsal->id}}</th>
-            <td>{{$Futsal->time}}</td>
-            <td>{{$Futsal->date}}</td>
-            <td>{{$Futsal->team}}</td>
-
-            <td>VS</td>
-            <td>{{$Futsal->pair}}</td>
-            <td>{{$Futsal->category}}</td>
-            <td>{{$Futsal->line}}</td>
-            <td>{{$Futsal->around}}</td>
-            <td>
-                <a class="btn btn-success" href="addFutsal/{{$Futsal->id}}/edit" >แก้ไข</a>
-            </td>
-            <td>
-                <form action="addFutsal/{{$Futsal->id}}" method="post">
-                  @csrf
-                  @method('DELETE')
-                  <button class="btn btn-danger" type="submit">ลบ</button>
-                </form>
-               
-            </td>
-          </tr>
-          <tr>
-
-              @endforeach
-        </tbody>
-      </table>
-
-    </div>
-  </div>
-</div>
 
 <script>
 
-  $(function(){
-    $("#inlineFormCustomSelect").()
-
-  });
+  
   function openForm() {
     document.getElementById("myForm").style.display = "block";
   }
