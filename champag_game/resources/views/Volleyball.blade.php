@@ -90,7 +90,7 @@
   @csrf
     <div class="row justify-content-md-center">
         <div class="col-md-auto">
-            <label ><b>ตารางแข่งขันฟุตบอล</b></label>
+            <label ><b>ตารางแข่งขันวอลเลย์บอล</b></label>
           </div>
     </div>
     <div class="form-row align-items-center">

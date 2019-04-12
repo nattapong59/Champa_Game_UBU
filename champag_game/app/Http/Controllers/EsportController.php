@@ -14,7 +14,7 @@ class EsportController extends Controller
      */
     public function index()
     {
-        //
+        return view("Esport");
     }
 
     /**

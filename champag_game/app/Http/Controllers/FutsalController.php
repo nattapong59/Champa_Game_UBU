@@ -14,7 +14,7 @@ class FutsalController extends Controller
      */
     public function index()
     {
-        //
+        return view("Futsal");
     }
 
     /**

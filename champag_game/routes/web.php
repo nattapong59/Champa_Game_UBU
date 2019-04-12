@@ -50,3 +50,21 @@ Route::get('/ShowUser', function () {
   return view('ShowUser');
 });
 
+Route::get('/program', function () {
+  return view('program');
+});
+
+
+Route::resource('/addfootball', 'FootballController');
+
+Route::resource('/addbasketball', 'BasketballController');
+
+Route::resource('/addesport', 'EsportController');
+
+Route::resource('/addfutsal', 'FutsalController');
+
+Route::resource('/addvolleyball', 'VolleyballController');
+
+Route::resource('/addbadminton', 'BadmintonController');
+
+Route::resource('/addsepaktakraw', 'SepakTakrawController');

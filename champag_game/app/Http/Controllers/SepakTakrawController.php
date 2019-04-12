@@ -14,7 +14,7 @@ class SepakTakrawController extends Controller
      */
     public function index()
     {
-        
+        return view("SepakTakraw");
     }
 
     /**
