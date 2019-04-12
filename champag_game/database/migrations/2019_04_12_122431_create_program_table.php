@@ -15,6 +15,12 @@ class CreateProgramTable extends Migration
     {
         Schema::create('program', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('around');
+            $table->string('team');
+            $table->string('pair');
+            $table->enum('line',array('A','B'));
+            $table->enum('category', array('M', 'W'));
+            $table->integer('results');
             $table->timestamps();
         });
     }

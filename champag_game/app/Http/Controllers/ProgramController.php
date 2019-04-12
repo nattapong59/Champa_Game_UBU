@@ -3,6 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Program;
+use App\Badminton;
+use App\Basketball;
+use App\Esport;
+use App\Football;
+use App\Volleyball;
+use App\Futsal;
 use Illuminate\Http\Request;
 
 class ProgramController extends Controller
@@ -14,7 +20,13 @@ class ProgramController extends Controller
      */
     public function index()
     {
-        //
+        $Badminton = Badminton::all();
+        $Basketball = Basketball::all();
+        $esport = Esport::all();
+        $football = Football::all();
+        $Futsal = Futsal::all();
+        $Volleyball = Volleyball::all();
+        return view('program',['post_Badminton'=>$Badminton,'post_Basketball'=>$Basketball,'post_esport'=>$esport,'post_football'=>$football,'post_Futsal'=>$Futsal,'post_Volleyball'=>$Volleyball]);
     }
 
     /**
@@ -35,7 +47,7 @@ class ProgramController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
     }
 
     /**
