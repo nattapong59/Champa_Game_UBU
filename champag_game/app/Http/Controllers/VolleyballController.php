@@ -16,7 +16,9 @@ class VolleyballController extends Controller
     {
         $Volleyball = Volleyball::all();
         return view('Volleyball',['post_Volleyball'=>$Volleyball]);
+       
     }
+  
 
     /**
      * Show the form for creating a new resource.

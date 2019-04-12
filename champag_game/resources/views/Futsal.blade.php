@@ -126,8 +126,8 @@
             <option selected>..รอบการแข่งขัน..</option>
             <option value="รอบแรก">รอบแรก</option>
             <option value="รอบสอง">รอบสอง</option>
-            <option value="รอบรองชนะเริศ">รอบรองชนะเริศ</option>
-            <option value="รอบชิงชนะเริศ">รอบชิงชนะเริศ</option>
+            <option value="รอบรองชนะเริศ">รอบรองชนะเลิศ</option>
+            <option value="รอบชิงชนะเริศ">รอบชิงชนะเลิศ</option>
           </select>
         </div>
 

@@ -66,5 +66,9 @@ Route::resource('/addvolleyball', 'VolleyballController');
 
 Route::resource('/addbadminton', 'BadmintonController');
 
+<<<<<<< HEAD
 Route::resource('/program', 'ProgramController');
+=======
+Route::resource('/ShowTable', 'ShowTableController');
+>>>>>>> c2e83f313556c7708f254e21a4ba25ebf5fba781
 
