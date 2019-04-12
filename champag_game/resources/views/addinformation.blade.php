@@ -31,9 +31,24 @@
       <option value="2">ชั้นปีที่2</option>
         <option value="3">ชั้นปีที่3</option>
         <option value="4">ชั้นปีที่4</option>
-        </select>
+        </select><br>
 
-        <div class="form-group"> <label>สาขา</label> <input type="Branch" class="form-control" placeholder="สาขา"></div>
+        <div class="form-group"> </div>
+        <select class="custom-select">
+       <option selected>สาขา</option>
+        <option value="1">ฟิสิกส์ PHY</option>
+        <option value="2">เคมี CHEM</option>
+        <option value="3">ชีวะ BIO</option>
+        <option value="4">การยาง RPT</option>
+        <option value="5">คณิตศาสตร์ MATH</option>
+        <option value="6">วิทยากรคอมพิวเตอร์ COM</option>
+        <option value="7">เทคโนโลยีสารสนเทศ IT</option>
+        <option value="8">ความปลอดภัย OCC</option>
+        <option value="9">จุลชีวะ MICO</option>
+        <option value="10">สิ่งแวดล้อม ENVI</option>
+        
+        </select>
+       
 
         <div class="form-group"> <label>หมายเลขโทรศัพท์</label> <input type="phonenumber" class="form-control" placeholder="กรุณากรอก หมายเลขโทรศัพท์">  </div>
 
