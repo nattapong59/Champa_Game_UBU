@@ -64,6 +64,7 @@ Route::resource('/addesport', 'EsportController');
 Route::resource('/addfutsal', 'FutsalController');
 
 Route::resource('/addvolleyball', 'VolleyballController');
+Route::resource('/addvolleyball/destroy', 'VolleyballController@destroy');
 
 Route::resource('/addbadminton', 'BadmintonController');
 
