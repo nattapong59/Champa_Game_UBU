@@ -14,7 +14,7 @@ class SepakTakrawController extends Controller
      */
     public function index()
     {
-        //
+        
     }
 
     /**
@@ -35,7 +35,18 @@ class SepakTakrawController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $new_SepakTakraw = new SepakTakraw();
+        $new_SepakTakraw->team = $request['team'];
+        $new_SepakTakraw->date = $request['date'];
+        $new_SepakTakraw->pair = $request['pair'];
+        $new_SepakTakraw->category = $request['category'];
+        $new_SepakTakraw->between = $request['between'];
+        $new_SepakTakraw->around = $request['around'];
+        $new_SepakTakraw->line = $request['line'];
+        $new_SepakTakraw->time = $request['time'];
+        $new_SepakTakraw->results = $request['results'];
+        $new_SepakTakraw->save();
+        return redirect();
     }
 
     /**
@@ -69,7 +80,18 @@ class SepakTakrawController extends Controller
      */
     public function update(Request $request, SepakTakraw $sepakTakraw)
     {
-        //
+        $SepakTakraw = SepakTakraw::find($id);
+        $SepakTakraw->team = $request['team'];
+        $SepakTakraw->date = $request['date'];
+        $SepakTakraw->pair = $request['pair'];
+        $SepakTakraw->category = $request['category'];
+        $SepakTakraw->between = $request['between'];
+        $SepakTakraw->around = $request['around'];
+        $SepakTakraw->line = $request['line'];
+        $SepakTakraw->time = $request['time'];
+        $SepakTakraw->results = $request['results'];
+        $SepakTakraw->save();
+        return redirect();
     }
 
     /**

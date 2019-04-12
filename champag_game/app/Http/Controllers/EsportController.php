@@ -35,7 +35,18 @@ class EsportController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $new_Esport = new Esport();
+        $new_Esport->team = $request['team'];
+        $new_Esport->date = $request['date'];
+        $new_Esport->pair = $request['pair'];
+        $new_Esport->category = $request['category'];
+        $new_Esport->between = $request['between'];
+        $new_Esport->around = $request['around'];
+        $new_Esport->line = $request['line'];
+        $new_Esport->time = $request['time'];
+        $new_Esport->results = $request['results'];
+        $new_Esport->save();
+        return redirect();
     }
 
     /**
@@ -69,7 +80,18 @@ class EsportController extends Controller
      */
     public function update(Request $request, Esport $esport)
     {
-        //
+        $Esport = Esport::find($id);
+        $Esport->team = $request['team'];
+        $Esport->date = $request['date'];
+        $Esport->pair = $request['pair'];
+        $Esport->category = $request['category'];
+        $Esport->between = $request['between'];
+        $Esport->around = $request['around'];
+        $Esport->line = $request['line'];
+        $Esport->time = $request['time'];
+        $Esport->results = $request['results'];
+        $Esport->save();
+        return redirect();
     }
 
     /**

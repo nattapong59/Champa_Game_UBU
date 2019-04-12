@@ -19,20 +19,24 @@
       <div class="row">
         <div class="col-md-6" >
 
-        <form action="" method="get">
-        <div class="form-group"> <label>กรอกข้อมูล</label></div>
-        <div class="form-group"> <label>ชื่อ</label> <input type="first_name" class="form-control" placeholder="กรุณากรอก ชื่อ"></div>
-        <div class="form-group"> <label>นามสกุล</label> <input type="last_name" class="form-control" placeholder="กรุณากรอก นามสกุล"></div>
-        <div class="form-group"> <label>รหัสนักศึกษา</label> <input type="user_id" class="form-control" placeholder="กรุณากรอก รหัสนักศึกษา"></div>
 
-        <select class="custom-select">
-       <option selected>ชั้นปี</option>
+        <form calss="" action="/add" method="POST">
+          @csrf
+        <div class="form-group"> <label>กรอกข้อมูล</label></div>
+        <div class="form-group"> <label>ชื่อ</label> <input type="" name="first_name" value="" class="form-control" placeholder="กรุณากรอก ชื่อ"></div>
+        <div class="form-group"> <label>นามสกุล</label> <input type="" name="last_name" value="" class="form-control" placeholder="กรุณากรอก นามสกุล"></div>
+        <div class="form-group"> <label>รหัสนักศึกษา</label> <input type="" name="user_id" value="" class="form-control" placeholder="กรุณากรอก รหัสนักศึกษา"></div>
+
+
+        <select name="year" class="custom-select">
+       <option selected >ชั้นปี</option>
       <option value="1">ชั้นปีที่1</option>
       <option value="2">ชั้นปีที่2</option>
         <option value="3">ชั้นปีที่3</option>
         <option value="4">ชั้นปีที่4</option>
         </select><br>
 
+<<<<<<< HEAD
         <div class="form-group"> </div>
         <select class="custom-select">
        <option selected>สาขา</option>
@@ -49,11 +53,16 @@
         
         </select>
        
+=======
+        <div class="form-group"> <label>สาขา</label> <input name="branch" value="" class="form-control" placeholder="สาขา"></div>
 
-        <div class="form-group"> <label>หมายเลขโทรศัพท์</label> <input type="phonenumber" class="form-control" placeholder="กรุณากรอก หมายเลขโทรศัพท์">  </div>
+        <div class="form-group"> <label>หมายเลขโทรศัพท์</label> <input name="phonenumber" value="" class="form-control" placeholder="กรุณากรอก หมายเลขโทรศัพท์">  </div>
 
-        <div class="form-group"> <label>Email address</label> <input type="email" class="form-control" placeholder="กรุณากรอก email">  </div>
-        <div class="form-group"> <label>Password</label> <input type="Password" class="form-control" placeholder="กรุณากรอก Password">  </div>
+>>>>>>> fc671ddac7339b6b7d926347242271c687c061b5
+
+        <div class="form-group"> <label>Email address</label> <input name="email" value="" class="form-control" placeholder="กรุณากรอก email">  </div>
+        <div class="form-group"> <label>Password</label> <input type="Password" name="password" value="" class="form-control" placeholder="กรุณากรอก Password">  </div>
+
 
              <button type="submit" class="btn btn-primary">ตกลง</button>
         </form>
