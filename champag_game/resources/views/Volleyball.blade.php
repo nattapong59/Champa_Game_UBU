@@ -182,6 +182,10 @@
             <th>ลำดับ</th>
             <th>วันที่</th>
             <th>เวลา</th>
+<<<<<<< HEAD
+=======
+            
+>>>>>>> b45fa89b8ea104a20a6813e32944c51834bff61d
             <th>ทีมที่1</th>
             <th>พบ</th>
             <th>ทีมที่2</th>
@@ -194,11 +198,18 @@
         <tbody>
             @foreach($post_Volleyball as $Volleyball)
           <tr>
+<<<<<<< HEAD
               
             <th>{{$Volleyball->id}}</th>
             <td>{{$Volleyball->time}}</td>
             <td>{{$Volleyball->date}}</td>
             <td>{{$Volleyball->team}}</td>
+=======
+            <th>1</th>
+            <td>18.00-18.45</td>
+            
+            <td>Math</td>
+>>>>>>> b45fa89b8ea104a20a6813e32944c51834bff61d
             <td>VS</td>
             <td>{{$Volleyball->pair}}</td>
             <td>{{$Volleyball->category}}</td>
