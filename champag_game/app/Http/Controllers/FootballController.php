@@ -14,7 +14,8 @@ class FootballController extends Controller
      */
     public function index()
     {
-        return view("football");
+        $football = Football::all();
+        return view('football',['post_football'=>$football]);
     }
 
     /**
@@ -53,9 +54,11 @@ class FootballController extends Controller
      * @param  \App\Football  $football
      * @return \Illuminate\Http\Response
      */
-    public function show(Football $football)
+    public function show( $id)
     {
-        //
+        $football = Football::find($id);
+
+      return $football;
     }
 
     /**
@@ -64,9 +67,11 @@ class FootballController extends Controller
      * @param  \App\Football  $football
      * @return \Illuminate\Http\Response
      */
-    public function edit(Football $football)
+    public function edit( $id)
     {
-        //
+        $football = Football::find($id);
+        return view('edit_football', ['football'=>$football]);
+ 
     }
 
     /**
@@ -76,7 +81,7 @@ class FootballController extends Controller
      * @param  \App\Football  $football
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Football $football)
+    public function update(Request $request,  $id)
     {
         $Football = Football::find($id);
         $Football->team = $request['team'];
@@ -96,8 +101,10 @@ class FootballController extends Controller
      * @param  \App\Football  $football
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Football $football)
+    public function destroy( $id)
     {
-        //
+        football::destroy($id);
+        return redirect('addfootball');
     }
+    
 }

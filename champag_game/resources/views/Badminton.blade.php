@@ -193,25 +193,25 @@
           </tr>
         </thead>
         <tbody>
-            @foreach($post_badminton as $badminton)
+            @foreach($post_Badminton as $Badminton)
           <tr>
 
               
-            <th>{{$badminton->id}}</th>
-            <td>{{$badminton->time}}</td>
-            <td>{{$badminton->date}}</td>
-            <td>{{$badminton->team}}</td>
+            <th>{{$Badminton->id}}</th>
+            <td>{{$Badminton->time}}</td>
+            <td>{{$Badminton->date}}</td>
+            <td>{{$Badminton->team}}</td>
 
             <td>VS</td>
-            <td>{{$badminton->pair}}</td>
-            <td>{{$badminton->category}}</td>
-            <td>{{$badminton->line}}</td>
-            <td>{{$badminton->around}}</td>
+            <td>{{$Badminton->pair}}</td>
+            <td>{{$Badminton->category}}</td>
+            <td>{{$Badminton->line}}</td>
+            <td>{{$Badminton->around}}</td>
             <td>
-                <a class="btn btn-success" href="addbadminton/{{$badminton->id}}/edit" >แก้ไข</a>
+                <a class="btn btn-success" href="addbadminton/{{$Badminton->id}}/edit" >แก้ไข</a>
             </td>
             <td>
-                <form action="addbadminton/{{$badminton->id}}" method="post">
+                <form action="addbadminton/{{$Badminton->id}}" method="post">
                   @csrf
                   @method('DELETE')
                   <button class="btn btn-danger" type="submit">ลบ</button>
@@ -231,10 +231,6 @@
 
 <script>
 
-  $(function(){
-    $("#inlineFormCustomSelect").()
-
-  });
   function openForm() {
     document.getElementById("myForm").style.display = "block";
   }

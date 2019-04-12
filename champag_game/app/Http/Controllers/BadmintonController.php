@@ -14,7 +14,8 @@ class BadmintonController extends Controller
      */
     public function index()
     {
-        return view("Badminton");
+        $Badminton = Badminton::all();
+        return view('Badminton',['post_Badminton'=>$Badminton]);
     }
 
     /**
@@ -53,9 +54,11 @@ class BadmintonController extends Controller
      * @param  \App\Badminton  $badminton
      * @return \Illuminate\Http\Response
      */
-    public function show(Badminton $badminton)
+    public function show($id)
     {
-        //
+        $Badminton = Badminton::find($id);
+
+        return $Badminton;
     }
 
     /**
@@ -64,9 +67,11 @@ class BadmintonController extends Controller
      * @param  \App\Badminton  $badminton
      * @return \Illuminate\Http\Response
      */
-    public function edit(Badminton $badminton)
+    public function edit( $id)
     {
-        //
+        $Badminton = Badminton::find($id);
+        return view('edit_Badminton', ['Badminton'=>$Badminton]);
+   
     }
 
     /**
@@ -76,7 +81,7 @@ class BadmintonController extends Controller
      * @param  \App\Badminton  $badminton
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Badminton $badminton)
+    public function update(Request $request,  $id)
     {
         $Badminton = Badminton::find($id);
         $Badminton->team = $request['team'];
@@ -96,8 +101,9 @@ class BadmintonController extends Controller
      * @param  \App\Badminton  $badminton
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Badminton $badminton)
+    public function destroy( $id)
     {
-        //
+        badminton::destroy($id);
+        return redirect('addvolleyball');
     }
 }

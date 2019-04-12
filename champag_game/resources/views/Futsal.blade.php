@@ -208,10 +208,10 @@
             <td>{{$Futsal->line}}</td>
             <td>{{$Futsal->around}}</td>
             <td>
-                <a class="btn btn-success" href="addFutsal/{{$Futsal->id}}/edit" >แก้ไข</a>
+                <a class="btn btn-success" href="addfutsal/{{$Futsal->id}}/edit" >แก้ไข</a>
             </td>
             <td>
-                <form action="addFutsal/{{$Futsal->id}}" method="post">
+                <form action="addfutsal/{{$Futsal->id}}" method="post">
                   @csrf
                   @method('DELETE')
                   <button class="btn btn-danger" type="submit">ลบ</button>

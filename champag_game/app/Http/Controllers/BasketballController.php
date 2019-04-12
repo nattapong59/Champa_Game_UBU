@@ -14,7 +14,8 @@ class BasketballController extends Controller
      */
     public function index()
     {
-        return view("Basketball");
+        $Basketball = Basketball::all();
+        return view('Basketball',['post_Basketball'=>$Basketball]);
     }
 
     /**
@@ -53,9 +54,12 @@ class BasketballController extends Controller
      * @param  \App\Basketball  $basketball
      * @return \Illuminate\Http\Response
      */
-    public function show(Basketball $basketball)
+    public function show( $id)
     {
-        //
+        $Basketball = Basketball::find($id);
+
+        return $Basketball;
+     
     }
 
     /**
@@ -64,9 +68,10 @@ class BasketballController extends Controller
      * @param  \App\Basketball  $basketball
      * @return \Illuminate\Http\Response
      */
-    public function edit(Basketball $basketball)
+    public function edit( $id)
     {
-        //
+        $Basketball = Basketball::find($id);
+        return view('edit_Basketball', ['Basketball'=>$Basketball]);
     }
 
     /**
@@ -76,7 +81,7 @@ class BasketballController extends Controller
      * @param  \App\Basketball  $basketball
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Basketball $basketball)
+    public function update(Request $request,  $id)
     {
         $Basketball = Basketball::find($id);
         $Basketball->team = $request['team'];
@@ -96,8 +101,9 @@ class BasketballController extends Controller
      * @param  \App\Basketball  $basketball
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Basketball $basketball)
+    public function destroy( $id)
     {
-        //
+        Basketball::destroy($id);
+        return redirect('addbasketball');
     }
 }

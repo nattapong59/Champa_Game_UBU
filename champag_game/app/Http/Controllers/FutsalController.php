@@ -14,7 +14,10 @@ class FutsalController extends Controller
      */
     public function index()
     {
-        return view("Futsal");
+        $Futsal = Futsal::all();
+        return view('Futsal',['post_Futsal'=>$Futsal]);
+   
+     
     }
 
     /**
@@ -53,9 +56,11 @@ class FutsalController extends Controller
      * @param  \App\Futsal  $futsal
      * @return \Illuminate\Http\Response
      */
-    public function show(Futsal $futsal)
+    public function show( $id)
     {
-        //
+        $Futsal = Futsal::find($id);
+
+        return $Futsal;
     }
 
     /**
@@ -64,9 +69,11 @@ class FutsalController extends Controller
      * @param  \App\Futsal  $futsal
      * @return \Illuminate\Http\Response
      */
-    public function edit(Futsal $futsal)
+    public function edit($id)
     {
-        //
+        $Futsal = Futsal::find($id);
+        return view('edit_Futsal', ['Futsal'=>$Futsal]);
+  
     }
 
     /**
@@ -76,7 +83,7 @@ class FutsalController extends Controller
      * @param  \App\Futsal  $futsal
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Futsal $futsal)
+    public function update(Request $request,  $id)
     {
         $Futsal = Futsal::find($id);
         $Futsal->team = $request['team'];
@@ -96,8 +103,10 @@ class FutsalController extends Controller
      * @param  \App\Futsal  $futsal
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Futsal $futsal)
+    public function destroy( $id)
     {
-        //
+        Futsal::destroy($id);
+        return redirect('addfutsal');
+    
     }
 }

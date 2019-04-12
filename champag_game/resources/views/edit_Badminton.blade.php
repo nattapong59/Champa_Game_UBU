@@ -86,7 +86,7 @@
 
 
 
-<form class="container" action="/addbadminton/{{$badminton->id}}" method="POST">
+<form class="container" action="/addbadminton/{{$Badminton->id}}" method="POST">
     @csrf
     @method('PUT')
     <div class="row justify-content-md-center">
@@ -96,17 +96,17 @@
     </div>
     <div class="form-row align-items-center">
         <div class="col-auto my-1">    
-            <input type="date" name="date" value="{{$badminton->date}}">
+            <input type="date" name="date" value="{{$Badminton->date}}">
           </div>
       <div class="col-auto my-1">
-          <input type="time" name="time" value="{{$badminton->time}}">
+          <input type="time" name="time" value="{{$Badminton->time}}">
       </div>
      
       
       <div class="col-auto my-1">
         <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
         <select class="custom-select mr-sm-2" name="category" id="inlineFormCustomSelect">
-          <option selected>{{$badminton->category}}</option>
+          <option selected>{{$Badminton->category}}</option>
           <option value="ชาย">ชาย</option>
           <option value="หญิง">หญิง</option>
           
@@ -115,7 +115,7 @@
       <div class="col-auto my-1">
         <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
         <select class="custom-select mr-sm-2" name="line" id="inlineFormCustomSelect">
-          <option selected>{{$badminton->line}}</option>
+          <option selected>{{$Badminton->line}}</option>
           <option value="A">A</option>
           <option value="B">B</option>
           
@@ -124,7 +124,7 @@
       <div class="col-auto my-1">
           <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
           <select class="custom-select mr-sm-2" name="around" id="inlineFormCustomSelect">
-            <option selected>{{$badminton->around}}</option>
+            <option selected>{{$Badminton->around}}</option>
             <option value="รอบแรก">รอบแรก</option>
             <option value="รอบสอง">รอบสอง</option>
             <option value="รอบรองชนะเริศ">รอบรองชนะเริศ</option>
@@ -135,7 +135,7 @@
       <div class="col-auto my-1">
           <label class="mr-sm-2 sr-only"  for="inlineFormCustomSelect">Preference</label>
           <select class="custom-select mr-sm-2" name="team" id="inlineFormCustomSelect">
-            <option selected>{{$badminton->team}}</option>
+            <option selected>{{$Badminton->team}}</option>
             <option value="">Phy</option>
             <option value="Chem">Chem</option>
             <option value="Bio">Bio</option>
@@ -152,7 +152,7 @@
         <div class="col-auto my-1">
           <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
           <select class="custom-select mr-sm-2" name="pair" id="inlineFormCustomSelect">
-            <option selected >{{$badminton->pair}}</option>
+            <option selected >{{$Badminton->pair}}</option>
             <option value="">Phy</option>
             <option value="Chem">Chem</option>
             <option value="Bio">Bio</option>

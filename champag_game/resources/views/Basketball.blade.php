@@ -193,25 +193,25 @@
           </tr>
         </thead>
         <tbody>
-            @foreach($post_basketball as $basketball)
+            @foreach($post_Basketball as $Basketball)
           <tr>
 
               
-            <th>{{$basketball->id}}</th>
-            <td>{{$basketball->time}}</td>
-            <td>{{$basketball->date}}</td>
-            <td>{{$basketball->team}}</td>
+            <th>{{$Basketball->id}}</th>
+            <td>{{$Basketball->time}}</td>
+            <td>{{$Basketball->date}}</td>
+            <td>{{$Basketball->team}}</td>
 
             <td>VS</td>
-            <td>{{$basketball->pair}}</td>
-            <td>{{$basketball->category}}</td>
-            <td>{{$basketball->line}}</td>
-            <td>{{$basketball->around}}</td>
+            <td>{{$Basketball->pair}}</td>
+            <td>{{$Basketball->category}}</td>
+            <td>{{$Basketball->line}}</td>
+            <td>{{$Basketball->around}}</td>
             <td>
-                <a class="btn btn-success" href="addbasketball/{{$basketball->id}}/edit" >แก้ไข</a>
+                <a class="btn btn-success" href="addbasketball/{{$Basketball->id}}/edit" >แก้ไข</a>
             </td>
             <td>
-                <form action="addbasketball/{{$basketball->id}}" method="post">
+                <form action="addbasketball/{{$Basketball->id}}" method="post">
                   @csrf
                   @method('DELETE')
                   <button class="btn btn-danger" type="submit">ลบ</button>

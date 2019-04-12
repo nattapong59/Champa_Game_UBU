@@ -68,4 +68,3 @@ Route::resource('/addvolleyball', 'VolleyballController');
 
 Route::resource('/addbadminton', 'BadmintonController');
 
-Route::resource('/addsepaktakraw', 'SepakTakrawController');

@@ -14,7 +14,10 @@ class EsportController extends Controller
      */
     public function index()
     {
-        return view("Esport");
+        $esport = Esport::all();
+        return view('Esport',['post_esport'=>$esport]);
+  
+   
     }
 
     /**
@@ -53,9 +56,11 @@ class EsportController extends Controller
      * @param  \App\Esport  $esport
      * @return \Illuminate\Http\Response
      */
-    public function show(Esport $esport)
+    public function show( $id)
     {
-        //
+        $esport = Esport::find($id);
+
+      return $esport;
     }
 
     /**
@@ -64,9 +69,11 @@ class EsportController extends Controller
      * @param  \App\Esport  $esport
      * @return \Illuminate\Http\Response
      */
-    public function edit(Esport $esport)
+    public function edit( $id)
     {
-        //
+        $esport = Esport::find($id);
+        return view('edit_esport', ['esport'=>$esport]);
+  
     }
 
     /**
@@ -76,7 +83,7 @@ class EsportController extends Controller
      * @param  \App\Esport  $esport
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Esport $esport)
+    public function update(Request $request,  $id)
     {
         $Esport = Esport::find($id);
         $Esport->team = $request['team'];
@@ -96,8 +103,9 @@ class EsportController extends Controller
      * @param  \App\Esport  $esport
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Esport $esport)
+    public function destroy( $id)
     {
-        //
+        Esport::destroy($id);
+        return redirect('addesport');
     }
 }
