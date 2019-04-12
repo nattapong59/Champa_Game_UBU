@@ -70,41 +70,40 @@
           <table class="table table-bordered ">
             <thead class="thead-dark">
               <tr>
-                <th>เวลา</th>
-                <th>ประเภทกีฬา</th>
-                <th>ทีมที่1</th>
-                <th>พบ</th>
-                <th>ทีมที่2</th>
+                <th>ลำดับ</th>
+                <th>รหัสนักศึกษา</th>
+                <th>ชื่อ-สกุล</th>
+                <th>สาขา</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <th>1</th>
-                <td>ฟุตบอล</td>
-                <td>Comsci</td>
-                <td>VS</td>
-                <td>Math</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                
               </tr>
               <tr>
                 <th>2</th>
-                <td>บาสเกสบอล</td>
-                <td>Mico</td>
-                <td>VS</td>
-                <td>Bio</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                
               </tr>
               <tr>
                 <th>3</th>
-                <td>ฟุตบอล</td>
-                <td>IT</td>
-                <td>VS</td>
-                <td>Physic</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                
               </tr>
               <tr>
                 <th>4</th>
-                <td>แบดมินตัน</td>
-                <td>Comsci</td>
-                <td>VS</td>
-                <td>Physic</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                
               </tr>
 
             </tbody>
