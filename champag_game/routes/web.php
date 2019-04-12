@@ -28,6 +28,7 @@ Route::get('/fb', function(){
 });
 
 Route::resource('add','UserController');
+
 Route::get('/addinformation', function () {
     return view('addinformation');
 });
@@ -43,3 +44,4 @@ Route::get('/EditData', function () {
 Route::get('/ShowTable', function () {
     return view('ShowTable');
 });
+Route::resource('/program','');
