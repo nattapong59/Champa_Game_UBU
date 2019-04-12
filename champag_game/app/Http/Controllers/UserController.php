@@ -38,9 +38,6 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-
-        //
-
         $new_User = new User();
         $new_User->user_id = $request['user_id'];
         $new_User->first_name = $request['first_name'];

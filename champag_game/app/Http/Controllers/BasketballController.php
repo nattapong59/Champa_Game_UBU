@@ -14,7 +14,8 @@ class BasketballController extends Controller
      */
     public function index()
     {
-        //
+        $Basketball = Basketball::all();
+        return view('Basketball',['post_Basketball'=>$Basketball]);
     }
 
     /**
@@ -40,13 +41,11 @@ class BasketballController extends Controller
         $new_Basketball->date = $request['date'];
         $new_Basketball->pair = $request['pair'];
         $new_Basketball->category = $request['category'];
-        $new_Basketball->between = $request['between'];
         $new_Basketball->around = $request['around'];
         $new_Basketball->line = $request['line'];
         $new_Basketball->time = $request['time'];
-        $new_Basketball->results = $request['results'];
         $new_Basketball->save();
-        return redirect();
+        return redirect('addbasketball');
     }
 
     /**
@@ -55,9 +54,12 @@ class BasketballController extends Controller
      * @param  \App\Basketball  $basketball
      * @return \Illuminate\Http\Response
      */
-    public function show(Basketball $basketball)
+    public function show( $id)
     {
-        //
+        $Basketball = Basketball::find($id);
+
+        return $Basketball;
+     
     }
 
     /**
@@ -66,9 +68,10 @@ class BasketballController extends Controller
      * @param  \App\Basketball  $basketball
      * @return \Illuminate\Http\Response
      */
-    public function edit(Basketball $basketball)
+    public function edit( $id)
     {
-        //
+        $Basketball = Basketball::find($id);
+        return view('edit_Basketball', ['Basketball'=>$Basketball]);
     }
 
     /**
@@ -78,20 +81,18 @@ class BasketballController extends Controller
      * @param  \App\Basketball  $basketball
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Basketball $basketball)
+    public function update(Request $request,  $id)
     {
         $Basketball = Basketball::find($id);
         $Basketball->team = $request['team'];
         $Basketball->date = $request['date'];
         $Basketball->pair = $request['pair'];
         $Basketball->category = $request['category'];
-        $Basketball->between = $request['between'];
         $Basketball->around = $request['around'];
         $Basketball->line = $request['line'];
         $Basketball->time = $request['time'];
-        $Basketball->results = $request['results'];
         $Basketball->save();
-        return redirect();
+        return redirect('addbasketball');
     }
 
     /**
@@ -100,8 +101,9 @@ class BasketballController extends Controller
      * @param  \App\Basketball  $basketball
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Basketball $basketball)
+    public function destroy( $id)
     {
-        //
+        Basketball::destroy($id);
+        return redirect('addbasketball');
     }
 }

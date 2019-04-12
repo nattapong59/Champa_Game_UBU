@@ -86,11 +86,11 @@
 
 
 
-<form class="container" action="/addfootball" method="POST">
+<form class="container" action="/addvolleyball" method="POST">
   @csrf
     <div class="row justify-content-md-center">
         <div class="col-md-auto">
-            <label ><b>ตารางแข่งขันฟุตบอล</b></label>
+            <label ><b>ตารางแข่งขันวอลเลย์บอล</b></label>
           </div>
     </div>
     <div class="form-row align-items-center">
@@ -193,25 +193,25 @@
           </tr>
         </thead>
         <tbody>
-            @foreach($post_football as $football)
+            @foreach($post_Volleyball as $Volleyball)
           <tr>
 
               
-            <th>{{$football->id}}</th>
-            <td>{{$football->time}}</td>
-            <td>{{$football->date}}</td>
-            <td>{{$football->team}}</td>
+            <th>{{$Volleyball->id}}</th>
+            <td>{{$Volleyball->time}}</td>
+            <td>{{$Volleyball->date}}</td>
+            <td>{{$Volleyball->team}}</td>
 
             <td>VS</td>
-            <td>{{$football->pair}}</td>
-            <td>{{$football->category}}</td>
-            <td>{{$football->line}}</td>
-            <td>{{$football->around}}</td>
+            <td>{{$Volleyball->pair}}</td>
+            <td>{{$Volleyball->category}}</td>
+            <td>{{$Volleyball->line}}</td>
+            <td>{{$Volleyball->around}}</td>
             <td>
-                <a class="btn btn-success" href="addfootball/{{$football->id}}/edit" >แก้ไข</a>
+                <a class="btn btn-success" href="addvolleyball/{{$Volleyball->id}}/edit" >แก้ไข</a>
             </td>
             <td>
-                <form action="addfootball/{{$football->id}}" method="post">
+                <form action="addvolleyball/{{$Volleyball->id}}" method="post">
                   @csrf
                   @method('DELETE')
                   <button class="btn btn-danger" type="submit">ลบ</button>

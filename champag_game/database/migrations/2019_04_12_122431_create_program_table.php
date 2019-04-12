@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateSepakTakrawsTable extends Migration
+class CreateProgramTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,17 +13,14 @@ class CreateSepakTakrawsTable extends Migration
      */
     public function up()
     {
-        Schema::create('sepak_takraws', function (Blueprint $table) {
+        Schema::create('program', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('team');
-            $table->date('date');
-            $table->integer('pair');
-            $table->enum('category', array('M', 'W'));
-            $table->string('between');
             $table->string('around');
+            $table->string('team');
+            $table->string('pair');
             $table->enum('line',array('A','B'));
-            $table->time('time');
-            $table->enum('results',array('W','D','L'));
+            $table->enum('category', array('M', 'W'));
+            $table->integer('results');
             $table->timestamps();
         });
     }
@@ -35,6 +32,6 @@ class CreateSepakTakrawsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('sepak_takraws');
+        Schema::dropIfExists('program');
     }
 }

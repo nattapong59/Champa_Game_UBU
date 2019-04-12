@@ -14,7 +14,10 @@ class FutsalController extends Controller
      */
     public function index()
     {
-        //
+        $Futsal = Futsal::all();
+        return view('Futsal',['post_Futsal'=>$Futsal]);
+   
+     
     }
 
     /**
@@ -40,13 +43,11 @@ class FutsalController extends Controller
         $new_Futsal->date = $request['date'];
         $new_Futsal->pair = $request['pair'];
         $new_Futsal->category = $request['category'];
-        $new_Futsal->between = $request['between'];
         $new_Futsal->around = $request['around'];
         $new_Futsal->line = $request['line'];
         $new_Futsal->time = $request['time'];
-        $new_Futsal->results = $request['results'];
         $new_Futsal->save();
-        return redirect();
+        return redirect('addfutsal');
     }
 
     /**
@@ -55,9 +56,11 @@ class FutsalController extends Controller
      * @param  \App\Futsal  $futsal
      * @return \Illuminate\Http\Response
      */
-    public function show(Futsal $futsal)
+    public function show( $id)
     {
-        //
+        $Futsal = Futsal::find($id);
+
+        return $Futsal;
     }
 
     /**
@@ -66,9 +69,11 @@ class FutsalController extends Controller
      * @param  \App\Futsal  $futsal
      * @return \Illuminate\Http\Response
      */
-    public function edit(Futsal $futsal)
+    public function edit($id)
     {
-        //
+        $Futsal = Futsal::find($id);
+        return view('edit_Futsal', ['Futsal'=>$Futsal]);
+  
     }
 
     /**
@@ -78,20 +83,18 @@ class FutsalController extends Controller
      * @param  \App\Futsal  $futsal
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Futsal $futsal)
+    public function update(Request $request,  $id)
     {
         $Futsal = Futsal::find($id);
         $Futsal->team = $request['team'];
         $Futsal->date = $request['date'];
         $Futsal->pair = $request['pair'];
         $Futsal->category = $request['category'];
-        $Futsal->between = $request['between'];
         $Futsal->around = $request['around'];
         $Futsal->line = $request['line'];
         $Futsal->time = $request['time'];
-        $Futsal->results = $request['results'];
         $Futsal->save();
-        return redirect();
+        return redirect('addfutsal');
     }
 
     /**
@@ -100,8 +103,10 @@ class FutsalController extends Controller
      * @param  \App\Futsal  $futsal
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Futsal $futsal)
+    public function destroy( $id)
     {
-        //
+        Futsal::destroy($id);
+        return redirect('addfutsal');
+    
     }
 }

@@ -86,11 +86,11 @@
 
 
 
-<form class="container" action="/addfootball" method="POST">
+<form class="container" action="/addbadminton" method="POST">
   @csrf
     <div class="row justify-content-md-center">
         <div class="col-md-auto">
-            <label ><b>ตารางแข่งขันฟุตบอล</b></label>
+            <label ><b>ตารางแข่งขันแบดมินตัน</b></label>
           </div>
     </div>
     <div class="form-row align-items-center">
@@ -193,25 +193,25 @@
           </tr>
         </thead>
         <tbody>
-            @foreach($post_football as $football)
+            @foreach($post_Badminton as $Badminton)
           <tr>
 
               
-            <th>{{$football->id}}</th>
-            <td>{{$football->time}}</td>
-            <td>{{$football->date}}</td>
-            <td>{{$football->team}}</td>
+            <th>{{$Badminton->id}}</th>
+            <td>{{$Badminton->time}}</td>
+            <td>{{$Badminton->date}}</td>
+            <td>{{$Badminton->team}}</td>
 
             <td>VS</td>
-            <td>{{$football->pair}}</td>
-            <td>{{$football->category}}</td>
-            <td>{{$football->line}}</td>
-            <td>{{$football->around}}</td>
+            <td>{{$Badminton->pair}}</td>
+            <td>{{$Badminton->category}}</td>
+            <td>{{$Badminton->line}}</td>
+            <td>{{$Badminton->around}}</td>
             <td>
-                <a class="btn btn-success" href="addfootball/{{$football->id}}/edit" >แก้ไข</a>
+                <a class="btn btn-success" href="addbadminton/{{$Badminton->id}}/edit" >แก้ไข</a>
             </td>
             <td>
-                <form action="addfootball/{{$football->id}}" method="post">
+                <form action="addbadminton/{{$Badminton->id}}" method="post">
                   @csrf
                   @method('DELETE')
                   <button class="btn btn-danger" type="submit">ลบ</button>
@@ -231,10 +231,6 @@
 
 <script>
 
-  $(function(){
-    $("#inlineFormCustomSelect").()
-
-  });
   function openForm() {
     document.getElementById("myForm").style.display = "block";
   }

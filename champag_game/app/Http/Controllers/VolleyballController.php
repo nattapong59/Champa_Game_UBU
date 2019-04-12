@@ -14,8 +14,11 @@ class VolleyballController extends Controller
      */
     public function index()
     {
-        //
+        $Volleyball = Volleyball::all();
+        return view('Volleyball',['post_Volleyball'=>$Volleyball]);
+       
     }
+  
 
     /**
      * Show the form for creating a new resource.
@@ -24,7 +27,7 @@ class VolleyballController extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
     /**
@@ -39,14 +42,12 @@ class VolleyballController extends Controller
         $new_Volleyball->team = $request['team'];
         $new_Volleyball->date = $request['date'];
         $new_Volleyball->pair = $request['pair'];
-        $new_Volleyball->category = $request['category'];
-        $new_Volleyball->between = $request['between'];
+        $new_Volleyball->category = $request['category']; 
         $new_Volleyball->around = $request['around'];
         $new_Volleyball->line = $request['line'];
         $new_Volleyball->time = $request['time'];
-        $new_Volleyball->results = $request['results'];
         $new_Volleyball->save();
-        return redirect();
+        return redirect('addvolleyball');
     }
 
     /**
@@ -55,9 +56,11 @@ class VolleyballController extends Controller
      * @param  \App\Volleyball  $volleyball
      * @return \Illuminate\Http\Response
      */
-    public function show(Volleyball $volleyball)
+    public function show($id)
     {
-        //
+        $Volleyballs = Volleyball::find($id);
+
+      return $Volleyballs;
     }
 
     /**
@@ -66,9 +69,10 @@ class VolleyballController extends Controller
      * @param  \App\Volleyball  $volleyball
      * @return \Illuminate\Http\Response
      */
-    public function edit(Volleyball $volleyball)
+    public function edit($id)
     {
-        //
+        $Volleyball = Volleyball::find($id);
+        return view('edit_Volleyball', ['Volleyball'=>$Volleyball]);
     }
 
     /**
@@ -78,20 +82,18 @@ class VolleyballController extends Controller
      * @param  \App\Volleyball  $volleyball
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Volleyball $volleyball)
+    public function update(Request $request, $id)
     {
-        $Volleyball = Volleyball::find($id);
-        $Volleyball->team = $request['team'];
-        $Volleyball->date = $request['date'];
-        $Volleyball->pair = $request['pair'];
-        $Volleyball->category = $request['category'];
-        $Volleyball->between = $request['between'];
-        $Volleyball->around = $request['around'];
-        $Volleyball->line = $request['line'];
-        $Volleyball->time = $request['time'];
-        $Volleyball->results = $request['results'];
-        $Volleyball->save();
-        return redirect();
+        $Voll = Volleyball::find($id);
+        $Voll->team = $request['team'];
+        $Voll->date = $request['date'];
+        $Voll->pair = $request['pair'];
+        $Voll->category = $request['category'];  
+        $Voll->around = $request['around'];
+        $Voll->line = $request['line'];
+        $Voll->time = $request['time'];
+        $Voll->save();
+        return redirect('addvolleyball');
     }
 
     /**
@@ -100,8 +102,9 @@ class VolleyballController extends Controller
      * @param  \App\Volleyball  $volleyball
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Volleyball $volleyball)
+    public function destroy($id)
     {
-        //
+        volleyball::destroy($id);
+        return redirect('addvolleyball');
     }
 }

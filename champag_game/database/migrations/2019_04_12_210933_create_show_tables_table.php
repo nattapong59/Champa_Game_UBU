@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateVolleyballsTable extends Migration
+class CreateShowTablesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,8 @@ class CreateVolleyballsTable extends Migration
      */
     public function up()
     {
-        Schema::create('volleyballs', function (Blueprint $table) {
+        Schema::create('show_tables', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('around');
-            $table->string('team');
-            $table->string('pair');
-            $table->enum('line',array('A','B'));
-            $table->date('date');
-            $table->time('time');
-            $table->enum('category', array('M', 'W'));
             $table->timestamps();
         });
     }
@@ -33,6 +26,6 @@ class CreateVolleyballsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('volleyballs');
+        Schema::dropIfExists('show_tables');
     }
 }

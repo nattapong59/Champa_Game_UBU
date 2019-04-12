@@ -14,7 +14,10 @@ class EsportController extends Controller
      */
     public function index()
     {
-        //
+        $esport = Esport::all();
+        return view('Esport',['post_esport'=>$esport]);
+  
+   
     }
 
     /**
@@ -40,13 +43,11 @@ class EsportController extends Controller
         $new_Esport->date = $request['date'];
         $new_Esport->pair = $request['pair'];
         $new_Esport->category = $request['category'];
-        $new_Esport->between = $request['between'];
         $new_Esport->around = $request['around'];
         $new_Esport->line = $request['line'];
         $new_Esport->time = $request['time'];
-        $new_Esport->results = $request['results'];
         $new_Esport->save();
-        return redirect();
+        return redirect('addesport');
     }
 
     /**
@@ -55,9 +56,11 @@ class EsportController extends Controller
      * @param  \App\Esport  $esport
      * @return \Illuminate\Http\Response
      */
-    public function show(Esport $esport)
+    public function show( $id)
     {
-        //
+        $esport = Esport::find($id);
+
+      return $esport;
     }
 
     /**
@@ -66,9 +69,11 @@ class EsportController extends Controller
      * @param  \App\Esport  $esport
      * @return \Illuminate\Http\Response
      */
-    public function edit(Esport $esport)
+    public function edit( $id)
     {
-        //
+        $esport = Esport::find($id);
+        return view('edit_esport', ['esport'=>$esport]);
+  
     }
 
     /**
@@ -78,20 +83,18 @@ class EsportController extends Controller
      * @param  \App\Esport  $esport
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Esport $esport)
+    public function update(Request $request,  $id)
     {
         $Esport = Esport::find($id);
         $Esport->team = $request['team'];
         $Esport->date = $request['date'];
         $Esport->pair = $request['pair'];
         $Esport->category = $request['category'];
-        $Esport->between = $request['between'];
         $Esport->around = $request['around'];
         $Esport->line = $request['line'];
         $Esport->time = $request['time'];
-        $Esport->results = $request['results'];
         $Esport->save();
-        return redirect();
+        return redirect('addesport');
     }
 
     /**
@@ -100,8 +103,9 @@ class EsportController extends Controller
      * @param  \App\Esport  $esport
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Esport $esport)
+    public function destroy( $id)
     {
-        //
+        Esport::destroy($id);
+        return redirect('addesport');
     }
 }
