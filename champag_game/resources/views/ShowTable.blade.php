@@ -1,9 +1,7 @@
-@extends('layouts.main')
+@extends('layouts.app')
 
-@section('main')
-    <br>
-    <br>
-    <br>
+@section('content')
+
     <form class="container" action="/addvolleyball" method="POST">
   @csrf
 <div class="row justify-content-md-center">
@@ -17,8 +15,8 @@
   <div class="col-md-12">
     <div class="table-responsive">
       <table class="table table-bordered container">
-        <thead class="thead-dark">          
-          <tr>            
+        <thead class="thead-dark">
+          <tr>
             <th>วันที่</th>
             <th>เวลา</th>
             <th>ทีมที่1</th>
@@ -27,14 +25,14 @@
             <th>ประเภท</th>
             <th>สาย</th>
             <th>รอบ</th>
-            <th>ผล</th>          
+            <th>ผล</th>
           </tr>
         </thead>
         <tbody>
             @foreach($post_Volleyball as $Volleyball)
           <tr>
 
-              
+
             <th>{{$Volleyball->id}}</th>
             <td>{{$Volleyball->time}}</td>
             <td>{{$Volleyball->date}}</td>
@@ -48,7 +46,7 @@
           </tr>
           <tr>
 
-              @endforeach 
+              @endforeach
         </tbody>
       </table>
     </div>
@@ -71,8 +69,8 @@
   <div class="col-md-12">
     <div class="table-responsive">
       <table class="table table-bordered container">
-        <thead class="thead-dark">          
-          <tr>            
+        <thead class="thead-dark">
+          <tr>
             <th>วันที่</th>
             <th>เวลา</th>
             <th>ทีมที่1</th>
@@ -81,14 +79,14 @@
             <th>ประเภท</th>
             <th>สาย</th>
             <th>รอบ</th>
-            <th>ผล</th>          
+            <th>ผล</th>
           </tr>
         </thead>
         <tbody>
         @foreach($post_esport as $esport)
           <tr>
 
-              
+
           <th>{{$esport->id}}</th>
             <td>{{$esport->time}}</td>
             <td>{{$esport->date}}</td>
@@ -113,7 +111,7 @@
 <br>
 
 <form class="container" action="/addfootball" method="POST">
- 
+
 <div class="row justify-content-md-center">
         <div class="col-md-auto">
             <label ><b>ตารางแข่งขันฟุตบอล</b></label>
@@ -125,8 +123,8 @@
   <div class="col-md-12">
     <div class="table-responsive">
       <table class="table table-bordered container">
-        <thead class="thead-dark">          
-          <tr>            
+        <thead class="thead-dark">
+          <tr>
             <th>วันที่</th>
             <th>เวลา</th>
             <th>ทีมที่1</th>
@@ -135,14 +133,14 @@
             <th>ประเภท</th>
             <th>สาย</th>
             <th>รอบ</th>
-            <th>ผล</th>          
+            <th>ผล</th>
           </tr>
         </thead>
         <tbody>
         @foreach($post_football as $football)
           <tr>
 
-              
+
             <th>{{$football->id}}</th>
             <td>{{$football->time}}</td>
             <td>{{$football->date}}</td>
@@ -152,7 +150,7 @@
             <td>{{$football->category}}</td>
             <td>{{$football->line}}</td>
             <td>{{$football->around}}</td>
-            
+
           </tr>
           <tr>
 
@@ -169,7 +167,7 @@
 
 
 <form class="container" action="/addfutsal" method="POST">
- 
+
 <div class="row justify-content-md-center">
         <div class="col-md-auto">
             <label ><b>ตารางแข่งขันฟุตซอล</b></label>
@@ -181,8 +179,8 @@
   <div class="col-md-12">
     <div class="table-responsive">
       <table class="table table-bordered container">
-        <thead class="thead-dark">          
-          <tr>            
+        <thead class="thead-dark">
+          <tr>
             <th>วันที่</th>
             <th>เวลา</th>
             <th>ทีมที่1</th>
@@ -191,14 +189,14 @@
             <th>ประเภท</th>
             <th>สาย</th>
             <th>รอบ</th>
-            <th>ผล</th>          
+            <th>ผล</th>
           </tr>
         </thead>
         <tbody>
         @foreach($post_Futsal as $Futsal)
           <tr>
 
-              
+
             <th>{{$Futsal->id}}</th>
             <td>{{$Futsal->time}}</td>
             <td>{{$Futsal->date}}</td>
@@ -208,7 +206,7 @@
             <td>{{$Futsal->category}}</td>
             <td>{{$Futsal->line}}</td>
             <td>{{$Futsal->around}}</td>
-            
+
           </tr>
           <tr>
 
@@ -223,7 +221,7 @@
 <br>
 
 <form class="container" action="/addbasketball" method="POST">
- 
+
 <div class="row justify-content-md-center">
         <div class="col-md-auto">
             <label ><b>ตารางแข่งขันบาสเกสบอล</b></label>
@@ -235,8 +233,8 @@
   <div class="col-md-12">
     <div class="table-responsive">
       <table class="table table-bordered container">
-        <thead class="thead-dark">          
-          <tr>            
+        <thead class="thead-dark">
+          <tr>
             <th>วันที่</th>
             <th>เวลา</th>
             <th>ทีมที่1</th>
@@ -245,14 +243,14 @@
             <th>ประเภท</th>
             <th>สาย</th>
             <th>รอบ</th>
-            <th>ผล</th>          
+            <th>ผล</th>
           </tr>
         </thead>
         <tbody>
         @foreach($post_Basketball as $Basketball)
           <tr>
 
-              
+
             <th>{{$Basketball->id}}</th>
             <td>{{$Basketball->time}}</td>
             <td>{{$Basketball->date}}</td>
@@ -262,7 +260,7 @@
             <td>{{$Basketball->category}}</td>
             <td>{{$Basketball->line}}</td>
             <td>{{$Basketball->around}}</td>
-            
+
           </tr>
           <tr>
 
@@ -277,7 +275,7 @@
 <br>
 
 <form class="container" action="/addbadminton" method="POST">
- 
+
 <div class="row justify-content-md-center">
         <div class="col-md-auto">
             <label ><b>ตารางแข่งขันแบดมินตัน</b></label>
@@ -289,8 +287,8 @@
   <div class="col-md-12">
     <div class="table-responsive">
       <table class="table table-bordered container">
-        <thead class="thead-dark">          
-          <tr>            
+        <thead class="thead-dark">
+          <tr>
             <th>วันที่</th>
             <th>เวลา</th>
             <th>ทีมที่1</th>
@@ -299,14 +297,14 @@
             <th>ประเภท</th>
             <th>สาย</th>
             <th>รอบ</th>
-            <th>ผล</th>          
+            <th>ผล</th>
           </tr>
         </thead>
         <tbody>
         @foreach($post_Badminton as $Badminton)
           <tr>
 
-              
+
             <th>{{$Badminton->id}}</th>
             <td>{{$Badminton->time}}</td>
             <td>{{$Badminton->date}}</td>
@@ -316,7 +314,7 @@
             <td>{{$Badminton->category}}</td>
             <td>{{$Badminton->line}}</td>
             <td>{{$Badminton->around}}</td>
-          
+
           </tr>
           <tr>
 
@@ -333,4 +331,3 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 @endsection
-

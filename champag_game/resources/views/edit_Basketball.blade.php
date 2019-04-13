@@ -1,12 +1,12 @@
-@extends('layouts.main')
+@extends('layouts.app')
 
-@section('main')
+@section('content')
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <style>
 
   body {font-family: Arial, Helvetica, sans-serif;}
   * {box-sizing: border-box;}
-  
+
   /* Button used to open the contact form - fixed at the bottom of the page */
   .open-button {
     background-color: #555;
@@ -20,7 +20,7 @@
     right: 28px;
     width: 280px;
   }
-  
+
   /* The popup form - hidden by default */
   .form-popup {
     display: none;
@@ -30,14 +30,14 @@
     border: 3px solid #f1f1f1;
     z-index: 9;
   }
-  
+
   /* Add styles to the form container */
   .form-container {
     max-width: 300px;
     padding: 10px;
     background-color: white;
   }
-  
+
   /* Full-width input fields */
   .form-container input[type=text], .form-container input[type=password] {
     width: 100%;
@@ -46,13 +46,13 @@
     border: none;
     background: #f1f1f1;
   }
-  
+
   /* When the inputs get focus, do something */
   .form-container input[type=text]:focus, .form-container input[type=password]:focus {
     background-color: #ddd;
     outline: none;
   }
-  
+
   /* Set a style for the submit/login button */
   .form-container .btn {
     background-color: #4CAF50;
@@ -64,12 +64,12 @@
     margin-bottom:10px;
     opacity: 0.8;
   }
-  
+
   /* Add a red background color to the cancel button */
   .form-container .cancel {
     background-color: red;
   }
-  
+
   /* Add some hover effects to buttons */
   .form-container .btn:hover, .open-button:hover {
     opacity: 1;
@@ -95,21 +95,21 @@
           </div>
     </div>
     <div class="form-row align-items-center">
-        <div class="col-auto my-1">    
+        <div class="col-auto my-1">
             <input type="date" name="date" value="{{$Basketball->date}}">
           </div>
       <div class="col-auto my-1">
           <input type="time" name="time" value="{{$Basketball->time}}">
       </div>
-     
-      
+
+
       <div class="col-auto my-1">
         <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
         <select class="custom-select mr-sm-2" name="category" id="inlineFormCustomSelect">
           <option selected>{{$Basketball->category}}</option>
           <option value="ชาย">ชาย</option>
           <option value="หญิง">หญิง</option>
-          
+
         </select>
       </div>
       <div class="col-auto my-1">
@@ -118,7 +118,7 @@
           <option selected>{{$Basketball->line}}</option>
           <option value="A">A</option>
           <option value="B">B</option>
-          
+
         </select>
       </div>
       <div class="col-auto my-1">
@@ -175,11 +175,11 @@
 
 <script>
 
-  
+
   function openForm() {
     document.getElementById("myForm").style.display = "block";
   }
-  
+
   function closeForm() {
     document.getElementById("myForm").style.display = "none";
   }

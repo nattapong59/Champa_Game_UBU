@@ -1,6 +1,6 @@
-@extends('layouts.main')
+@extends('layouts.app')
 
-@section('main')
+@section('content')
 <div class="py-5 text-center">
   <div class="container">
     <div class="">
@@ -82,28 +82,28 @@
                 <td></td>
                 <td></td>
                 <td></td>
-                
+
               </tr>
               <tr>
                 <th>2</th>
                 <td></td>
                 <td></td>
                 <td></td>
-                
+
               </tr>
               <tr>
                 <th>3</th>
                 <td></td>
                 <td></td>
                 <td></td>
-                
+
               </tr>
               <tr>
                 <th>4</th>
                 <td></td>
                 <td></td>
                 <td></td>
-                
+
               </tr>
 
             </tbody>

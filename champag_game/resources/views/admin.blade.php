@@ -61,57 +61,7 @@
               </div>
             </div>
           </section>
-
-    </div>
-      <label >ตารางแข่งขันวันนี้</label>
-    <div class="row">
-      <div class="col-md-12" >
-        <div class="table-responsive">
-          <table class="table table-bordered ">
-            <thead class="thead-dark">
-              <tr>
-                <th>เวลา</th>
-                <th>ประเภทกีฬา</th>
-                <th>ทีมที่1</th>
-                <th>พบ</th>
-                <th>ทีมที่2</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th>1</th>
-                <td>ฟุตบอล</td>
-                <td>Comsci</td>
-                <td>VS</td>
-                <td>Math</td>
-              </tr>
-              <tr>
-                <th>2</th>
-                <td>บาสเกสบอล</td>
-                <td>Mico</td>
-                <td>VS</td>
-                <td>Bio</td>
-              </tr>
-              <tr>
-                <th>3</th>
-                <td>ฟุตบอล</td>
-                <td>IT</td>
-                <td>VS</td>
-                <td>Physic</td>
-              </tr>
-              <tr>
-                <th>4</th>
-                <td>แบดมินตัน</td>
-                <td>Comsci</td>
-                <td>VS</td>
-                <td>Physic</td>
-              </tr>
-
-            </tbody>
-          </table>
         </div>
-      </div>
     </div>
   </div>
-</div>
 @endsection

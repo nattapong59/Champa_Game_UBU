@@ -1,8 +1,7 @@
-@extends('layouts.main')
+@extends('layouts.app')
 
+@section('content')
 
-@section('main')
-    
 <div class="py-5">
     <div class="container">
         <div class="row">
@@ -10,13 +9,13 @@
 
         <form action="" method="get">
         <div class="form-group"> <label>ชื่อผู้ใช้</label>
-        
+
         <div class="input-group">
               <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="ค้นหา">
               <div class="input-group-append"><button class="btn btn-primary" type="button"><i class="fa fa-search"></i></button></div>
             </div>
 
-        
+
 
 
         <label >ตารางข้อมูล</label>
@@ -32,7 +31,7 @@
                   <th>สาขา</th>
                   <th>ชั้นปี</th>
                   <th>หมายเลขโทรศัพท์</th>
-                  
+
                 </tr>
               </thead>
               <tbody>
@@ -59,10 +58,10 @@
                   <td>IT</td>
                   <td>1</td>
                   <td>099********</td>
-                  
+
                 </tr>
-                
-                
+
+
               </tbody>
             </table>
           </div>

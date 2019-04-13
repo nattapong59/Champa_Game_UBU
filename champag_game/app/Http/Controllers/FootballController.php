@@ -12,6 +12,13 @@ class FootballController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+     public function __construct()
+     {
+       $this->middleware('auth');
+     }
+
+     
     public function index()
     {
         $football = Football::all();
@@ -71,7 +78,7 @@ class FootballController extends Controller
     {
         $football = Football::find($id);
         return view('edit_football', ['football'=>$football]);
- 
+
     }
 
     /**
@@ -106,5 +113,5 @@ class FootballController extends Controller
         football::destroy($id);
         return redirect('addfootball');
     }
-    
+
 }

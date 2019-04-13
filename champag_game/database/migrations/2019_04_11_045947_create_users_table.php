@@ -12,7 +12,8 @@ class CreateUsersTable extends Migration
      * @return void
      */
     public function up()
-    {   
+    {
+        Schema::defaultStringLength(191);
         Schema::create('users', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('first_name');
@@ -21,7 +22,7 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->string('branch');
             $table->char('year',1);
-            $table->integer('phonenumber');
+            $table->string('type')->default('default');
             $table->rememberToken();
             $table->timestamps();
         });
