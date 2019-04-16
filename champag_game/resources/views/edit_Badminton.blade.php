@@ -165,6 +165,19 @@
             <option value="Envi">Envi</option>
           </select>
         </div>
+        <div class="form-row align-items-center">
+            <div class="col-md-auto"> 
+              <label><b><h4>ผล</h4></b></label>
+            </div>
+          <div class="col">
+            <label>{{$Badminton->team}}</label>
+            <input type="text" value="{{$Badminton->rbadmintons1}}" name="rbadmintons1" class="form-control">
+         </div>
+         <br>
+         <div class="col">
+           <label>{{$Badminton->pair}}</label>
+           <input type="text" value="{{$Badminton->rbadmintons2}}" name="rbadmintons2" class="form-control" >
+         </div>
       <div class="col-auto my-1">
         <button type="submit" class="btn btn-primary">ตกลง</button>
       </div>
@@ -172,17 +185,5 @@
   </form>
 
 
-
-<script>
-
-
-  function openForm() {
-    document.getElementById("myForm").style.display = "block";
-  }
-
-  function closeForm() {
-    document.getElementById("myForm").style.display = "none";
-  }
-  </script>
 
 @endsection

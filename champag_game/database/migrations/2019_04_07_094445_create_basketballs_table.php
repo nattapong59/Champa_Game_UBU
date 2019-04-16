@@ -22,6 +22,8 @@ class CreateBasketballsTable extends Migration
             $table->date('date');
             $table->time('time');
             $table->enum('category', array('M', 'W'));
+            $table->integer('rbasketballs1');
+            $table->integer('rbasketballs2');
             $table->timestamps();
         });
     }

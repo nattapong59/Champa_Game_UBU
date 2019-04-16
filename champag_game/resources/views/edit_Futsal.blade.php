@@ -165,6 +165,19 @@
             <option value="Envi">Envi</option>
           </select>
         </div>
+        <div class="form-row align-items-center">
+            <div class="col-md-auto"> 
+              <label><b><h4>ผล</h4></b></label>
+            </div>
+          <div class="col">
+            <label>{{$Futsal->team}}</label>
+            <input type="text" value="{{$Futsal->rfutsals1}}" name="rfutsals1" class="form-control">
+         </div>
+         <br>
+         <div class="col">
+           <label>{{$Futsal->pair}}</label>
+           <input type="text" value="{{$Futsal->rfutsals2}}" name="rfutsals2" class="form-control" >
+         </div>
       <div class="col-auto my-1">
         <button type="submit" class="btn btn-primary">ตกลง</button>
       </div>

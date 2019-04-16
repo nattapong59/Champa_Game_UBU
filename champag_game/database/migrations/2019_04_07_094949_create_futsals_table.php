@@ -22,6 +22,8 @@ class CreateFutsalsTable extends Migration
             $table->date('date');
             $table->time('time');
             $table->enum('category', array('M', 'W'));
+            $table->integer('rfutsals1');
+            $table->integer('rfutsals2');
             $table->timestamps();
         });
     }

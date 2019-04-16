@@ -22,6 +22,8 @@ class CreateVolleyballsTable extends Migration
             $table->date('date');
             $table->time('time');
             $table->enum('category', array('M', 'W'));
+            $table->integer('rvolleyballs1');
+            $table->integer('rvolleyballs2');
             $table->timestamps();
         });
     }

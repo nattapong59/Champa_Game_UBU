@@ -22,6 +22,8 @@ class CreateFootballsTable extends Migration
             $table->date('date');
             $table->time('time');
             $table->enum('category', array('M', 'W'));
+            $table->integer('rfootballs1');
+            $table->integer('rfootballs2');
             $table->timestamps();
         });
     }

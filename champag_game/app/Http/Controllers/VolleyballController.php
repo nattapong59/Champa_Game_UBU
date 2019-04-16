@@ -46,6 +46,8 @@ class VolleyballController extends Controller
         $new_Volleyball->around = $request['around'];
         $new_Volleyball->line = $request['line'];
         $new_Volleyball->time = $request['time'];
+        $new_Volleyball->rvolleyballs1 = 0;
+        $new_Volleyball->rvolleyballs2 = 0;
         $new_Volleyball->save();
         return redirect('addvolleyball');
     }
@@ -92,6 +94,8 @@ class VolleyballController extends Controller
         $Voll->around = $request['around'];
         $Voll->line = $request['line'];
         $Voll->time = $request['time'];
+        $Voll->rvolleyballs1 = $request['rvolleyballs1'];
+        $Voll->rvolleyballs2 = $request['rvolleyballs2'];
         $Voll->save();
         return redirect('addvolleyball');
     }

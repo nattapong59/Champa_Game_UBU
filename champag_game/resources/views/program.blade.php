@@ -2,89 +2,16 @@
 
 @section('content')
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<style>
-
-  body {font-family: Arial, Helvetica, sans-serif;}
-  * {box-sizing: border-box;}
-
-  /* Button used to open the contact form - fixed at the bottom of the page */
-  .open-button {
-    background-color: #555;
-    color: white;
-    padding: 16px 20px;
-    border: none;
-    cursor: pointer;
-    opacity: 0.8;
-    position: fixed;
-    bottom: 23px;
-    right: 28px;
-    width: 280px;
-  }
-
-  /* The popup form - hidden by default */
-  .form-popup {
-    display: none;
-    position: fixed;
-    bottom: 0;
-    right: 15px;
-    border: 3px solid #f1f1f1;
-    z-index: 9;
-  }
-
-  /* Add styles to the form container */
-  .form-container {
-    max-width: 300px;
-    padding: 10px;
-    background-color: white;
-  }
-
-  /* Full-width input fields */
-  .form-container input[type=text], .form-container input[type=password] {
-    width: 100%;
-    padding: 15px;
-    margin: 5px 0 22px 0;
-    border: none;
-    background: #f1f1f1;
-  }
-
-  /* When the inputs get focus, do something */
-  .form-container input[type=text]:focus, .form-container input[type=password]:focus {
-    background-color: #ddd;
-    outline: none;
-  }
-
-  /* Set a style for the submit/login button */
-  .form-container .btn {
-    background-color: #4CAF50;
-    color: white;
-    padding: 16px 20px;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-    margin-bottom:10px;
-    opacity: 0.8;
-  }
-
-  /* Add a red background color to the cancel button */
-  .form-container .cancel {
-    background-color: red;
-  }
-
-  /* Add some hover effects to buttons */
-  .form-container .btn:hover, .open-button:hover {
-    opacity: 1;
-  }
-  </style>
-
-
 <br>
 <br>
-<form class="container" action="/addvolleyball" method="POST">
-  @csrf
+
+  <form class="container">
+    @csrf
+    
   <div class="row justify-content-md-center">
       <div class="col-md-auto">
-          <label ><b>ตารางแข่งขันวอลเลย์บอล</b></label>
-        </div>
+        <label ><b>ตารางแข่งขันวอลเลย์บอล</b></label>
+      </div>
   </div>
   <div class="row">
       <div class="col-md-12">
@@ -95,9 +22,9 @@
                 <th>ลำดับ</th>
                 <th>วันที่</th>
                 <th>เวลา</th>
-                <th>ทีมที่1</th>
+                <th>ทีม</th>
                 <th>พบ</th>
-                <th>ทีมที่2</th>
+                <th>ทีม</th>
                 <th>ประเภท</th>
                 <th>สาย</th>
                 <th>รอบ</th>
@@ -116,25 +43,13 @@
                 <td>{{$Volleyball->category}}</td>
                 <td>{{$Volleyball->line}}</td>
                 <td>{{$Volleyball->around}}</td>
-                <td>
-                    <button type="button" class="btn btn-success" onclick="openForm()">สรุปผล</button>
-                    <div class="form-popup" id="myForm">
-                        <form action="" class="form-container">
-                          <h1>ผลการแข่ง</h1>
-                          <div class="col">
-                              <input type="text" class="form-control" placeholder="ทีม1">
-                            </div>
-                            <br>
-                            <div class="col">
-                              <input type="text" class="form-control" placeholder="ทีม2">
-                            </div>
-                          <button type="submit" class="btn">บันทึก</button>
-                          <button type="submit" class="btn">แก้ไข</button>
-                          <button type="button" class="btn cancel" onclick="closeForm()">กลับ</button>
-                        </form>
-                  </div></td>
+                <td>{{$Volleyball->rvolleyballs1}} : {{$Volleyball->rvolleyballs2}}
+                  <a class="btn btn-success" href="addvolleyball/{{$Volleyball->id}}/edit" >สรุปผล</a>
+                  </div>
+                      </div>
+                </td>
               </tr>
-              <tr>
+              
                   @endforeach
             </tbody>
           </table>
@@ -145,8 +60,9 @@
   <br>
   <br>
 
-  <form class="container" action="/addesport" method="POST">
-  @csrf
+  <form class="container" action="/porgram" method="POST">
+    @csrf
+    @method('PUT')
   <div class="row justify-content-md-center">
       <div class="col-md-auto">
           <label ><b>ตารางแข่งขันเกม e-sport</b></label>
@@ -157,18 +73,18 @@
         <div class="table-responsive">
           <table class="table table-bordered container">
             <thead class="thead-dark">
-              <tr>
-                <th>ลำดับ</th>
-                <th>วันที่</th>
-                <th>เวลา</th>
-                <th>ทีมที่1</th>
-                <th>พบ</th>
-                <th>ทีมที่2</th>
-                <th>ประเภท</th>
-                <th>สาย</th>
-                <th>รอบ</th>
-                <th>ผล</th>
-              </tr>
+                    <tr>
+                            <th>ลำดับ</th>
+                            <th>วันที่</th>
+                            <th>เวลา</th>
+                            <th>ทีม</th>
+                            <th>พบ</th>
+                            <th>ทีม</th>
+                            <th>ประเภท</th>
+                            <th>สาย</th>
+                            <th>รอบ</th>
+                            <th>ผล</th>
+                          </tr>
             </thead>
             <tbody>
                 @foreach($post_esport as $esport)
@@ -182,23 +98,9 @@
                   <td>{{$esport->category}}</td>
                   <td>{{$esport->line}}</td>
                   <td>{{$esport->around}}</td>
-                <td>
-                    <button type="button" class="btn btn-success" onclick="openForm()">สรุปผล</button>
-                    <div class="form-popup" id="myForm">
-                        <form action="" class="form-container">
-                          <h1>ผลการแข่ง</h1>
-                          <div class="col">
-                              <input type="text" class="form-control" placeholder="ทีม1">
-                            </div>
-                            <br>
-                            <div class="col">
-                              <input type="text" class="form-control" placeholder="ทีม2">
-                            </div>
-                          <button type="submit" class="btn">บันทึก</button>
-                          <button type="submit" class="btn">แก้ไข</button>
-                          <button type="button" class="btn cancel" onclick="closeForm()">กลับ</button>
-                        </form>
-                  </div></td>
+                  <td>{{$esport->resports1}} : {{$esport->resports2}}
+                    <a class="btn btn-success" href="addesport/{{$esport->id}}/edit" >สรุปผล</a>
+                  </td>
               </tr>
               <tr>
                   @endforeach
@@ -210,8 +112,9 @@
   </form>
   <br>
   <br>
-  <form class="container" action="/addfootball" method="POST">
+  <form class="container" action="/porgram" method="POST">
     @csrf
+    @method('PUT')
     <div class="row justify-content-md-center">
         <div class="col-md-auto">
             <label ><b>ตารางแข่งขันฟุตบอล</b></label>
@@ -222,18 +125,18 @@
           <div class="table-responsive">
             <table class="table table-bordered container">
               <thead class="thead-dark">
-                <tr>
-                  <th>ลำดับ</th>
-                  <th>วันที่</th>
-                  <th>เวลา</th>
-                  <th>ทีมที่1</th>
-                  <th>พบ</th>
-                  <th>ทีมที่2</th>
-                  <th>ประเภท</th>
-                  <th>สาย</th>
-                  <th>รอบ</th>
-                  <th>ผล</th>
-                </tr>
+                    <tr>
+                            <th>ลำดับ</th>
+                            <th>วันที่</th>
+                            <th>เวลา</th>
+                            <th>ทีม</th>
+                            <th>พบ</th>
+                            <th>ทีม</th>
+                            <th>ประเภท</th>
+                            <th>สาย</th>
+                            <th>รอบ</th>
+                            <th>ผล</th>
+                          </tr>
               </thead>
               <tbody>
                   @foreach($post_football as $football)
@@ -250,23 +153,10 @@
                     <td>{{$football->category}}</td>
                     <td>{{$football->line}}</td>
                     <td>{{$football->around}}</td>
-                  <td>
-                      <button type="button" class="btn btn-success" onclick="openForm()">สรุปผล</button>
-                      <div class="form-popup" id="myForm">
-                          <form action="" class="form-container">
-                            <h1>ผลการแข่ง</h1>
-                            <div class="col">
-                                <input type="text" class="form-control" placeholder="ทีม1">
-                              </div>
-                              <br>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="ทีม2">
-                              </div>
-                            <button type="submit" class="btn">บันทึก</button>
-                            <button type="submit" class="btn">แก้ไข</button>
-                            <button type="button" class="btn cancel" onclick="closeForm()">กลับ</button>
-                          </form>
-                    </div></td>
+                    <td>
+                    {{$football->rfootballs1}} : {{$football->rfootballs2}}
+                      <a class="btn btn-success" href="addfootball/{{$football->id}}/edit" >สรุปผล</a>
+                    </td>
                 </tr>
                 <tr>
                     @endforeach
@@ -278,8 +168,9 @@
     </form>
     <br>
     <br>
-    <form class="container" action="/addfutsal" method="POST">
+    <form class="container" action="/porgram" method="POST">
       @csrf
+      @method('PUT')
       <div class="row justify-content-md-center">
           <div class="col-md-auto">
               <label ><b>ตารางแข่งขันฟุตซอล</b></label>
@@ -290,18 +181,18 @@
             <div class="table-responsive">
               <table class="table table-bordered container">
                 <thead class="thead-dark">
-                  <tr>
-                    <th>ลำดับ</th>
-                    <th>วันที่</th>
-                    <th>เวลา</th>
-                    <th>ทีมที่1</th>
-                    <th>พบ</th>
-                    <th>ทีมที่2</th>
-                    <th>ประเภท</th>
-                    <th>สาย</th>
-                    <th>รอบ</th>
-                    <th>ผล</th>
-                  </tr>
+                        <tr>
+                                <th>ลำดับ</th>
+                                <th>วันที่</th>
+                                <th>เวลา</th>
+                                <th>ทีม</th>
+                                <th>พบ</th>
+                                <th>ทีม</th>
+                                <th>ประเภท</th>
+                                <th>สาย</th>
+                                <th>รอบ</th>
+                                <th>ผล</th>
+                              </tr>
                 </thead>
                 <tbody>
                     @foreach($post_Futsal as $Futsal)
@@ -318,23 +209,10 @@
                       <td>{{$Futsal->category}}</td>
                       <td>{{$Futsal->line}}</td>
                       <td>{{$Futsal->around}}</td>
-                    <td>
-                        <button type="button" class="btn btn-success" onclick="openForm()">สรุปผล</button>
-                        <div class="form-popup" id="myForm">
-                            <form action="" class="form-container">
-                              <h1>ผลการแข่ง</h1>
-                              <div class="col">
-                                  <input type="text" class="form-control" placeholder="ทีม1">
-                                </div>
-                                <br>
-                                <div class="col">
-                                  <input type="text" class="form-control" placeholder="ทีม2">
-                                </div>
-                              <button type="submit" class="btn">บันทึก</button>
-                              <button type="submit" class="btn">แก้ไข</button>
-                              <button type="button" class="btn cancel" onclick="closeForm()">กลับ</button>
-                            </form>
-                      </div></td>
+                      <td>
+                          {{$Futsal->rfutsals1}} : {{$Futsal->rfutsals2}}
+                          <a class="btn btn-success" href="addfootball/{{$Futsal->id}}/edit" >สรุปผล</a>
+                      </td>
                   </tr>
                   <tr>
                       @endforeach
@@ -346,8 +224,9 @@
       </form>
       <br>
       <br>
-      <form class="container" action="addbasketball" method="POST">
+      <form class="container" action="/porgram" method="POST">
         @csrf
+        @method('PUT')
         <div class="row justify-content-md-center">
             <div class="col-md-auto">
                 <label ><b>ตารางแข่งขันบาสเกสบอล</b></label>
@@ -358,18 +237,18 @@
               <div class="table-responsive">
                 <table class="table table-bordered container">
                   <thead class="thead-dark">
-                    <tr>
-                      <th>ลำดับ</th>
-                      <th>วันที่</th>
-                      <th>เวลา</th>
-                      <th>ทีมที่1</th>
-                      <th>พบ</th>
-                      <th>ทีมที่2</th>
-                      <th>ประเภท</th>
-                      <th>สาย</th>
-                      <th>รอบ</th>
-                      <th>ผล</th>
-                    </tr>
+                        <tr>
+                                <th>ลำดับ</th>
+                                <th>วันที่</th>
+                                <th>เวลา</th>
+                                <th>ทีม</th>
+                                <th>พบ</th>
+                                <th>ทีม</th>
+                                <th>ประเภท</th>
+                                <th>สาย</th>
+                                <th>รอบ</th>
+                                <th>ผล</th>
+                              </tr>
                   </thead>
                   <tbody>
                       @foreach($post_Basketball as $Basketball)
@@ -380,29 +259,15 @@
             <td>{{$Basketball->time}}</td>
             <td>{{$Basketball->date}}</td>
             <td>{{$Basketball->team}}</td>
-
             <td>VS</td>
             <td>{{$Basketball->pair}}</td>
             <td>{{$Basketball->category}}</td>
             <td>{{$Basketball->line}}</td>
             <td>{{$Basketball->around}}</td>
-                      <td>
-                          <button type="button" class="btn btn-success" onclick="openForm()">สรุปผล</button>
-                          <div class="form-popup" id="myForm">
-                              <form action="" class="form-container">
-                                <h1>ผลการแข่ง</h1>
-                                <div class="col">
-                                    <input type="text" class="form-control" placeholder="ทีม1">
-                                  </div>
-                                  <br>
-                                  <div class="col">
-                                    <input type="text" class="form-control" placeholder="ทีม2">
-                                  </div>
-                                <button type="submit" class="btn">บันทึก</button>
-                                <button type="submit" class="btn">แก้ไข</button>
-                                <button type="button" class="btn cancel" onclick="closeForm()">กลับ</button>
-                              </form>
-                        </div></td>
+            <td>
+                {{$Basketball->rbasketballs1}} : {{$Basketball->rbasketballs2}}
+                <a class="btn btn-success" href="addfootball/{{$Basketball->id}}/edit" >สรุปผล</a>
+            </td>
                     </tr>
                     <tr>
                         @endforeach
@@ -414,8 +279,9 @@
         </form>
         <br>
         <br>
-        <form class="container" action="/addbadminton" method="POST">
-            @csrf
+        <form class="container" action="/porgram" method="POST">
+          @csrf
+          @method('PUT')
             <div class="row justify-content-md-center">
                 <div class="col-md-auto">
                     <label ><b>ตารางแข่งขันแบดมินตัน</b></label>
@@ -426,18 +292,18 @@
                   <div class="table-responsive">
                     <table class="table table-bordered container">
                       <thead class="thead-dark">
-                        <tr>
-                          <th>ลำดับ</th>
-                          <th>วันที่</th>
-                          <th>เวลา</th>
-                          <th>ทีมที่1</th>
-                          <th>พบ</th>
-                          <th>ทีมที่2</th>
-                          <th>ประเภท</th>
-                          <th>สาย</th>
-                          <th>รอบ</th>
-                          <th>ผล</th>
-                        </tr>
+                            <tr>
+                                    <th>ลำดับ</th>
+                                    <th>วันที่</th>
+                                    <th>เวลา</th>
+                                    <th>ทีม</th>
+                                    <th>พบ</th>
+                                    <th>ทีม</th>
+                                    <th>ประเภท</th>
+                                    <th>สาย</th>
+                                    <th>รอบ</th>
+                                    <th>ผล</th>
+                                  </tr>
                       </thead>
                       <tbody>
                           @foreach($post_Badminton as $Badminton)
@@ -448,30 +314,15 @@
                             <td>{{$Badminton->time}}</td>
                             <td>{{$Badminton->date}}</td>
                             <td>{{$Badminton->team}}</td>
-
                             <td>VS</td>
                             <td>{{$Badminton->pair}}</td>
                             <td>{{$Badminton->category}}</td>
                             <td>{{$Badminton->line}}</td>
                             <td>{{$Badminton->around}}</td>
                           <td>
-                              <button type="button" class="btn btn-success" onclick="openForm()">สรุปผล</button>
-                              <div class="form-popup" id="myForm">
-                                  <form action="" class="form-container">
-                                    <h1>ผลการแข่ง</h1>
-                                    <div class="col">
-                                        <input type="text" class="form-control" placeholder="ทีม1">
-                                      </div>
-                                      <br>
-                                      <div class="col">
-                                        <input type="text" class="form-control" placeholder="ทีม2">
-                                      </div>
-                                    <button type="submit" class="btn">บันทึก</button>
-                                    <button type="submit" class="btn">แก้ไข</button>
-                                    <button type="button" class="btn cancel" onclick="closeForm()">กลับ</button>
-                                  </form>
-                              </div>
-                            </td>
+                              {{$Badminton->rbadmintons1}} : {{$Badminton->rbadmintons2}}
+                              <a class="btn btn-success" href="addfootball/{{$Badminton->id}}/edit" >สรุปผล</a>
+                          </td>
                         </tr>
                         <tr>
                             @endforeach
@@ -486,15 +337,11 @@
 
 
 
-<script>
 
-  function openForm() {
-    document.getElementById("myForm").style.display = "block";
-  }
 
-  function closeForm() {
-    document.getElementById("myForm").style.display = "none";
-  }
-  </script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
 
 @endsection

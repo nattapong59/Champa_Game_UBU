@@ -22,6 +22,8 @@ class CreateEsportsTable extends Migration
             $table->date('date');
             $table->time('time');
             $table->enum('category', array('M', 'W'));
+            $table->integer('resports1');
+            $table->integer('resports2');
             $table->timestamps();
         });
     }

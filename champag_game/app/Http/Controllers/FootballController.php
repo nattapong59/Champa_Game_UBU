@@ -51,6 +51,8 @@ class FootballController extends Controller
         $new_Football->around = $request['around'];
         $new_Football->line = $request['line'];
         $new_Football->time = $request['time'];
+        $new_Football->rfootballs1 = 0;
+        $new_Football->rfootballs2 = 0;
         $new_Football->save();
         return redirect('addfootball');
     }
@@ -98,6 +100,8 @@ class FootballController extends Controller
         $Football->around = $request['around'];
         $Football->line = $request['line'];
         $Football->time = $request['time'];
+        $Football->rfootballs1 = $request['rfootballs1'];
+        $Football->rfootballs2 = $request['rfootballs2'];
         $Football->save();
         return redirect('addfootball');
     }

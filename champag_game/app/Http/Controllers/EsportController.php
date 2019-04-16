@@ -46,6 +46,8 @@ class EsportController extends Controller
         $new_Esport->around = $request['around'];
         $new_Esport->line = $request['line'];
         $new_Esport->time = $request['time'];
+        $new_Esport->resports1 = 0;
+        $new_Esport->resports2 = 0;
         $new_Esport->save();
         return redirect('addesport');
     }
@@ -93,6 +95,8 @@ class EsportController extends Controller
         $Esport->around = $request['around'];
         $Esport->line = $request['line'];
         $Esport->time = $request['time'];
+        $Esport->resports1 = $request['resports1'];
+        $Esport->resports2 = $request['resports2'];
         $Esport->save();
         return redirect('addesport');
     }

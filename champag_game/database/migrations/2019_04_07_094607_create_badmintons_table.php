@@ -22,6 +22,8 @@ class CreateBadmintonsTable extends Migration
             $table->date('date');
             $table->time('time');
             $table->enum('category', array('M', 'W'));
+            $table->integer('rbadmintons1');
+            $table->integer('rbadmintons2');
             $table->timestamps();
         });
     }

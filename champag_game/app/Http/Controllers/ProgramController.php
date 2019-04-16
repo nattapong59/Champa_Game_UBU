@@ -56,9 +56,9 @@ class ProgramController extends Controller
      * @param  \App\Program  $program
      * @return \Illuminate\Http\Response
      */
-    public function show(Program $program)
+    public function show( $id)
     {
-        //
+        
     }
 
     /**
@@ -67,9 +67,17 @@ class ProgramController extends Controller
      * @param  \App\Program  $program
      * @return \Illuminate\Http\Response
      */
-    public function edit(Program $program)
+    public function edit( $id)
     {
-        //
+        $Badminton = Badminton::find($id);
+        $Basketball = Basketball::find($id);
+        $esport = esport::find($id);
+        $football = football::find($id);
+        $Futsal = Futsal::find($id);
+        $Volleyballs = Volleyballs::find($id);
+
+        return view('program',['post_Badminton'=>$Badminton,'post_Basketball'=>$Basketball,'post_esport'=>$esport,'post_football'=>$football,'post_Futsal'=>$Futsal,'post_Volleyball'=>$Volleyball]);
+ 
     }
 
     /**
@@ -79,9 +87,9 @@ class ProgramController extends Controller
      * @param  \App\Program  $program
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Program $program)
+    public function update(Request $request,  $id)
     {
-        //
+        
     }
 
     /**

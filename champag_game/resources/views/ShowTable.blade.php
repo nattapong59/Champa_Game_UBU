@@ -17,11 +17,12 @@
       <table class="table table-bordered container">
         <thead class="thead-dark">
           <tr>
+            <th>ลำดับ</th>
             <th>วันที่</th>
             <th>เวลา</th>
-            <th>ทีมที่1</th>
+            <th>ทีม</th>
             <th>พบ</th>
-            <th>ทีมที่2</th>
+            <th>ทีม</th>
             <th>ประเภท</th>
             <th>สาย</th>
             <th>รอบ</th>
@@ -37,12 +38,12 @@
             <td>{{$Volleyball->time}}</td>
             <td>{{$Volleyball->date}}</td>
             <td>{{$Volleyball->team}}</td>
-
             <td>VS</td>
             <td>{{$Volleyball->pair}}</td>
             <td>{{$Volleyball->category}}</td>
             <td>{{$Volleyball->line}}</td>
             <td>{{$Volleyball->around}}</td>
+            <td>{{$Volleyball->rvolleyballs1}} : {{$Volleyball->rvolleyballs2}}</td>
           </tr>
           <tr>
 
@@ -71,15 +72,16 @@
       <table class="table table-bordered container">
         <thead class="thead-dark">
           <tr>
-            <th>วันที่</th>
-            <th>เวลา</th>
-            <th>ทีมที่1</th>
-            <th>พบ</th>
-            <th>ทีมที่2</th>
-            <th>ประเภท</th>
-            <th>สาย</th>
-            <th>รอบ</th>
-            <th>ผล</th>
+              <th>ลำดับ</th>
+              <th>วันที่</th>
+              <th>เวลา</th>
+              <th>ทีม</th>
+              <th>พบ</th>
+              <th>ทีม</th>
+              <th>ประเภท</th>
+              <th>สาย</th>
+              <th>รอบ</th>
+              <th>ผล</th>
           </tr>
         </thead>
         <tbody>
@@ -96,6 +98,7 @@
             <td>{{$esport->category}}</td>
             <td>{{$esport->line}}</td>
             <td>{{$esport->around}}</td>
+            <td>{{$esport->resports1}} : {{$esport->resports2}}</td>
           </tr>
           <tr>
 
@@ -125,15 +128,16 @@
       <table class="table table-bordered container">
         <thead class="thead-dark">
           <tr>
-            <th>วันที่</th>
-            <th>เวลา</th>
-            <th>ทีมที่1</th>
-            <th>พบ</th>
-            <th>ทีมที่2</th>
-            <th>ประเภท</th>
-            <th>สาย</th>
-            <th>รอบ</th>
-            <th>ผล</th>
+              <th>ลำดับ</th>
+              <th>วันที่</th>
+              <th>เวลา</th>
+              <th>ทีม</th>
+              <th>พบ</th>
+              <th>ทีม</th>
+              <th>ประเภท</th>
+              <th>สาย</th>
+              <th>รอบ</th>
+              <th>ผล</th>
           </tr>
         </thead>
         <tbody>
@@ -150,6 +154,7 @@
             <td>{{$football->category}}</td>
             <td>{{$football->line}}</td>
             <td>{{$football->around}}</td>
+            <td> {{$football->rfootballs1}} : {{$football->rfootballs2}}</td>
 
           </tr>
           <tr>
@@ -181,15 +186,16 @@
       <table class="table table-bordered container">
         <thead class="thead-dark">
           <tr>
-            <th>วันที่</th>
-            <th>เวลา</th>
-            <th>ทีมที่1</th>
-            <th>พบ</th>
-            <th>ทีมที่2</th>
-            <th>ประเภท</th>
-            <th>สาย</th>
-            <th>รอบ</th>
-            <th>ผล</th>
+              <th>ลำดับ</th>
+              <th>วันที่</th>
+              <th>เวลา</th>
+              <th>ทีม</th>
+              <th>พบ</th>
+              <th>ทีม</th>
+              <th>ประเภท</th>
+              <th>สาย</th>
+              <th>รอบ</th>
+              <th>ผล</th>
           </tr>
         </thead>
         <tbody>
@@ -206,6 +212,7 @@
             <td>{{$Futsal->category}}</td>
             <td>{{$Futsal->line}}</td>
             <td>{{$Futsal->around}}</td>
+            <td>{{$Futsal->rfutsals1}} : {{$Futsal->rfutsals2}}</td>
 
           </tr>
           <tr>
@@ -235,15 +242,16 @@
       <table class="table table-bordered container">
         <thead class="thead-dark">
           <tr>
-            <th>วันที่</th>
-            <th>เวลา</th>
-            <th>ทีมที่1</th>
-            <th>พบ</th>
-            <th>ทีมที่2</th>
-            <th>ประเภท</th>
-            <th>สาย</th>
-            <th>รอบ</th>
-            <th>ผล</th>
+              <th>ลำดับ</th>
+              <th>วันที่</th>
+              <th>เวลา</th>
+              <th>ทีม</th>
+              <th>พบ</th>
+              <th>ทีม</th>
+              <th>ประเภท</th>
+              <th>สาย</th>
+              <th>รอบ</th>
+              <th>ผล</th>
           </tr>
         </thead>
         <tbody>
@@ -260,6 +268,7 @@
             <td>{{$Basketball->category}}</td>
             <td>{{$Basketball->line}}</td>
             <td>{{$Basketball->around}}</td>
+            <td>{{$Basketball->rbasketballs1}} : {{$Basketball->rbasketballs2}}</td>
 
           </tr>
           <tr>
@@ -289,15 +298,16 @@
       <table class="table table-bordered container">
         <thead class="thead-dark">
           <tr>
-            <th>วันที่</th>
-            <th>เวลา</th>
-            <th>ทีมที่1</th>
-            <th>พบ</th>
-            <th>ทีมที่2</th>
-            <th>ประเภท</th>
-            <th>สาย</th>
-            <th>รอบ</th>
-            <th>ผล</th>
+              <th>ลำดับ</th>
+              <th>วันที่</th>
+              <th>เวลา</th>
+              <th>ทีม</th>
+              <th>พบ</th>
+              <th>ทีม</th>
+              <th>ประเภท</th>
+              <th>สาย</th>
+              <th>รอบ</th>
+              <th>ผล</th>
           </tr>
         </thead>
         <tbody>
@@ -314,6 +324,7 @@
             <td>{{$Badminton->category}}</td>
             <td>{{$Badminton->line}}</td>
             <td>{{$Badminton->around}}</td>
+            <td>{{$Badminton->rbadmintons1}} : {{$Badminton->rbadmintons2}}</td>
 
           </tr>
           <tr>

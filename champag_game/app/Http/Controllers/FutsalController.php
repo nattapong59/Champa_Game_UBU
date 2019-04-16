@@ -46,6 +46,8 @@ class FutsalController extends Controller
         $new_Futsal->around = $request['around'];
         $new_Futsal->line = $request['line'];
         $new_Futsal->time = $request['time'];
+        $new_Futsal->rfutsals1 = 0;
+        $new_Futsal->rfutsals2 = 0;
         $new_Futsal->save();
         return redirect('addfutsal');
     }
@@ -93,6 +95,8 @@ class FutsalController extends Controller
         $Futsal->around = $request['around'];
         $Futsal->line = $request['line'];
         $Futsal->time = $request['time'];
+        $Futsal->rfutsals1 = $request['rfutsals1'];
+        $Futsal->rfutsals2 = $request['rfutsals2'];
         $Futsal->save();
         return redirect('addfutsal');
     }
