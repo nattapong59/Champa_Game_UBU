@@ -1,4 +1,4 @@
-<?php
+  <?php
 
 /*
 |--------------------------------------------------------------------------
@@ -15,9 +15,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/test', function(){
-  return view('welcome');
-});
+Route::get('/add-player', function(){
+  return view('add_player');
+})->middleware('auth');
 
 Route::get('/user', function(){
   return view('user_manager');
@@ -56,17 +56,11 @@ Route::get('/admin', 'AdminController@admin')
 
 
 Route::resource('/addfootball', 'FootballController');
-
 Route::resource('/addbasketball', 'BasketballController');
-
 Route::resource('/addesport', 'EsportController');
-
 Route::resource('/addfutsal', 'FutsalController');
-
 Route::resource('/addvolleyball', 'VolleyballController');
-
 Route::resource('/addbadminton', 'BadmintonController');
-
 Route::resource('/program', 'ProgramController');
-
 Route::resource('/ShowTable', 'ShowTableController');
+Route::resource('/players','PlayerController');
