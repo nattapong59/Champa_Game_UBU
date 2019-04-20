@@ -75,6 +75,7 @@ class VolleyballController extends Controller
     {
         $Volleyball = Volleyball::find($id);
         return view('edit_Volleyball', ['Volleyball'=>$Volleyball]);
+
     }
 
     /**
@@ -99,7 +100,6 @@ class VolleyballController extends Controller
         $Voll->save();
         return redirect('addvolleyball');
     }
-
     /**
      * Remove the specified resource from storage.
      *

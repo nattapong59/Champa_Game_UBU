@@ -55,6 +55,7 @@ Route::get('/admin', 'AdminController@admin')
     ->name('admin');
 
 
+
 Route::resource('/addfootball', 'FootballController');
 
 Route::resource('/addbasketball', 'BasketballController');

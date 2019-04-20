@@ -2,7 +2,6 @@
 
 @section('content')
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
 <form class="container" action="/addvolleyball/{{$Volleyball->id}}" method="POST">
     @csrf
     @method('PUT')
@@ -105,18 +104,9 @@
     </div>
   </form>
 
-
-
 <script>
-
-
-  function openForm() {
-    document.getElementById("myForm").style.display = "block";
-  }
-
-  function closeForm() {
-    document.getElementById("myForm").style.display = "none";
-  }
-  </script>
-
+$(function(){
+  
+});
+</script>
 @endsection
