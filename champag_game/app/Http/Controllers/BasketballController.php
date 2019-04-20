@@ -61,7 +61,7 @@ class BasketballController extends Controller
         $Basketball = Basketball::find($id);
 
         return $Basketball;
-     
+
     }
 
     /**

@@ -18,6 +18,11 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <style media="screen">
+    .center {
+      text-align: center
+    }
+    </style>
 </head>
 <body>
     <div id="app">
@@ -47,7 +52,7 @@
                       </ul>
                       <ul class="navbar-nav mr-2">
                         <li class="nav-item">
-                          <a class="nav-link" href="{{ url('/ShowUser') }}">รายชื่อนักกีฬา</a>
+                          <a class="nav-link" href="{{ url('/players?type_sport=&branch=&branch=&category=') }}">รายชื่อนักกีฬา</a>
                         </li>
                     </ul>
                     @guest
@@ -68,11 +73,20 @@
                           </li>
                         </ul>
                         @else
-                          <ul class="navbar-nav mr-2">
-                            <li class="nav-item">
-                              <a class="nav-link" href="{{ url('/') }}">ลงสมัครแข่งขัน</a>
-                            </li>
-                          </ul>
+                        <ul class="navbar-nav mr-2">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                              aria-haspopup="true" aria-expanded="false">ลงสมัครแข่งขัน</a>
+                            <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                              <a class="dropdown-item" href="{{ url('/add-player?type=ฟุตบอล') }}">ลงสมัครแข่งขันกีฬาฟุตบอล</a>
+                              <a class="dropdown-item" href="{{ url('/add-player?type=บาสเกสบอล') }}">ลงสมัครแข่งขันกีฬาบาสเกสบอล</a>
+                              <a class="dropdown-item" href="{{ url('/add-player?type=วอลเลย์บอล') }}">ลงสมัครแข่งขันกีฬาวอลเลย์บอล</a>
+                              <a class="dropdown-item" href="{{ url('/add-player?type=เเบดมินตัน') }}">ลงสมัครแข่งขันกีฬาเเบดมินตัน</a>
+                              <a class="dropdown-item" href="{{ url('/add-player?type=e-sport') }}">ลงสมัครแข่งขันกีฬา e-sport</a>
+                              <a class="dropdown-item" href="{{ url('/add-player?type=ฟุตซอล') }}">ลงสมัครแข่งขันกีฬาฟุตซอล</a>
+                            </div>
+                          </li>
+                        </ul>
                         @endif
                     @endguest
 
