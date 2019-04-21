@@ -71,8 +71,7 @@
                         </nav>
                     </div>
 
-<<<<<<< HEAD
-=======
+
                       <ul class="navbar-nav mr-2">
                         <li>
                           <a class="nav-link" href="{{ url('/') }}">หน้าแรก</a>
@@ -127,7 +126,7 @@
                         </ul>
                         @endif
                     @endguest
->>>>>>> e23094c787e18cc4f75c492b5b2b0b66eba32089
+
 
                     <div class="ec-right-section">
                         <nav class="ec-navigation">
