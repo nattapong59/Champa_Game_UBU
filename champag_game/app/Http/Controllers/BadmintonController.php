@@ -44,8 +44,8 @@ class BadmintonController extends Controller
         $new_Badminton->around = $request['around'];
         $new_Badminton->line = $request['line'];
         $new_Badminton->time = $request['time'];
-        $new_Badminton->results1 = 0;
-        $new_Badminton->results2 = 0;
+        $new_Badminton->rbadmintons1 = 0;
+        $new_Badminton->rbadmintons2 = 0;
         $new_Badminton->save();
         return redirect('addbadminton');
     }
@@ -93,6 +93,8 @@ class BadmintonController extends Controller
         $Badminton->around = $request['around'];
         $Badminton->line = $request['line'];
         $Badminton->time = $request['time'];
+        $Badminton->rbadmintons1 = $request['rbadmintons1'];
+        $Badminton->rbadmintons2 = $request['rbadmintons2'];
         $Badminton->save();
         return redirect('addbadminton');
     }

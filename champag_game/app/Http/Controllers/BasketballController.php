@@ -44,8 +44,8 @@ class BasketballController extends Controller
         $new_Basketball->around = $request['around'];
         $new_Basketball->line = $request['line'];
         $new_Basketball->time = $request['time'];
-        $new_Basketball->results1 = 0;
-        $new_Basketball->results2 = 0;
+        $new_Basketball->rbasketballs1 = 0;
+        $new_Basketball->rbasketballs2 = 0;
         $new_Basketball->save();
         return redirect('addbasketball');
     }
@@ -93,6 +93,8 @@ class BasketballController extends Controller
         $Basketball->around = $request['around'];
         $Basketball->line = $request['line'];
         $Basketball->time = $request['time'];
+        $Basketball->rbasketballs1 = $request['rbasketballs1'];
+        $Basketball->rbasketballs2 = $request['rbasketballs2'];
         $Basketball->save();
         return redirect('addbasketball');
     }

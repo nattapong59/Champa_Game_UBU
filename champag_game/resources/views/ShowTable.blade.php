@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <form class="container" action="/addvolleyball" method="POST">
+<form class="container" action="/addvolleyball" method="POST">
   @csrf
 <div class="row justify-content-md-center">
         <div class="col-md-auto">
@@ -30,11 +30,13 @@
           </tr>
         </thead>
         <tbody>
+            <?php $indexvlb=1;?>
             @foreach($post_Volleyball as $Volleyball)
+            
           <tr>
 
-
-            <th>{{$Volleyball->id}}</th>
+            
+            <th><?=$indexvlb++?></th>
             <td>{{$Volleyball->time}}</td>
             <td>{{$Volleyball->date}}</td>
             <td>{{$Volleyball->team}}</td>
@@ -56,7 +58,7 @@
 </form>
 
 <br>
-    <br>
+    
     <form class="container" action="/addesport" method="POST">
   @csrf
 <div class="row justify-content-md-center">
@@ -85,11 +87,12 @@
           </tr>
         </thead>
         <tbody>
+          <?php $indexesp=1?>
         @foreach($post_esport as $esport)
           <tr>
 
 
-          <th>{{$esport->id}}</th>
+            <th><?=$indexesp++?></th>
             <td>{{$esport->time}}</td>
             <td>{{$esport->date}}</td>
             <td>{{$esport->team}}</td>
@@ -111,7 +114,7 @@
 </form>
 
 <br>
-<br>
+
 
 <form class="container" action="/addfootball" method="POST">
 
@@ -141,11 +144,12 @@
           </tr>
         </thead>
         <tbody>
+          <?php $indexfbl=1 ?>
         @foreach($post_football as $football)
           <tr>
 
 
-            <th>{{$football->id}}</th>
+            <th><?=$indexfbl++?></th>
             <td>{{$football->time}}</td>
             <td>{{$football->date}}</td>
             <td>{{$football->team}}</td>
@@ -168,7 +172,7 @@
 </form>
 
 <br>
-<br>
+
 
 
 <form class="container" action="/addfutsal" method="POST">
@@ -199,11 +203,12 @@
           </tr>
         </thead>
         <tbody>
+          <?php $indexfts=1?>
         @foreach($post_Futsal as $Futsal)
           <tr>
 
 
-            <th>{{$Futsal->id}}</th>
+            <th><?=$indexfts++?></th>
             <td>{{$Futsal->time}}</td>
             <td>{{$Futsal->date}}</td>
             <td>{{$Futsal->team}}</td>
@@ -225,7 +230,7 @@
 </div>
 </form>
 <br>
-<br>
+
 
 <form class="container" action="/addbasketball" method="POST">
 
@@ -255,11 +260,12 @@
           </tr>
         </thead>
         <tbody>
+          <?php $indexbkb=1?>
         @foreach($post_Basketball as $Basketball)
           <tr>
 
 
-            <th>{{$Basketball->id}}</th>
+            <th><?=$indexbkb++?></th>
             <td>{{$Basketball->time}}</td>
             <td>{{$Basketball->date}}</td>
             <td>{{$Basketball->team}}</td>
@@ -281,7 +287,7 @@
 </div>
 </form>
 <br>
-<br>
+
 
 <form class="container" action="/addbadminton" method="POST">
 
@@ -311,11 +317,12 @@
           </tr>
         </thead>
         <tbody>
+          <?php $indexbnt=1?>
         @foreach($post_Badminton as $Badminton)
           <tr>
 
-
-            <th>{{$Badminton->id}}</th>
+            
+            <th><?=$indexbnt++?></th>
             <td>{{$Badminton->time}}</td>
             <td>{{$Badminton->date}}</td>
             <td>{{$Badminton->team}}</td>
@@ -327,7 +334,6 @@
             <td>{{$Badminton->rbadmintons1}} : {{$Badminton->rbadmintons2}}</td>
 
           </tr>
-          <tr>
 
               @endforeach
         </tbody>
