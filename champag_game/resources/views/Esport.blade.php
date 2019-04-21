@@ -193,12 +193,12 @@
           </tr>
         </thead>
         <tbody>
-          <?php$index=1?>
+          <?php $indexes=1?>
             @foreach($post_esport as $esport)
           <tr>
 
 
-            <th><?=$index++?></th>
+            <th><?= $indexes++ ?></th>
             <td>{{$esport->time}}</td>
             <td>{{$esport->date}}</td>
             <td>{{$esport->team}}</td>

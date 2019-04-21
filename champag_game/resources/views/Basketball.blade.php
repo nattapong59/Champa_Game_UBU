@@ -193,12 +193,10 @@
           </tr>
         </thead>
         <tbody>
-          <?php$index=1?>
+          <?php $indexbkb=1?>
             @foreach($post_Basketball as $Basketball)
           <tr>
-
-
-            <th><?=$index++?></th>
+            <th><?= $indexbkb++?></th>
             <td>{{$Basketball->time}}</td>
             <td>{{$Basketball->date}}</td>
             <td>{{$Basketball->team}}</td>

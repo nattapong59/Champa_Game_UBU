@@ -108,7 +108,7 @@
           <tr>
 
 
-            <th>{<?=$index++?></th>
+            <th><?=$index++?></th>
             <td>{{$Badminton->time}}</td>
             <td>{{$Badminton->date}}</td>
             <td>{{$Badminton->team}}</td>
