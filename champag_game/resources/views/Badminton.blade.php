@@ -3,6 +3,7 @@
 @section('content')
 <form class="container" action="/addbadminton" method="POST">
   @csrf
+ 
     <div class="row justify-content-md-center">
         <div class="col-md-auto">
             <label ><b>ตารางแข่งขันแบดมินตัน</b></label>
@@ -78,6 +79,7 @@
       
       </script>
     </div>
+ 
   </form>
   <br>
   <br>
