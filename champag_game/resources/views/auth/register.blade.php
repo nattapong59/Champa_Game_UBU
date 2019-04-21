@@ -77,7 +77,7 @@
                             </div>
 
                             <div class="col-md-2">
-                            <select class="form-control{{ $errors->has('year') ? ' is-invalid' : '' }}" id="year"  name="year" class="form-control">
+                            <select class="form-control{{ $errors->has('year') ? ' is-invalid' : '' }}"  name="year" class="form-control">
                                 <option selected>--</option>
                                 <option value="1"  >1</option>
                                 <option value="2"  >2</option>

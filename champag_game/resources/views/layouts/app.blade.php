@@ -70,12 +70,7 @@
                         </nav>
                     </div>
 
-<<<<<<< HEAD
-=======
 
-
-
->>>>>>> 183346b8e5d87a8a797d7beea5da99a8d8bcab51
                     <div class="ec-right-section">
                         <nav class="ec-navigation">
                           <ul>
