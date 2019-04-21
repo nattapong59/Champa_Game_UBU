@@ -1,63 +1,48 @@
 @extends('layouts.app')
 
 @section('content')
+<div class="ec-mainbanner">
+    <div class="flexslider">
+
+    <div class="flex-viewport" style="overflow: hidden; position: relative;">
+      <ul class="slides" style="width: 800%; transition-duration: 0s; transform: translate3d(-2334px, 0px, 0px);">
+          <li class="clone" aria-hidden="true" style="width: 1167px; float: left; display: block;">
+                <img src="https://www.img.in.th/images/9eac147753a0ecaa0863748ef0bc6a32.jpg" alt="" draggable="false">
+                <span class="ec-transparent-color"></span>
+                <div class="ec-caption">
+                    <div class="container">
+                        <div class="caption-inner-wrap">
+                            <time class="ec-bgcolor" style="font-size:20px">ระหว่างวันที่ 22 ก.พ. - 2 มี.ค.</time>
+                            <div class="clearfix"></div>
+                            <h1>จำปาเกมส์ ครั้งที่ 14</h1>
+                            <p style="font-size:18px">คณะวทยาศาสตร์ มหาวิทยาลัยอุบลราชธาณี จัดแข่งขันกีฬาเชื่อมความสัมพันธ์ จำปาเกมส์ ครั้งที่ 14 CHAMPA GAMES faculty of science  ระหว่างวันที่ 22 ก.พ. - 2 มี.ค.</p>
+                            <a href="#" style="font-size:20px" class="ec-bgcolor">รายละเอียดเพิ่มเติม</a>
+                        </div>
+                        <div class="ec-caption-image"><img src="https://www.img.in.th/images/4e1b01db5bf9a418212bbf4ff076d11a.png" alt="" draggable="false"> </div>
+                    </div>
+                </div>
+            </li>
+            <li class="clone" aria-hidden="true" style="width: 1167px; float: left; display: block;">
+                  <img src="https://www.img.in.th/images/f713011a67b8082f00d88b42b042c4bd.jpg" alt="" draggable="false">
+                  <span class="ec-transparent-color"></span>
+                  <div class="ec-caption">
+                      <div class="container">
+                          <div class="caption-inner-wrap">
+                              <time class="ec-bgcolor" style="font-size:20px">ระหว่างวันที่ 22 ก.พ. - 2 มี.ค.</time>
+                              <div class="clearfix"></div>
+                              <h1>จำปาเกมส์ ครั้งที่ 14</h1>
+                              <p style="font-size:18px">จคณะวทยาศาสตร์ มหาวิทยาลัยอุบลราชธาณี จัดแข่งขันกีฬาเชื่อมความสัมพันธ์ จำปาเกมส์ ครั้งที่ 14 CHAMPA GAMES faculty of science  ระหว่างวันที่ 22 ก.พ. - 2 มี.ค.</p>
+                              <a href="#" style="font-size:20px" class="ec-bgcolor">รายละเอียดเพิ่มเติม</a>
+                          </div>
+                          <div class="ec-caption-image"><img src="https://www.img.in.th/images/4e1b01db5bf9a418212bbf4ff076d11a.png" alt="" draggable="false"> </div>
+                      </div>
+                  </div>
+              </li>
+          </ul>
+        </div><ol class="flex-control-nav flex-control-paging"><li><a class="">1</a></li><li><a class="flex-active">2</a></li></ol><ul class="flex-direction-nav"><li class="flex-nav-prev"><a class="flex-prev" href="#"><em class="fa fa-angle-left"></em></a></li><li class="flex-nav-next"><a class="flex-next" href="#"><em class="fa fa-angle-right"></em></a></li></ul></div>
+</div>
 <div class="py-5 text-center">
   <div class="container">
-    <div class="bd-example">
-    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
-      <ol class="carousel-indicators">
-        <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-        <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-        <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-      </ol>
-      <div class="carousel-inner" style="height:350px;">
-        <div class="carousel-item active">
-          <img src="image/champa_game.jpg" class="d-block w-100" >
-          <div class="carousel-caption d-none d-md-block">
-
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img src="image/All.jpg" class="d-block w-100" >
-          <div class="carousel-caption d-none d-md-block">
-
-          </div>
-        </div>
-<<<<<<< HEAD
-        <div class="carousel-item">
-          <img src="image/sport.jpg" class="d-block w-100" >
-          <div class="carousel-caption d-none d-md-block">
-
-          </div>
-        </div>
-      </div>
-      <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-    </div>
-  </div>
-
-
-
-=======
-      </div>
-    </div>
-    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-  </div>
-</div>
-<br>
 
 <form class="container" action="/addvolleyball" method="POST">
   @csrf
@@ -89,10 +74,10 @@
         <tbody>
             <?php $indexvlb=1;?>
             @foreach($post_Volleyball as $Volleyball)
-            
+
           <tr>
 
-            
+
             <th><?=$indexvlb++?></th>
             <td>{{$Volleyball->time}}</td>
             <td>{{$Volleyball->date}}</td>
@@ -115,7 +100,7 @@
 </form>
 
 <br>
-    
+
     <form class="container" action="/addesport" method="POST">
   @csrf
 <div class="row justify-content-md-center">
@@ -378,7 +363,7 @@
         @foreach($post_Badminton as $Badminton)
           <tr>
 
-            
+
             <th><?=$indexbnt++?></th>
             <td>{{$Badminton->time}}</td>
             <td>{{$Badminton->date}}</td>
@@ -401,5 +386,5 @@
 </form>
   </div>
 </div>
->>>>>>> e23094c787e18cc4f75c492b5b2b0b66eba32089
+
 @endsection

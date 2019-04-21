@@ -293,7 +293,7 @@ address {font-style: italic;}
 	float: left;
 }
 .ec-sticky .ec-main-navsection {
-	background: #fff;
+	background: #003366;
 	box-shadow: 0 0 10px #eee;
 	left: 0;
 	position: fixed;
@@ -1123,7 +1123,7 @@ address {font-style: italic;}
 .ec-caption-image {
 	float: right;
 	width: 50%;
-	margin: -65px 0px 0px 0px;
+	margin: -15px 0px 0px 0px;
 }
 .caption-inner-wrap time {
 	color: #fff;

@@ -16,6 +16,8 @@
     <link href="{{ asset('css/dl-menu.css') }}" rel="stylesheet">
     <link href="{{ asset('css/flexslider.css') }}" rel="stylesheet">
     <link href="{{ asset('css/prettyphoto.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/responsive.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link href="" rel="stylesheet">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -30,7 +32,7 @@
     <!--// Main Wrapper \\-->
     <div class="ec-main-wrapper">
         <!--// Main Header \\-->
-        <header id="ec-header">
+        <header id="ec-header" style="position: fixed;right:0;left:0;top:0;z-index:900;">
             <!--// Main Header \\-->
             <div class="ec-main-navsection">
                 <div class="container">
@@ -70,64 +72,6 @@
                             </ul>
                         </nav>
                     </div>
-
-<<<<<<< HEAD
-=======
-                      <ul class="navbar-nav mr-2">
-                        <li>
-                          <a class="nav-link" href="{{ url('/') }}">หน้าแรก</a>
-                        </li>
-                      </ul>
-                      <ul class="navbar-nav mr-2">
-                        <li class="nav-item">
-                          <a class="nav-link" href="{{ url('/ShowTable') }}">โปรแกรมการแข่งขัน</a>
-                        </li>
-                      </ul>
-                      <ul class="navbar-nav mr-2">
-                        <li class="nav-item">
-                          <a class="nav-link" href="{{ url('/program') }}">ผลการแข่งขัน</a>
-                        </li>
-                      </ul>
-                      <ul class="navbar-nav mr-2">
-                        <li class="nav-item">
-                          <a class="nav-link" href="{{ url('/players?type_sport=&branch=&branch=&category=') }}">รายชื่อนักกีฬา</a>
-                        </li>
-                    </ul>
-                    @guest
-                    @else
-                        @if(Auth::user()->isAdmin())
-                        <ul class="navbar-nav mr-2">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
-                              aria-haspopup="true" aria-expanded="false">จัดการระบบ</a>
-                            <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-                              <a class="dropdown-item" href="{{ url('/addfootball') }}">ตารางกีฬาฟุตบอล</a>
-                              <a class="dropdown-item" href="{{ url('/addbasketball') }}">ตารางกีฬาบาสเกสบอล</a>
-                              <a class="dropdown-item" href="{{ url('/addvolleyball') }}">ตารางกีฬาวอลเลย์บอล</a>
-                              <a class="dropdown-item" href="{{ url('/addbadminton') }}">ตารางกีฬาเเบดมินตัน</a>
-                              <a class="dropdown-item" href="{{ url('/addesport') }}">ตารางกีฬา e-sport</a>
-                              <a class="dropdown-item" href="{{ url('/addfutsal') }}">ตารางกีฬาฟุตซอล</a>
-                            </div>
-                          </li>
-                        </ul>
-                        @else
-                        <ul class="navbar-nav mr-2">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
-                              aria-haspopup="true" aria-expanded="false">ลงสมัครแข่งขัน</a>
-                            <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-                              <a class="dropdown-item" href="{{ url('/add-player?type=ฟุตบอล') }}">ลงสมัครแข่งขันกีฬาฟุตบอล</a>
-                              <a class="dropdown-item" href="{{ url('/add-player?type=บาสเกสบอล') }}">ลงสมัครแข่งขันกีฬาบาสเกสบอล</a>
-                              <a class="dropdown-item" href="{{ url('/add-player?type=วอลเลย์บอล') }}">ลงสมัครแข่งขันกีฬาวอลเลย์บอล</a>
-                              <a class="dropdown-item" href="{{ url('/add-player?type=เเบดมินตัน') }}">ลงสมัครแข่งขันกีฬาเเบดมินตัน</a>
-                              <a class="dropdown-item" href="{{ url('/add-player?type=e-sport') }}">ลงสมัครแข่งขันกีฬา e-sport</a>
-                              <a class="dropdown-item" href="{{ url('/add-player?type=ฟุตซอล') }}">ลงสมัครแข่งขันกีฬาฟุตซอล</a>
-                            </div>
-                          </li>
-                        </ul>
-                        @endif
-                    @endguest
->>>>>>> e23094c787e18cc4f75c492b5b2b0b66eba32089
 
                     <div class="ec-right-section">
                         <nav class="ec-navigation">
@@ -193,9 +137,30 @@
             <!--// Main Header \\-->
         </header>
 
-        <main class="ec-mainbanner">
+        <main class="ec-mainbanner" style="margin-top:104px;z-index:888;">
             @yield('content')
         </main>
     </div>
+    <script src="{{ asset('js/jquery.js') }}"></script>
+    <script src="{{ asset('js/modernizr.js') }}"></script>
+    <script src="{{ asset('js/bootstrap.js') }}"></script>
+    <script src="{{ asset('js/jquery.dlmenu.js') }}"></script>
+    <script src="{{ asset('js/flexslider-min.js') }}"></script>
+    <script src="{{ asset('js/jquery.prettyphoto.js') }}"></script>
+    <script src="{{ asset('js/waypoints-min.js') }}"></script>
+    <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
+    <script src="{{ asset('js/jquery.countdown.min.js') }}"></script>
+    <script src="{{ asset('js/fitvideo.js') }}"></script>
+    <script src="{{ asset('js/newsticker.js') }}"></script>
+    <script src="{{ asset('js/skills.js') }}"></script>
+    <script src="{{ asset('js/functions.js') }}"></script>
+    <script>
+    var options = {
+        newsList: "#ec-news",
+        startDelay: 10,
+        placeHolder1: ""
+    }
+    jQuery().newsTicker(options);
+    </script>
 </body>
 </html>
