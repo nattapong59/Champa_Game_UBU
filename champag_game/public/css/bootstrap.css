@@ -4261,7 +4261,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .container > .navbar-header,
 .container-fluid > .navbar-header,
 .container > .navbar-collapse,
-.container-fluid > .navbar-collapse {
+.container-fluid > .navbar-collapse {z
   margin-right: -15px;
   margin-left: -15px;
 }
@@ -7069,7 +7069,7 @@ button.close {
     left: 50%;
     position: fixed;
     top: 50%;
-    transform: translateY(-30px);  
+    transform: translateY(-30px);
 }
   .ball-scale-multiple > div:nth-child(0) {
     -webkit-animation-delay: -0.8s;

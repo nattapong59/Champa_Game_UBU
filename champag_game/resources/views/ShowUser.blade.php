@@ -17,8 +17,9 @@
     <link href="{{ asset('css/dl-menu.css') }}" rel="stylesheet">
     <link href="{{ asset('css/flexslider.css') }}" rel="stylesheet">
     <link href="{{ asset('css/prettyphoto.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/responsive.css') }}" rel="stylesheet">
 
-    <link href="" rel="stylesheet">
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -121,8 +122,10 @@
         <div class="ec-mainbanner">
             <div class="flexslider">
 
-            <div class="flex-viewport" style="overflow: hidden; position: relative;"><ul class="slides" style="width: 800%; transition-duration: 0s; transform: translate3d(-2334px, 0px, 0px);"><li class="clone" aria-hidden="true" style="width: 1167px; float: left; display: block;">
-                        <img src="extra-images/banner-2.jpg" alt="" draggable="false">
+            <div class="flex-viewport" style="overflow: hidden; position: relative;">
+              <ul class="slides" style="width: 800%; transition-duration: 0s; transform: translate3d(-2334px, 0px, 0px);">
+                  <li class="clone" aria-hidden="true" style="width: 1167px; float: left; display: block;">
+                        <img src="https://autobinck.com/wp-content/uploads/2016/05/autopoint-international-1920x700.jpg" alt="" draggable="false">
                         <span class="ec-transparent-color"></span>
                         <div class="ec-caption">
                             <div class="container">
@@ -133,12 +136,12 @@
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id justo a arcu viverra placerat in eget dolor. In hac habitasse platea dictumst. Etiam porta diam sed lacus pharetra, elementum molestie metus fermentum.</p>
                                     <a href="#" class="ec-bgcolor">Read More</a>
                                 </div>
-                                <div class="ec-caption-image"> <img src="extra-images/banner-static.png" alt="" draggable="false"> </div>
+                                <div class="ec-caption-image"> <img src="https://autobinck.com/wp-content/uploads/2016/05/autopoint-international-1920x700.jpg" alt="" draggable="false"> </div>
                             </div>
                         </div>
                     </li>
                     <li style="width: 1167px; float: left; display: block;" class="">
-                        <img src="extra-images/banner-1.jpg" alt="" draggable="false">
+                        <img src="https://autobinck.com/wp-content/uploads/2016/05/autopoint-international-1920x700.jpg" alt="" draggable="false">
                         <span class="ec-transparent-color"></span>
                         <div class="ec-caption">
                             <div class="container">
@@ -146,15 +149,15 @@
                                     <time class="ec-bgcolor" datetime="2008-02-14 20:00">From the March 7, 2014</time>
                                     <div class="clearfix"></div>
                                     <h1>Welcome to eyesports</h1>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id justo a arcu viverra placerat in eget dolor. In hac habitasse platea dictumst. Etiam porta diam sed lacus pharetra, elementum molestie metus fermentum.</p>
+                                    <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id justo a arcu viverra placerat in eget dolor. In hac habitasse platea dictumst. Etiam porta diam sed lacus pharetra, elementum molestie metus fermentum.</p>
                                     <a href="#" class="ec-bgcolor">Read More</a>
                                 </div>
-                                <div class="ec-caption-image"> <img src="extra-images/banner-static.png" alt="" draggable="false"> </div>
+                                <div class="ec-caption-image"> <img src="https://autobinck.com/wp-content/uploads/2016/05/autopoint-international-1920x700.jpg" alt="" draggable="false"> </div>
                             </div>
                         </div>
                     </li>
                     <li style="width: 1167px; float: left; display: block;" class="flex-active-slide">
-                        <img src="extra-images/banner-2.jpg" alt="" draggable="false">
+                        <img src="https://autobinck.com/wp-content/uploads/2016/05/autopoint-international-1920x700.jpg" alt="" draggable="false">
                         <span class="ec-transparent-color"></span>
                         <div class="ec-caption">
                             <div class="container">
@@ -165,12 +168,12 @@
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id justo a arcu viverra placerat in eget dolor. In hac habitasse platea dictumst. Etiam porta diam sed lacus pharetra, elementum molestie metus fermentum.</p>
                                     <a href="#" class="ec-bgcolor">Read More</a>
                                 </div>
-                                <div class="ec-caption-image"> <img src="extra-images/banner-static.png" alt="" draggable="false"> </div>
+                                <div class="ec-caption-image"> <img src="https://autobinck.com/wp-content/uploads/2016/05/autopoint-international-1920x700.jpg" alt="" draggable="false"> </div>
                             </div>
                         </div>
                     </li>
-                <li style="width: 1167px; float: left; display: block;" class="clone" aria-hidden="true">
-                        <img src="extra-images/banner-1.jpg" alt="" draggable="false">
+                    <li style="width: 1167px; float: left; display: block;" class="clone" aria-hidden="true">
+                        <img src="https://autobinck.com/wp-content/uploads/2016/05/autopoint-international-1920x700.jpg" alt="" draggable="false">
                         <span class="ec-transparent-color"></span>
                         <div class="ec-caption">
                             <div class="container">
@@ -181,10 +184,12 @@
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id justo a arcu viverra placerat in eget dolor. In hac habitasse platea dictumst. Etiam porta diam sed lacus pharetra, elementum molestie metus fermentum.</p>
                                     <a href="#" class="ec-bgcolor">Read More</a>
                                 </div>
-                                <div class="ec-caption-image"> <img src="extra-images/banner-static.png" alt="" draggable="false"> </div>
+                                <div class="ec-caption-image"> <img src="https://autobinck.com/wp-content/uploads/2016/05/autopoint-international-1920x700.jpg" alt="" draggable="false"> </div>
                             </div>
                         </div>
-                    </li></ul></div><ol class="flex-control-nav flex-control-paging"><li><a class="">1</a></li><li><a class="flex-active">2</a></li></ol><ul class="flex-direction-nav"><li class="flex-nav-prev"><a class="flex-prev" href="#"><em class="fa fa-angle-left"></em></a></li><li class="flex-nav-next"><a class="flex-next" href="#"><em class="fa fa-angle-right"></em></a></li></ul></div>
+                    </li>
+                  </ul>
+                </div><ol class="flex-control-nav flex-control-paging"><li><a class="">1</a></li><li><a class="flex-active">2</a></li></ol><ul class="flex-direction-nav"><li class="flex-nav-prev"><a class="flex-prev" href="#"><em class="fa fa-angle-left"></em></a></li><li class="flex-nav-next"><a class="flex-next" href="#"><em class="fa fa-angle-right"></em></a></li></ul></div>
         </div>
         <!--// Main Banner \\-->
         <!--// Main Content \\-->
@@ -570,19 +575,19 @@
     </div>
     <!--// Main Wrapper \\-->
     <!-- jQuery (necessary for JavaScript plugins) -->
-    <script src="{{ asset('css/jquery.js') }}"></script>
-    <script src="{{ asset('css/modernizr.js') }}"></script>
-    <script src="{{ asset('css/bootstrap.js') }}"></script>
-    <script src="{{ asset('css/jquery.dlmenu.js') }}"></script>
-    <script src="{{ asset('css/flexslider-min.js') }}"></script>
-    <script src="{{ asset('css/jquery.prettyphoto.js') }}"></script>
-    <script src="{{ asset('css/waypoints-min.js') }}"></script>
-    <script src="{{ asset('css/owl.carousel.min.js') }}"></script>
-    <script src="{{ asset('css/jquery.countdown.min.js') }}"></script>
-    <script src="{{ asset('css/fitvideo.js') }}"></script>
-    <script src="{{ asset('css/newsticker.js') }}"></script>
-    <script src="{{ asset('css/skills.js') }}"></script>
-    <script src="{{ asset('css/functions.js') }}"></script>
+    <script src="{{ asset('js/jquery.js') }}"></script>
+    <script src="{{ asset('js/modernizr.js') }}"></script>
+    <script src="{{ asset('js/bootstrap.js') }}"></script>
+    <script src="{{ asset('js/jquery.dlmenu.js') }}"></script>
+    <script src="{{ asset('js/flexslider-min.js') }}"></script>
+    <script src="{{ asset('js/jquery.prettyphoto.js') }}"></script>
+    <script src="{{ asset('js/waypoints-min.js') }}"></script>
+    <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
+    <script src="{{ asset('js/jquery.countdown.min.js') }}"></script>
+    <script src="{{ asset('js/fitvideo.js') }}"></script>
+    <script src="{{ asset('js/newsticker.js') }}"></script>
+    <script src="{{ asset('js/skills.js') }}"></script>
+    <script src="{{ asset('js/functions.js') }}"></script>
     <script>
     var options = {
         newsList: "#ec-news",
