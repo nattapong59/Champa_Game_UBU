@@ -20,12 +20,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link href="" rel="stylesheet">
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+   
 </head>
 
 <body class="">
@@ -34,11 +29,13 @@
         <!--// Main Header \\-->
         <header id="ec-header" style="position: fixed;right:0;left:0;top:0;z-index:900;">
             <!--// Main Header \\-->
-            <div class="ec-main-navsection">
+            <div class="ec-main-navsection navbar navbar-expand-md">
                 <div class="container">
+                    
                     <a href="{{ url('/') }}" class="ec-logo"><img style="height: 60px" src="https://www.img.in.th/images/f82f7e3b5cf3630d679016375c2a9c56.png" alt=""><img style="height: 60px" src="https://www.img.in.th/images/2dacd1935a52aac23ee1e5b2ea2e2c38.png" alt=""></a>
                     <div class="ec-section">
-                        <nav class="ec-navigation">
+                        <nav class="ec-navigation ">
+                                
                             <ul>
                                 <li class="active"><a href="{{ url('/') }}" >หน้าแรก</a></li>
                                 <li><a href="{{ url('/ShowTable') }}" >โปรแกรมการแข่งขัน</a>
@@ -73,6 +70,12 @@
                         </nav>
                     </div>
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 183346b8e5d87a8a797d7beea5da99a8d8bcab51
                     <div class="ec-right-section">
                         <nav class="ec-navigation">
                           <ul>
