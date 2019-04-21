@@ -47,7 +47,7 @@
                       </ul>
                       <ul class="navbar-nav mr-2">
                         <li class="nav-item">
-                          <a class="nav-link" href="{{ url('/') }}">ผลการแข่งขัน</a>
+                          <a class="nav-link" href="{{ url('/program') }}">ผลการแข่งขัน</a>
                         </li>
                       </ul>
                       <ul class="navbar-nav mr-2">

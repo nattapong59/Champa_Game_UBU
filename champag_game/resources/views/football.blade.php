@@ -193,11 +193,12 @@
           </tr>
         </thead>
         <tbody>
+          <?php $index=1?>
             @foreach($post_football as $football)
           <tr>
 
 
-            <th>{{$football->id}}</th>
+            <th><?=$index++?></th>
             <td>{{$football->time}}</td>
             <td>{{$football->date}}</td>
             <td>{{$football->team}}</td>

@@ -193,11 +193,12 @@
           </tr>
         </thead>
         <tbody>
+          <?php $index=1?>
             @foreach($post_Futsal as $Futsal)
           <tr>
 
 
-            <th>{{$Futsal->id}}</th>
+            <th><?=$index++?></th>
             <td>{{$Futsal->time}}</td>
             <td>{{$Futsal->date}}</td>
             <td>{{$Futsal->team}}</td>

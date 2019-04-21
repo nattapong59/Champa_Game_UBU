@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::resource('/','TabelController');
 
 Route::get('/add-player', function(){
   return view('add_player');
@@ -65,3 +63,4 @@ Route::resource('/addbadminton', 'BadmintonController');
 Route::resource('/program', 'ProgramController');
 Route::resource('/ShowTable', 'ShowTableController');
 Route::resource('/players','PlayerController');
+Route::resource('/Tabel','TabelController');

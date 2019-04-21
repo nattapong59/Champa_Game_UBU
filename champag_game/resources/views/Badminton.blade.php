@@ -48,40 +48,35 @@
 
       <div class="col-auto my-1">
           <label class="mr-sm-2 sr-only"  for="inlineFormCustomSelect">Preference</label>
-          <select class="custom-select mr-sm-2" name="team" id="inlineFormCustomSelect">
+          <select class="custom-select mr-sm-2" name="team" id="team">
             <option selected>..ทีม1..</option>
-            <option value="Phy">Phy</option>
-            <option value="Chem">Chem</option>
-            <option value="Bio">Bio</option>
-            <option value="Rpt">Rpt</option>
-            <option value="Math">Math</option>
-            <option value="Com">Com</option>
-            <option value="It">It</option>
-            <option value="Occ">Occ</option>
-            <option value="Mico">Mico</option>
-            <option value="Envi">Envi</option>
+            <?php
+            $team = array("Phy","Chem","Bio","Rpt","Math","Com","It","Occ","Mico","Envi");
+              for ($i=0; $i < sizeof($team); $i++) { 
+                echo "<option value='$team[$i]'>$team[$i]</option>";
+              }
+              
+            ?>
           </select>
         </div>
         <h4>VS</h4>
         <div class="col-auto my-1">
           <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
-          <select class="custom-select mr-sm-2" name="pair" id="inlineFormCustomSelect">
+          <select class="custom-select mr-sm-2" name="pair" id="pair">
             <option selected >..ทีม2..</option>
-            <option value="Phy">Phy</option>
-            <option value="Chem">Chem</option>
-            <option value="Bio">Bio</option>
-            <option value="Rpt">Rpt</option>
-            <option value="Math">Math</option>
-            <option value="Com">Com</option>
-            <option value="It">It</option>
-            <option value="Occ">Occ</option>
-            <option value="Mico">Mico</option>
-            <option value="Envi">Envi</option>
+            <?php
+              for ($i=0; $i < sizeof($team); $i++) { 
+                echo "<option value='$team[$i]'>$team[$i]</option>";
+              }
+            ?>
           </select>
         </div>
       <div class="col-auto my-1">
         <button type="submit" class="btn btn-primary">เพิ่มการแข่ง</button>
       </div>
+      <script>
+      
+      </script>
     </div>
   </form>
   <br>
@@ -108,11 +103,12 @@
           </tr>
         </thead>
         <tbody>
+          <?php $index=1?>
             @foreach($post_Badminton as $Badminton)
           <tr>
 
 
-            <th>{{$Badminton->id}}</th>
+            <th>{<?=$index++?></th>
             <td>{{$Badminton->time}}</td>
             <td>{{$Badminton->date}}</td>
             <td>{{$Badminton->team}}</td>
