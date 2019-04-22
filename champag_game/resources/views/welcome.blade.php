@@ -2,6 +2,8 @@
 
 @section('content')
 
+
+
 <div class="ec-mainbanner">
     <div class="flexslider">
 
@@ -40,9 +42,23 @@
                   </div>
               </li>
           </ul>
+          
+          
         </div><ol class="flex-control-nav flex-control-paging"><li><a class="">1</a></li><li><a class="flex-active">2</a></li></ol><ul class="flex-direction-nav"><li class="flex-nav-prev"><a class="flex-prev" href="#"><em class="fa fa-angle-left"></em></a></li><li class="flex-nav-next"><a class="flex-next" href="#"><em class="fa fa-angle-right"></em></a></li></ul></div>
 
+
+
 </div>
+<div >
+<div class="ec-newsticker" style="background-color: #000; " >
+<div class="container">
+<span class="ec-color" ><small style = "font-size: 20px;">คณะวิทยาศาสตร์</small></span>
+                                <ul id="ec-news"><li><a href="#" style = "font-size: 20px;" >ยินดีต้อนรับเข้าสู่การแข่งขันกีฬาจำปาเกมส์ครั้งที่14 ระหว่างวันที่ 22 ก.พ.- 2 มี.ค.</a></li></ul>
+                        </div>
+                                       
+                            </div>
+                </div>
+
 
 <br>
 <div class="ec-main-content">
