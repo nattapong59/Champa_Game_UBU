@@ -11,10 +11,10 @@
             <label ><b>แก้ไขตารางแข่งขันบาสเกสบอล</b></label>
           </div>
     </div>
-    <table>
+    <table style="width:60%" class="container">
         <tr>
-          <th><div class="col-auto my-1"><input type="date" name="date" value="{{$Basketball->date}}"></div></div></th>
-          <th><div class="col-auto my-1"><input type="time" name="time" value="{{$Basketball->time}}"></div></th>
+          <th><div class="col-auto my-1">วันที่ :: <input type="date" name="date" value="{{$Basketball->date}}"></div></div></th>
+          <th><div class="col-auto my-1">เวลา :: <input type="time" name="time" value="{{$Basketball->time}}"></div></th>
           <th><div class="col-auto my-1">
             <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
             <select class="custom-select mr-sm-2" name="category" id="inlineFormCustomSelect">

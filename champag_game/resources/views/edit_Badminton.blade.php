@@ -2,9 +2,7 @@
 
 @section('content')
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<<<<<<< HEAD
 
-=======
 <style>
 
   body {font-family: Arial, Helvetica, sans-serif;}
@@ -78,7 +76,7 @@
     opacity: 1;
   }
   </style>
->>>>>>> 6b84824e1c5ecef0f970a9d5ef557be8b12ce4ac
+
 <form class="container" action="/addbadminton/{{$Badminton->id}}" method="POST">
     @csrf
     @method('PUT')
@@ -87,10 +85,10 @@
             <label ><b>แก้ไขตารางแข่งขันแบดมินตัน</b></label>
           </div>
     </div>
-    <table>
+    <table style="width:60%" class="container"> 
       <tr>
-        <th><div class="col-auto my-1"><input type="date" name="date" value="{{$Badminton->date}}"></div></div></th>
-        <th><div class="col-auto my-1"><input type="time" name="time" value="{{$Badminton->time}}"></div></th>
+        <th><div class="col-auto my-1">วันที่ :: <input type="date" name="date" value="{{$Badminton->date}}"></div></div></th>
+        <th><div class="col-auto my-1">เวลา :: <input type="time" name="time" value="{{$Badminton->time}}"></div></th>
         <th><div class="col-auto my-1">
           <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
           <select class="custom-select mr-sm-2" name="category" id="inlineFormCustomSelect">
@@ -139,31 +137,6 @@
             <option value="Mico">Mico</option>
             <option value="Envi">Envi</option>
           </select>
-<<<<<<< HEAD
-        </div>
-        <h4>VS</h4>
-        <div class="col-auto my-1">
-          <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
-          <select class="custom-select mr-sm-2" name="pair" id="inlineFormCustomSelect">
-            <option selected >{{$Badminton->pair}}</option>
-            <option value="">Phy</option>
-            <option value="Chem">Chem</option>
-            <option value="Bio">Bio</option>
-            <option value="Rpt">Rpt</option>
-            <option value="Math">Math</option>
-            <option value="Com">Com</option>
-            <option value="It">It</option>
-            <option value="Occ">Occ</option>
-            <option value="Mico">Mico</option>
-            <option value="Envi">Envi</option>
-          </select>
-        </div>
-        <div class="form-row align-items-center">
-            <div class="col-md-auto">
-              <label><b><h4>ผล</h4></b></label>
-            </div>
-          <div class="col">
-=======
         </div></th>
         <th><span class="ec-fixture-vs"><small>vs</small></span></th>
         <th>
@@ -193,7 +166,7 @@
           
         </th>
         <th><div class="col">
->>>>>>> 6b84824e1c5ecef0f970a9d5ef557be8b12ce4ac
+
             <label>{{$Badminton->team}}</label>
             <input type="text" value="{{$Badminton->rbadmintons1}}" name="rbadmintons1" class="form-control">
          </div></th>
