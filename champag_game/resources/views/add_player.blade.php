@@ -9,11 +9,20 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <h5 class="card-header center">{{ __('ลงทะเบียนแข่งขันกีฬา'.$type) }}</h5>
+                
 
                 <div class="card-body">
                     <form method="POST" action="/players">
+                    <br>
+                    <br>
+                    <br>
+
                         @csrf
+
+                        <table  class="containers " style="width:100% " style="height=50%">
+                        <tr>
+                        <th>
+                        <h5 class="card-header center">{{ __('ลงทะเบียนแข่งขันกีฬา'.$type) }}</h5>
                         <input type="hidden" name ="type_sport" value="{{ __($type) }}" >
 
                         <div class="form-group row">
@@ -97,6 +106,7 @@
                             </div>
                         </div>
 
+                    <div class="bt">
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
@@ -104,6 +114,14 @@
                                 </button>
                             </div>
                         </div>
+                    </div>
+
+                        </th>
+                        </tr>
+                        </table>
+                        
+
+                        
                     </form>
                 </div>
             </div>
