@@ -22,11 +22,11 @@
                             <tr >
                                 
                                 <th class = "container ">
-                                <div class="card-header">{{ __('Register') }}</div>
+                                <div class="card-header" style="font-size: 36px;">{{ __('Register') }}</div>
                         <div class="form-group row">
                             <label for="id" class="col-md-3 col-form-label text-md-right">{{ __('รหัสนักศึกษา') }}</label>
                             <div class="col-md-8">
-                                <input id="id" type="text" class="form-control{{ $errors->has('id') ? ' is-invalid' : '' }}" name="id" value="{{ old('id') }}" required autofocus>
+                                <input id="id" type="text" class="form-control{{ $errors->has('id') ? ' is-invalid' : '' }}" name="id" value="{{ old('id') }}" required autofocus style = "font-size: 15px;">
 
                                 @if ($errors->has('id'))
                                     <span class="invalid-feedback" role="alert">
@@ -40,7 +40,7 @@
                             <label for="first_name" class="col-md-3 col-form-label text-md-right">{{ __('ชื่อ') }}</label>
 
                             <div class="col-md-8">
-                                <input id="first_name" type="text" class="form-control{{ $errors->has('first_name') ? ' is-invalid' : '' }}" name="first_name" value="{{ old('first_name') }}" required autofocus>
+                                <input id="first_name" type="text" class="form-control{{ $errors->has('first_name') ? ' is-invalid' : '' }}" name="first_name" value="{{ old('first_name') }}" required autofocus style = "font-size: 15px;">
 
                                 @if ($errors->has('first_name'))
                                     <span class="invalid-feedback" role="alert">
@@ -54,7 +54,7 @@
                             <label for="last_name" class="col-md-3 col-form-label text-md-right">{{ __('นามสกุล') }}</label>
 
                             <div class="col-md-8">
-                                <input id="last_name" type="text" class="form-control{{ $errors->has('last_name') ? ' is-invalid' : '' }}" name="last_name" value="{{ old('last_name') }}" required autofocus>
+                                <input id="last_name" type="text" class="form-control{{ $errors->has('last_name') ? ' is-invalid' : '' }}" name="last_name" value="{{ old('last_name') }}" required autofocus style = "font-size: 15px;">
 
                                 @if ($errors->has('last_name'))
                                     <span class="invalid-feedback" role="alert">
@@ -110,7 +110,7 @@
                             <label for="email" class="col-md-3 col-form-label text-md-right">{{ __('อีเมล') }}</label>
 
                             <div class="col-md-8">
-                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required>
+                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required style = "font-size: 15px;">
 
                                 @if ($errors->has('email'))
                                     <span class="invalid-feedback" role="alert">
@@ -124,7 +124,7 @@
                             <label for="password" class="col-md-3 col-form-label text-md-right">{{ __('รหัสผ่าน') }}</label>
 
                             <div class="col-md-8">
-                                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
+                                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required style = "font-size: 15px;">
 
                                 @if ($errors->has('password'))
                                     <span class="invalid-feedback" role="alert">
@@ -138,14 +138,14 @@
                             <label for="password-confirm" class="col-md-3 col-form-label text-md-right">{{ __('ยืนยันรหัสผ่าน') }}</label>
 
                             <div class="col-md-8">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
+                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required style = "font-size: 15px;">
                             </div>
                         </div>
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
-                                    {{ __('Register') }}
+                                    {{ __('ยืนยัน') }}
                                 </button>
                             </div>
                         </div>  
