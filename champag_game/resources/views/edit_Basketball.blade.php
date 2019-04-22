@@ -85,12 +85,9 @@
           </th>
         </tr>
       </table>
-      
+      <br>
       <table style="width:50%" class="container">
         <tr>
-          <th>
-            
-          </th>
           <th><div class="col">
               <label>{{$Basketball->team}}</label>
               <input type="text" value="{{$Basketball->rbasketballs1}}" name="rbasketballs1" class="form-control">
@@ -102,9 +99,7 @@
                   <input type="text" value="{{$Basketball->rbasketballs2}}" name="rbasketballs2" class="form-control" >
                 </div>
            </th>
-           <th>
-             
-             <br>
+           <th><br><br><br>
               <div class="col-auto my-1">
                   <button type="submit" class="btn btn-primary">ตกลง</button>
                 </div>
