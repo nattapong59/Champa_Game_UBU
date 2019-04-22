@@ -2,8 +2,32 @@
 
 @section('content')
 
+
 <form class="container" action="/addvolleyball" method="POST">
   @csrf
+<div class="ec-main-section ec-promofull">
+
+    <div class="col-md">
+      <div class="ec-fancy-title">
+          <h2>โปรแกรมการแข่งขันวอลเลย์บอล</h2>
+      </div>
+      <div class="ec-fixture-list ec-matches-list">
+          <ul>
+              <li>
+                  <div class="ec-cell"><span>03 Sep. Friday 1:00pm</span></div>
+                  <div class="ec-cell">
+                      <a href="#" class="ec-fixture-flag"><img src="extra-images/fixer-flag-1.png" alt=""> Arsenal</a>
+                      <span class="ec-fixture-vs"><small>vs</small></span>
+                      <a href="#" class="ec-fixture-flag ec-next-flag"><img src="extra-images/fixer-flag-2.png" alt=""> Premier League</a>
+                  </div>
+                    <div class="ec-cell"><span>03 Sep.pm</span></div>
+                    <div class="ec-cell"><span>03 Sep.</span></div>
+              </li>
+          </ul>
+      </div>
+  </div>
+
+
 <div class="row justify-content-md-center">
         <div class="col-md-auto">
             <label ><b>ตารางแข่งขันวอลเลย์บอล</b></label>
@@ -32,10 +56,10 @@
         <tbody>
             <?php $indexvlb=1;?>
             @foreach($post_Volleyball as $Volleyball)
-            
+
           <tr>
 
-            
+
             <th><?=$indexvlb++?></th>
             <td>{{$Volleyball->time}}</td>
             <td>{{$Volleyball->date}}</td>
@@ -58,7 +82,7 @@
 </form>
 
 <br>
-    
+
     <form class="container" action="/addesport" method="POST">
   @csrf
 <div class="row justify-content-md-center">
@@ -321,7 +345,7 @@
         @foreach($post_Badminton as $Badminton)
           <tr>
 
-            
+
             <th><?=$indexbnt++?></th>
             <td>{{$Badminton->time}}</td>
             <td>{{$Badminton->date}}</td>
@@ -342,7 +366,7 @@
   </div>
 </div>
 </form>
-
+</div>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

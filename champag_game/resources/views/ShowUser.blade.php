@@ -519,60 +519,138 @@
     </div>
     <!--// Main Wrapper \\-->
     <!-- ModalLogin Box -->
-    <div class="modal fade" id="ModalLogin" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <div class="ec-modallogin-form ec-login-popup">
-                        <span class="ec-color">Login to Your Account</span>
-                        <form>
-                            <ul>
-                                <li>
-                                    <input type="text" value="Your Username" onblur="if(this.value == '') { this.value ='Your Username'; }" onfocus="if(this.value =='Your Username') { this.value = ''; }"> </li>
-                                <li>
-                                    <input type="password" value="password" onblur="if(this.value == '') { this.value ='password'; }" onfocus="if(this.value =='password') { this.value = ''; }"> </li>
-                                <li> <a href="#" class="ec-forgot-btn">Forgot Password?</a> </li>
-                                <li>
-                                    <input type="submit" value="Sign In"> </li>
+    <div class="col-md-9">
+                            <div class="ec-fancy-title">
+                                <h2>Upcoming Match Fixture</h2>
+                            </div>
+                            <div class="ec-fixture-list ec-matches-list">
+                                <ul>
+                                    <li>
+                                        <div class="ec-cell"><span>03 Sep. Friday 1:00pm</span></div>
+                                        <div class="ec-cell">
+                                            <a href="#" class="ec-fixture-flag"><img src="extra-images/fixer-flag-1.png" alt=""> Arsenal</a>
+                                            <span class="ec-fixture-vs"><small>vs</small></span>
+                                            <a href="#" class="ec-fixture-flag ec-next-flag"><img src="extra-images/fixer-flag-2.png" alt=""> Premier League</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="ec-cell"><span>04 Sep. Monday 1:00pm</span></div>
+                                        <div class="ec-cell">
+                                            <a href="#" class="ec-fixture-flag"><img src="extra-images/fixer-flag-3.png" alt=""> Liver Pool</a>
+                                            <span class="ec-fixture-vs"><small>vs</small></span>
+                                            <a href="#" class="ec-fixture-flag ec-next-flag"><img src="extra-images/fixer-flag-4.png" alt=""> South United</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="ec-cell"><span>10 Sep. Sunday1:00pm</span></div>
+                                        <div class="ec-cell">
+                                            <a href="#" class="ec-fixture-flag"><img src="extra-images/fixer-flag-5.png" alt=""> 1.FCK</a>
+                                            <span class="ec-fixture-vs"><small>vs</small></span>
+                                            <a href="#" class="ec-fixture-flag ec-next-flag"><img src="extra-images/fixer-flag-6.png" alt=""> Chelsea</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="ec-cell"><span>12 Sep. Wedn 1:00pm</span></div>
+                                        <div class="ec-cell">
+                                            <a href="#" class="ec-fixture-flag"><img src="extra-images/fixer-flag-7.png" alt=""> Real Madrid</a>
+                                            <span class="ec-fixture-vs"><small>vs</small></span>
+                                            <a href="#" class="ec-fixture-flag ec-next-flag"><img src="extra-images/fixer-flag-8.png" alt=""> Arsenal</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="ec-cell"><span>03 Sep. Friday 1:00pm</span></div>
+                                        <div class="ec-cell">
+                                            <a href="#" class="ec-fixture-flag"><img src="extra-images/fixer-flag-1.png" alt=""> Arsenal</a>
+                                            <span class="ec-fixture-vs"><small>vs</small></span>
+                                            <a href="#" class="ec-fixture-flag ec-next-flag"><img src="extra-images/fixer-flag-2.png" alt=""> Premier League</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="ec-cell"><span>03 Sep. Friday 1:00pm</span></div>
+                                        <div class="ec-cell">
+                                            <a href="#" class="ec-fixture-flag"><img src="extra-images/fixer-flag-3.png" alt=""> Liver Pool</a>
+                                            <span class="ec-fixture-vs"><small>vs</small></span>
+                                            <a href="#" class="ec-fixture-flag ec-next-flag"><img src="extra-images/fixer-flag-4.png" alt=""> South United</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="ec-cell"><span>03 Sep. Sunday1:00pm</span></div>
+                                        <div class="ec-cell">
+                                            <a href="#" class="ec-fixture-flag"><img src="extra-images/fixer-flag-5.png" alt=""> 1.FCK</a>
+                                            <span class="ec-fixture-vs"><small>vs</small></span>
+                                            <a href="#" class="ec-fixture-flag ec-next-flag"><img src="extra-images/fixer-flag-6.png" alt=""> Chelsea</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="ec-cell"><span>03 Sep. Friday 1:00pm</span></div>
+                                        <div class="ec-cell">
+                                            <a href="#" class="ec-fixture-flag"><img src="extra-images/fixer-flag-7.png" alt=""> Real Madrid</a>
+                                            <span class="ec-fixture-vs"><small>vs</small></span>
+                                            <a href="#" class="ec-fixture-flag ec-next-flag"><img src="extra-images/fixer-flag-8.png" alt=""> Arsenal</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="ec-cell"><span>03 Sep. Friday 1:00pm</span></div>
+                                        <div class="ec-cell">
+                                            <a href="#" class="ec-fixture-flag"><img src="extra-images/fixer-flag-1.png" alt=""> Arsenal</a>
+                                            <span class="ec-fixture-vs"><small>vs</small></span>
+                                            <a href="#" class="ec-fixture-flag ec-next-flag"><img src="extra-images/fixer-flag-2.png" alt=""> Premier League</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="ec-cell"><span>03 Sep. Friday 1:00pm</span></div>
+                                        <div class="ec-cell">
+                                            <a href="#" class="ec-fixture-flag"><img src="extra-images/fixer-flag-3.png" alt=""> Liver Pool</a>
+                                            <span class="ec-fixture-vs"><small>vs</small></span>
+                                            <a href="#" class="ec-fixture-flag ec-next-flag"><img src="extra-images/fixer-flag-4.png" alt=""> South United</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="ec-cell"><span>03 Sep. Sunday1:00pm</span></div>
+                                        <div class="ec-cell">
+                                            <a href="#" class="ec-fixture-flag"><img src="extra-images/fixer-flag-5.png" alt=""> 1.FCK</a>
+                                            <span class="ec-fixture-vs"><small>vs</small></span>
+                                            <a href="#" class="ec-fixture-flag ec-next-flag"><img src="extra-images/fixer-flag-6.png" alt=""> Chelsea</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="ec-cell"><span>03 Sep. Friday 1:00pm</span></div>
+                                        <div class="ec-cell">
+                                            <a href="#" class="ec-fixture-flag"><img src="extra-images/fixer-flag-7.png" alt=""> Real Madrid</a>
+                                            <span class="ec-fixture-vs"><small>vs</small></span>
+                                            <a href="#" class="ec-fixture-flag ec-next-flag"><img src="extra-images/fixer-flag-8.png" alt=""> Arsenal</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="ec-cell"><span>03 Sep. Friday 1:00pm</span></div>
+                                        <div class="ec-cell">
+                                            <a href="#" class="ec-fixture-flag"><img src="extra-images/fixer-flag-1.png" alt=""> Arsenal</a>
+                                            <span class="ec-fixture-vs"><small>vs</small></span>
+                                            <a href="#" class="ec-fixture-flag ec-next-flag"><img src="extra-images/fixer-flag-2.png" alt=""> Premier League</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="ec-cell"><span>03 Sep. Friday 1:00pm</span></div>
+                                        <div class="ec-cell">
+                                            <a href="#" class="ec-fixture-flag"><img src="extra-images/fixer-flag-3.png" alt=""> Liver Pool</a>
+                                            <span class="ec-fixture-vs"><small>vs</small></span>
+                                            <a href="#" class="ec-fixture-flag ec-next-flag"><img src="extra-images/fixer-flag-4.png" alt=""> South United</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <ul class="ec-pagination">
+                                <li><a href="#"><i class="fa fa-angle-left"></i></a></li>
+                                <li><span>. . .</span></li>
+                                <li class="active"><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><span>. . .</span></li>
+                                <li><a href="#">15</a></li>
+                                <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
                             </ul>
-                        </form>
-                        <span class="ec-color">or try our socials</span>
-                        <ul class="ec-login-social-media">
-                            <li><a href="#"><i class="fa fa-facebook"></i> Facebook</a></li>
-                            <li class="ec-twitter-color"><a href="#"><i class="fa fa-twitter"></i> twitter</a></li>
-                            <li class="ec-googleplus-color"><a href="#"><i class="fa fa-google-plus-square"></i> Google+</a></li>
-                        </ul>
-                        <p>Not a member yet? <a href="#">Sign-up Now!</a></p>
-                    </div>
-                    <div class="ec-modallogin-form ec-register-popup">
-                        <span class="ec-color">create Your Account today</span>
-                        <form>
-                            <ul>
-                                <li>
-                                    <input type="text" value="Your Username" onblur="if(this.value == '') { this.value ='Your Username'; }" onfocus="if(this.value =='Your Username') { this.value = ''; }"> </li>
-                                <li>
-                                    <input type="text" value="Your E-mail" onblur="if(this.value == '') { this.value ='Your E-mail'; }" onfocus="if(this.value =='Your E-mail') { this.value = ''; }"> </li>
-                                <li>
-                                    <input type="password" value="password" onblur="if(this.value == '') { this.value ='password'; }" onfocus="if(this.value =='password') { this.value = ''; }"> </li>
-                                <li>
-                                    <input type="text" value="Confirm Password" onblur="if(this.value == '') { this.value ='Confirm Password'; }" onfocus="if(this.value =='Confirm Password') { this.value = ''; }"> </li>
-                                <li>
-                                    <input type="submit" value="Create Account"> </li>
-                            </ul>
-                        </form>
-                        <span class="ec-color">or signup with your socials:</span>
-                        <ul class="ec-login-social-media">
-                            <li><a href="#"><i class="fa fa-facebook"></i> Facebook</a></li>
-                            <li class="ec-twitter-color"><a href="#"><i class="fa fa-twitter"></i> twitter</a></li>
-                            <li class="ec-googleplus-color"><a href="#"><i class="fa fa-google-plus-square"></i> Google+</a></li>
-                        </ul>
-                        <p>Already a member? <a href="#">Sign-in Here!</a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="clearfix"></div>
-        </div>
-    </div>
+                        </div>
     <!--// Main Wrapper \\-->
     <!-- jQuery (necessary for JavaScript plugins) -->
     <script src="{{ asset('js/jquery.js') }}"></script>
