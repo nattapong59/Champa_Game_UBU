@@ -159,7 +159,7 @@ select {
 	height: 40px;
 	padding: 8px 12px;
 	width: 100%;
-	background-color: #f0eef0;
+	background-color: white;
  }
 
 label {
@@ -1265,7 +1265,7 @@ span.ec-blue-transparent {
 	position: absolute;
 	right: -22px;
 	top: 0px;
-	background: url(images/ticcker-arrow.png);
+	background: url(https://eyecix.com/html/eyesports/images/ticcker-arrow.png);
 	width: 22px;
 	height: 43px;
 }
@@ -3622,8 +3622,7 @@ blockquote:after {
 .form-check{
     padding-right: 75px;;
 }
-<<<<<<< HEAD
-=======
+
 .containers{
 	padding-right: 15px;
     padding-left: 15px;
@@ -3636,4 +3635,3 @@ blockquote:after {
     margin-right: auto;
     margin-left: 250px;
 }
->>>>>>> 6b84824e1c5ecef0f970a9d5ef557be8b12ce4ac

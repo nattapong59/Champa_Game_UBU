@@ -6,19 +6,21 @@
 
 <form class="container" action="/addfootball" method="POST">
   @csrf
+    <br>
+    <br>
     <div class="row justify-content-md-center">
-        <div class="col-md-auto">
-            <label ><b>ตารางแข่งขันฟุตบอล</b></label>
-          </div>
+      <div class="ec-fancy-title">
+          <h2>ตารางแข่งขันฟุตบอล</h2>
+      </div>
     </div>
-    <table >
+    <table style="margin-top:10px">
         <tr>
-          <th><div class="col-auto my-1">วันที่ :: <input type="date" name="date"></div></th>
-          <th><div class="col-auto my-1">เวลา :: <input type="time" name="time"></div></th>
+          <th><div class="col-auto my-1">วันที่ : <input type="date" name="date"></div></th>
+          <th><div class="col-auto my-1">เวลา : <input type="time" name="time"></div></th>
           <th> <div class="col-auto my-1">
               <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
               <select class="custom-select mr-sm-2" name="category" id="inlineFormCustomSelect">
-                <option selected>..ประเภท..</option>
+                <option selected>ประเภท</option>
                 <option value="M">ชาย</option>
                 <option value="W">หญิง</option>
 
@@ -27,7 +29,7 @@
           <th> <div class="col-auto my-1">
               <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
               <select class="custom-select mr-sm-2" name="line" id="inlineFormCustomSelect">
-                <option selected>..สาย..</option>
+                <option selected>สาย</option>
                 <option value="A">A</option>
                 <option value="B">B</option>
 
@@ -36,7 +38,7 @@
           <th><div class="col-auto my-1">
               <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
               <select class="custom-select mr-sm-2" name="around" id="inlineFormCustomSelect">
-                <option selected>..รอบการแข่งขัน..</option>
+                <option selected>รอบการแข่งขัน</option>
                 <option value="รอบแรก">รอบแรก</option>
                 <option value="รอบสอง">รอบสอง</option>
                 <option value="รอบรองชนะเริศ">รอบรองชนะเลิศ</option>
@@ -51,7 +53,7 @@
           <th> <div class="col-auto my-1">
               <label class="mr-sm-2 sr-only"  for="inlineFormCustomSelect">Preference</label>
               <select class="custom-select mr-sm-2" name="team" id="team">
-                <option selected>..ทีม1..</option>
+                <option selected>ทีม1</option>
                 <?php
                 $team = array("Phy","Chem","Bio","Rpt","Math","Com","It","Occ","Mico","Envi");
                   for ($i=0; $i < sizeof($team); $i++) {
@@ -61,11 +63,11 @@
                 ?>
               </select>
             </div></th>
-            <th><span class="ec-fixture-vs"><small>vs</small></span></th>
+            <th><span class="ec-fixture-vs" ><small style="height:77%;width: 45px;">vs</small></span></th>
             <th> <div class="col-auto my-1">
                 <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
                 <select class="custom-select mr-sm-2" name="pair" id="pair">
-                  <option selected >..ทีม2..</option>
+                  <option selected >ทีม2</option>
                   <?php
                     for ($i=0; $i < sizeof($team); $i++) {
                       echo "<option value='$team[$i]'>$team[$i]</option>";
@@ -75,10 +77,12 @@
               </div>
             </th>
         </tr>
+        <tr>
+          <th></th>
+          <th><button type="submit" class="btn btn-primary">เพิ่มการแข่ง</button></th>
+          <th></th>
+        </tr>
       </table>
-      <div class="col-auto my-1">
-        <button type="submit" class="btn btn-primary">เพิ่มการแข่ง</button>
-      </div>
     </div>
   </form>
   <br>

@@ -5,121 +5,15 @@
 <br>
 <br>
 
-  <form class="container">
-    @csrf
-    
-  <div class="row justify-content-md-center">
-      <div class="col-md-auto">
-        <label ><b>ตารางแข่งขันวอลเลย์บอล</b></label>
-      </div>
-  </div>
-  <div class="row">
-      <div class="col-md-12">
-        <div class="table-responsive">
-          <table class="table table-bordered container">
-            <thead class="thead-dark">
-              <tr>
-                <th>ลำดับ</th>
-                <th>วันที่</th>
-                <th>เวลา</th>
-                <th>ทีม</th>
-                <th>พบ</th>
-                <th>ทีม</th>
-                <th>ประเภท</th>
-                <th>สาย</th>
-                <th>รอบ</th>
-                <th>ผล</th>
-              </tr>
-            </thead>
-            <tbody>
-                @foreach($post_Volleyball as $Volleyball)
-              <tr>
-                <th>{{$Volleyball->id}}</th>
-                <td>{{$Volleyball->time}}</td>
-                <td>{{$Volleyball->date}}</td>
-                <td>{{$Volleyball->team}}</td>
-                <td>VS</td>
-                <td>{{$Volleyball->pair}}</td>
-                <td>{{$Volleyball->category}}</td>
-                <td>{{$Volleyball->line}}</td>
-                <td>{{$Volleyball->around}}</td>
-                <td>{{$Volleyball->rvolleyballs1}} : {{$Volleyball->rvolleyballs2}}
-                  <a class="btn btn-success" href="addvolleyball/{{$Volleyball->id}}/edit" >สรุปผล</a>
-                  </div>
-                      </div>
-                </td>
-              </tr>
-              
-                  @endforeach
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-  </form>
-  <br>
-  <br>
+  @csrf
 
   <form class="container" action="/porgram" method="POST">
     @csrf
     @method('PUT')
-  <div class="row justify-content-md-center">
-      <div class="col-md-auto">
-          <label ><b>ตารางแข่งขันเกม e-sport</b></label>
-        </div>
-  </div>
-  <div class="row">
-      <div class="col-md-12">
-        <div class="table-responsive">
-          <table class="table table-bordered container">
-            <thead class="thead-dark">
-                    <tr>
-                            <th>ลำดับ</th>
-                            <th>วันที่</th>
-                            <th>เวลา</th>
-                            <th>ทีม</th>
-                            <th>พบ</th>
-                            <th>ทีม</th>
-                            <th>ประเภท</th>
-                            <th>สาย</th>
-                            <th>รอบ</th>
-                            <th>ผล</th>
-                          </tr>
-            </thead>
-            <tbody>
-                @foreach($post_esport as $esport)
-              <tr>
-                  <th>{{$esport->id}}</th>
-                  <td>{{$esport->time}}</td>
-                  <td>{{$esport->date}}</td>
-                  <td>{{$esport->team}}</td>
-                  <td>VS</td>
-                  <td>{{$esport->pair}}</td>
-                  <td>{{$esport->category}}</td>
-                  <td>{{$esport->line}}</td>
-                  <td>{{$esport->around}}</td>
-                  <td>{{$esport->resports1}} : {{$esport->resports2}}
-                    <a class="btn btn-success" href="addesport/{{$esport->id}}/edit" >สรุปผล</a>
-                  </td>
-              </tr>
-              <tr>
-                  @endforeach
-            </tbody>
-          </table>
-        </div>
+    <div class="col-md">
+      <div class="ec-fancy-title">
+          <h2>โปรแกรมการแข่งขันฟุตบอล</h2>
       </div>
-    </div>
-  </form>
-  <br>
-  <br>
-  <form class="container" action="/porgram" method="POST">
-    @csrf
-    @method('PUT')
-    <div class="row justify-content-md-center">
-        <div class="col-md-auto">
-            <label ><b>ตารางแข่งขันฟุตบอล</b></label>
-          </div>
-    </div>
     <div class="row">
         <div class="col-md-12">
           <div class="table-responsive">
@@ -165,54 +59,54 @@
           </div>
         </div>
       </div>
-    </form>
-    <br>
-    <br>
-    <form class="container" action="/porgram" method="POST">
+    </div>
+  </form>
+  <br>
+  <br>
+
+  <form class="container" action="/porgram" method="POST">
       @csrf
       @method('PUT')
-      <div class="row justify-content-md-center">
-          <div class="col-md-auto">
-              <label ><b>ตารางแข่งขันฟุตซอล</b></label>
-            </div>
-      </div>
+      <div class="col-md">
+        <div class="ec-fancy-title">
+            <h2>โปรแกรมการแข่งขันบาสเกสบอล</h2>
+        </div>
       <div class="row">
           <div class="col-md-12">
             <div class="table-responsive">
               <table class="table table-bordered container">
                 <thead class="thead-dark">
-                        <tr>
-                                <th>ลำดับ</th>
-                                <th>วันที่</th>
-                                <th>เวลา</th>
-                                <th>ทีม</th>
-                                <th>พบ</th>
-                                <th>ทีม</th>
-                                <th>ประเภท</th>
-                                <th>สาย</th>
-                                <th>รอบ</th>
-                                <th>ผล</th>
-                              </tr>
+                      <tr>
+                              <th>ลำดับ</th>
+                              <th>วันที่</th>
+                              <th>เวลา</th>
+                              <th>ทีม</th>
+                              <th>พบ</th>
+                              <th>ทีม</th>
+                              <th>ประเภท</th>
+                              <th>สาย</th>
+                              <th>รอบ</th>
+                              <th>ผล</th>
+                            </tr>
                 </thead>
                 <tbody>
-                    @foreach($post_Futsal as $Futsal)
-                    <tr>
+                    @foreach($post_Basketball as $Basketball)
+        <tr>
 
 
-                      <th>{{$Futsal->id}}</th>
-                      <td>{{$Futsal->time}}</td>
-                      <td>{{$Futsal->date}}</td>
-                      <td>{{$Futsal->team}}</td>
-
-                      <td>VS</td>
-                      <td>{{$Futsal->pair}}</td>
-                      <td>{{$Futsal->category}}</td>
-                      <td>{{$Futsal->line}}</td>
-                      <td>{{$Futsal->around}}</td>
-                      <td>
-                          {{$Futsal->rfutsals1}} : {{$Futsal->rfutsals2}}
-                          <a class="btn btn-success" href="addfootball/{{$Futsal->id}}/edit" >สรุปผล</a>
-                      </td>
+          <th>{{$Basketball->id}}</th>
+          <td>{{$Basketball->time}}</td>
+          <td>{{$Basketball->date}}</td>
+          <td>{{$Basketball->team}}</td>
+          <td>VS</td>
+          <td>{{$Basketball->pair}}</td>
+          <td>{{$Basketball->category}}</td>
+          <td>{{$Basketball->line}}</td>
+          <td>{{$Basketball->around}}</td>
+          <td>
+              {{$Basketball->rbasketballs1}} : {{$Basketball->rbasketballs2}}
+              <a class="btn btn-success" href="addfootball/{{$Basketball->id}}/edit" >สรุปผล</a>
+          </td>
                   </tr>
                   <tr>
                       @endforeach
@@ -221,119 +115,230 @@
             </div>
           </div>
         </div>
-      </form>
-      <br>
-      <br>
-      <form class="container" action="/porgram" method="POST">
+      </div>
+  </form>
+
+  <br>
+  <br>
+
+  <form class="container" action="/porgram" method="POST">
+    <div class="col-md">
+      <div class="ec-fancy-title">
+          <h2>โปรแกรมการแข่งขันวอลเลย์บอล</h2>
+      </div>
+      <div class="row">
+      <div class="col-md-12">
+        <div class="table-responsive">
+          <table class="table table-bordered container">
+            <thead class="thead-dark">
+              <tr>
+                <th>ลำดับ</th>
+                <th>วันที่</th>
+                <th>เวลา</th>
+                <th>ทีม</th>
+                <th>พบ</th>
+                <th>ทีม</th>
+                <th>ประเภท</th>
+                <th>สาย</th>
+                <th>รอบ</th>
+                <th>ผล</th>
+              </tr>
+            </thead>
+            <tbody>
+                @foreach($post_Volleyball as $Volleyball)
+              <tr>
+                <th>{{$Volleyball->id}}</th>
+                <td>{{$Volleyball->time}}</td>
+                <td>{{$Volleyball->date}}</td>
+                <td>{{$Volleyball->team}}</td>
+                <td>VS</td>
+                <td>{{$Volleyball->pair}}</td>
+                <td>{{$Volleyball->category}}</td>
+                <td>{{$Volleyball->line}}</td>
+                <td>{{$Volleyball->around}}</td>
+                <td>{{$Volleyball->rvolleyballs1}} : {{$Volleyball->rvolleyballs2}}
+                  <a class="btn btn-success" href="addvolleyball/{{$Volleyball->id}}/edit" >สรุปผล</a>
+                  </div>
+                      </div>
+                </td>
+              </tr>
+
+                  @endforeach
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  </form>
+  <br>
+  <br>
+
+  <form class="container" action="/porgram" method="POST">
         @csrf
         @method('PUT')
-        <div class="row justify-content-md-center">
-            <div class="col-md-auto">
-                <label ><b>ตารางแข่งขันบาสเกสบอล</b></label>
-              </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-              <div class="table-responsive">
-                <table class="table table-bordered container">
-                  <thead class="thead-dark">
+        <div class="col-md">
+          <div class="ec-fancy-title">
+              <h2>โปรแกรมการแข่งขันแบดมินตัน</h2>
+          </div>
+          <div class="row">
+              <div class="col-md-12">
+                <div class="table-responsive">
+                  <table class="table table-bordered container">
+                    <thead class="thead-dark">
+                          <tr>
+                                  <th>ลำดับ</th>
+                                  <th>วันที่</th>
+                                  <th>เวลา</th>
+                                  <th>ทีม</th>
+                                  <th>พบ</th>
+                                  <th>ทีม</th>
+                                  <th>ประเภท</th>
+                                  <th>สาย</th>
+                                  <th>รอบ</th>
+                                  <th>ผล</th>
+                                </tr>
+                    </thead>
+                    <tbody>
+                        @foreach($post_Badminton as $Badminton)
                         <tr>
-                                <th>ลำดับ</th>
-                                <th>วันที่</th>
-                                <th>เวลา</th>
-                                <th>ทีม</th>
-                                <th>พบ</th>
-                                <th>ทีม</th>
-                                <th>ประเภท</th>
-                                <th>สาย</th>
-                                <th>รอบ</th>
-                                <th>ผล</th>
-                              </tr>
-                  </thead>
-                  <tbody>
-                      @foreach($post_Basketball as $Basketball)
-          <tr>
 
 
-            <th>{{$Basketball->id}}</th>
-            <td>{{$Basketball->time}}</td>
-            <td>{{$Basketball->date}}</td>
-            <td>{{$Basketball->team}}</td>
-            <td>VS</td>
-            <td>{{$Basketball->pair}}</td>
-            <td>{{$Basketball->category}}</td>
-            <td>{{$Basketball->line}}</td>
-            <td>{{$Basketball->around}}</td>
-            <td>
-                {{$Basketball->rbasketballs1}} : {{$Basketball->rbasketballs2}}
-                <a class="btn btn-success" href="addfootball/{{$Basketball->id}}/edit" >สรุปผล</a>
-            </td>
-                    </tr>
-                    <tr>
-                        @endforeach
-                  </tbody>
-                </table>
+                          <th>{{$Badminton->id}}</th>
+                          <td>{{$Badminton->time}}</td>
+                          <td>{{$Badminton->date}}</td>
+                          <td>{{$Badminton->team}}</td>
+                          <td>VS</td>
+                          <td>{{$Badminton->pair}}</td>
+                          <td>{{$Badminton->category}}</td>
+                          <td>{{$Badminton->line}}</td>
+                          <td>{{$Badminton->around}}</td>
+                        <td>
+                            {{$Badminton->rbadmintons1}} : {{$Badminton->rbadmintons2}}
+                            <a class="btn btn-success" href="addfootball/{{$Badminton->id}}/edit" >สรุปผล</a>
+                        </td>
+                      </tr>
+                      <tr>
+                          @endforeach
+                    </tbody>
+                  </table>
+                </div>
               </div>
             </div>
           </div>
-        </form>
-        <br>
-        <br>
-        <form class="container" action="/porgram" method="POST">
-          @csrf
-          @method('PUT')
-            <div class="row justify-content-md-center">
-                <div class="col-md-auto">
-                    <label ><b>ตารางแข่งขันแบดมินตัน</b></label>
-                  </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                  <div class="table-responsive">
-                    <table class="table table-bordered container">
-                      <thead class="thead-dark">
-                            <tr>
-                                    <th>ลำดับ</th>
-                                    <th>วันที่</th>
-                                    <th>เวลา</th>
-                                    <th>ทีม</th>
-                                    <th>พบ</th>
-                                    <th>ทีม</th>
-                                    <th>ประเภท</th>
-                                    <th>สาย</th>
-                                    <th>รอบ</th>
-                                    <th>ผล</th>
-                                  </tr>
-                      </thead>
-                      <tbody>
-                          @foreach($post_Badminton as $Badminton)
-                          <tr>
+  </form>
+  <br>
+  <br>
+
+  <form class="container" action="/porgram" method="POST">
+    @csrf
+    @method('PUT')
+    <div class="col-md">
+      <div class="ec-fancy-title">
+          <h2>โปรแกรมการแข่งขัน E-sport</h2>
+      </div>
+      <div class="row">
+      <div class="col-md-12">
+        <div class="table-responsive">
+          <table class="table table-bordered container">
+            <thead class="thead-dark">
+                    <tr>
+                            <th>ลำดับ</th>
+                            <th>วันที่</th>
+                            <th>เวลา</th>
+                            <th>ทีม</th>
+                            <th>พบ</th>
+                            <th>ทีม</th>
+                            <th>ประเภท</th>
+                            <th>สาย</th>
+                            <th>รอบ</th>
+                            <th>ผล</th>
+                          </tr>
+            </thead>
+            <tbody>
+                @foreach($post_esport as $esport)
+              <tr>
+                  <th>{{$esport->id}}</th>
+                  <td>{{$esport->time}}</td>
+                  <td>{{$esport->date}}</td>
+                  <td>{{$esport->team}}</td>
+                  <td>VS</td>
+                  <td>{{$esport->pair}}</td>
+                  <td>{{$esport->category}}</td>
+                  <td>{{$esport->line}}</td>
+                  <td>{{$esport->around}}</td>
+                  <td>{{$esport->resports1}} : {{$esport->resports2}}
+                    <a class="btn btn-success" href="addesport/{{$esport->id}}/edit" >สรุปผล</a>
+                  </td>
+              </tr>
+              <tr>
+                  @endforeach
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  </form>
+  <br>
+  <br>
+
+  <form class="container" action="/porgram" method="POST">
+    @csrf
+    @method('PUT')
+    <div class="col-md">
+      <div class="ec-fancy-title">
+          <h2>โปรแกรมการแข่งขันฟุตซอล</h2>
+      </div>
+    <div class="row">
+        <div class="col-md-12">
+          <div class="table-responsive">
+            <table class="table table-bordered container">
+              <thead class="thead-dark">
+                      <tr>
+                              <th>ลำดับ</th>
+                              <th>วันที่</th>
+                              <th>เวลา</th>
+                              <th>ทีม</th>
+                              <th>พบ</th>
+                              <th>ทีม</th>
+                              <th>ประเภท</th>
+                              <th>สาย</th>
+                              <th>รอบ</th>
+                              <th>ผล</th>
+                            </tr>
+              </thead>
+              <tbody>
+                  @foreach($post_Futsal as $Futsal)
+                  <tr>
 
 
-                            <th>{{$Badminton->id}}</th>
-                            <td>{{$Badminton->time}}</td>
-                            <td>{{$Badminton->date}}</td>
-                            <td>{{$Badminton->team}}</td>
-                            <td>VS</td>
-                            <td>{{$Badminton->pair}}</td>
-                            <td>{{$Badminton->category}}</td>
-                            <td>{{$Badminton->line}}</td>
-                            <td>{{$Badminton->around}}</td>
-                          <td>
-                              {{$Badminton->rbadmintons1}} : {{$Badminton->rbadmintons2}}
-                              <a class="btn btn-success" href="addfootball/{{$Badminton->id}}/edit" >สรุปผล</a>
-                          </td>
-                        </tr>
-                        <tr>
-                            @endforeach
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </form>
-            <br>
-            <br>
+                    <th>{{$Futsal->id}}</th>
+                    <td>{{$Futsal->time}}</td>
+                    <td>{{$Futsal->date}}</td>
+                    <td>{{$Futsal->team}}</td>
+
+                    <td>VS</td>
+                    <td>{{$Futsal->pair}}</td>
+                    <td>{{$Futsal->category}}</td>
+                    <td>{{$Futsal->line}}</td>
+                    <td>{{$Futsal->around}}</td>
+                    <td>
+                        {{$Futsal->rfutsals1}} : {{$Futsal->rfutsals2}}
+                        <a class="btn btn-success" href="addfootball/{{$Futsal->id}}/edit" >สรุปผล</a>
+                    </td>
+                </tr>
+                <tr>
+                    @endforeach
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+  <br>
+  <br>
 
 
 

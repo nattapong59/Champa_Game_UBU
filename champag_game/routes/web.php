@@ -31,12 +31,6 @@ Route::get('/addinformation', function () {
     return view('addinformation');
 });
 
-Route::get('/Addsporttype', function () {
-    return view('Addsporttype');
-});
-
-
-
 
 Route::get('/ShowUser', function () {
   return view('ShowUser');
@@ -60,4 +54,3 @@ Route::resource('/addbadminton', 'BadmintonController');
 Route::resource('/program', 'ProgramController');
 Route::resource('/ShowTable', 'ShowTableController');
 Route::resource('/players','PlayerController');
-Route::resource('/Tabel','TabelController');
