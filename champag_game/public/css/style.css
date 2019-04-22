@@ -3623,3 +3623,15 @@ blockquote:after {
 .form-check{
     padding-right: 75px;;
 }
+.containers{
+	padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: 150px;
+}
+.bt{
+	padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: 250px;
+}
