@@ -24,7 +24,7 @@
                                     </select>
                                   </div>
                               </div>
-                              
+
                             </th>
                             <th>
                                 <label for="branch" class="col-md-0  col-form-label text-md-right">{{ __('สาขา') }}</label>
@@ -41,7 +41,7 @@
                                         <option  value="วิทยาศาสตร์สิ่งแวดล้อม}"  >วิทยาศาสตร์สิ่งแวดล้อม</option>
                                         <option  value="อาชีวอนามัยและความปลอดภัย "  >อาชีวอนามัยและความปลอดภัย</option>
                                   </select>
-        
+
                                     @if ($errors->has('branch'))
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $errors->first('branch') }}</strong>
@@ -57,7 +57,7 @@
                                         <option value="M" >ชาย</option>
                                         <option value="W" >หญิง</option>
                                   </select>
-        
+
                                     @if ($errors->has('branch'))
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $errors->first('branch') }}</strong>
@@ -82,7 +82,9 @@
   $type_sport = $_GET['type_sport'];
   $category = $_GET['category'];
  ?>
-      <h5 class="center">{{ __('รายชื่อนักกีฬา'.$type_sport.' '.$branch.' '.$category) }}</h5>
+ <div class="ec-fancy-title">
+     <h2>{{ __('รายชื่อนักกีฬา'.$type_sport.' '.$branch.' '.$category) }}</h2>
+ </div>
     <div class="row">
       <div class="col-md-12" >
         <div class="table-responsive">

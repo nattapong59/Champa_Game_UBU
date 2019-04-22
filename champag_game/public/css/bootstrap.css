@@ -2300,6 +2300,7 @@ th {
 }
 .table-bordered {
   border: 1px solid #ddd;
+  color: #000;
 }
 .table-bordered > thead > tr > th,
 .table-bordered > tbody > tr > th,
@@ -6959,7 +6960,7 @@ button.close {
 	overflow: hidden;
 }
 .ec-promofull {
-	padding: 79px 0px 20px 0px;
+	padding: 50px 0px 20px 0px;
 }
 .ec-default-button.ec-blue { background-color: #171b95; }
 .ec-full-parallexbg {

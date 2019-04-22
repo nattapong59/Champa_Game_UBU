@@ -35,9 +35,6 @@ Route::get('/Addsporttype', function () {
     return view('Addsporttype');
 });
 
-Route::get('/EditData', function () {
-    return view('EditData');
-});
 
 
 

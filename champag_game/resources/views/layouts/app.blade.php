@@ -38,15 +38,24 @@
 
                             <ul>
                                 <li class="active"><a href="{{ url('/') }}" >หน้าแรก</a></li>
+                                @guest
                                 <li><a href="{{ url('/ShowTable') }}" >โปรแกรมการแข่งขัน</a>
+                                @else
+                                  @if(Auth::user()->isAdmin())
+                                    <li><a href="{{ url('/program') }}" >จัดการผลแข่งขัน</a>
+                                  @else
+                                    <li><a href="{{ url('/ShowTable') }}" >โปรแกรมการแข่งขัน</a>
+                                  @endif
+                                @endguest
                                 <li><a href="{{ url('/players?type_sport=&branch=&branch=&category=') }}" >รายชื่อนักกีฬา</a></li>
+
                               @guest
                               @else
                                 @if(Auth::user()->isAdmin())
                                 <li><a href="#">จัดการระบบ</a>
                                           <ul class="as-dropdown">
                                               <li><a href="{{ url('/addfootball') }}">ตารางกีฬาฟุตบอล</a></li>
-                                              <li><a href="{{ url('/addfootball') }}" >ตารางกีฬาบาสเกสบอล</a></li>
+                                              <li><a href="{{ url('/addbasketball') }}" >ตารางกีฬาบาสเกสบอล</a></li>
                                               <li><a href="{{ url('/addvolleyball') }}">ตารางกีฬาวอลเลย์บอล</a></li>
                                               <li><a href="{{ url('/addbadminton') }}">ตารางกีฬาเเบดมินตัน</a></li>
                                               <li><a href="{{ url('/addesport') }}">ตารางกีฬา e-sport</a></li>

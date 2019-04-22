@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+
 <div class="ec-mainbanner">
     <div class="flexslider">
 
@@ -40,7 +41,7 @@
               </li>
           </ul>
         </div><ol class="flex-control-nav flex-control-paging"><li><a class="">1</a></li><li><a class="flex-active">2</a></li></ol><ul class="flex-direction-nav"><li class="flex-nav-prev"><a class="flex-prev" href="#"><em class="fa fa-angle-left"></em></a></li><li class="flex-nav-next"><a class="flex-next" href="#"><em class="fa fa-angle-right"></em></a></li></ul></div>
-</div>
+
 <div class="ec-main-content">
     <div class="ec-main-section ec-promofull">
         <div class="container">
@@ -169,8 +170,6 @@
                         </ul>
                     </div>
                 </div>
-
-
             </div>
         </div>
     </div>
