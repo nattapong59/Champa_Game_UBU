@@ -10,10 +10,10 @@
             <label ><b>แก้ไขตารางแข่งขันฟุตบอล</b></label>
           </div>
     </div>
-    <table>
+    <table style="width:60%" class="container">
         <tr>
-          <th><div class="col-auto my-1"><input type="date" name="date" value="{{$football->date}}"></div></div></th>
-          <th><div class="col-auto my-1"><input type="time" name="time" value="{{$football->time}}"></div></th>
+          <th><div class="col-auto my-1">วันที่ :: <input type="date" name="date" value="{{$football->date}}"></div></div></th>
+          <th><div class="col-auto my-1">เวลา :: <input type="time" name="time" value="{{$football->time}}"></div></th>
           <th><div class="col-auto my-1">
             <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
             <select class="custom-select mr-sm-2" name="category" id="inlineFormCustomSelect">
@@ -84,12 +84,9 @@
           </th>
         </tr>
       </table>
-      
+      <br>
       <table style="width:50%" class="container">
         <tr>
-          <th>
-            
-          </th>
           <th><div class="col">
               <label>{{$football->team}}</label>
               <input type="text" value="{{$football->rfootballs1}}" name="rfootballs1" class="form-control">
@@ -101,9 +98,7 @@
                   <input type="text" value="{{$football->rfootballs2}}" name="rfootballs2" class="form-control" >
                 </div>
            </th>
-           <th>
-             
-             <br>
+           <th><br><br><br>
               <div class="col-auto my-1">
                   <button type="submit" class="btn btn-primary">ตกลง</button>
                 </div>

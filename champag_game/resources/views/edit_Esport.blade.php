@@ -11,10 +11,10 @@
             <label ><b>แก้ไขตารางแข่งขันเกม e-sport</b></label>
           </div>
     </div>
-    <table>
+    <table style="width:60%" class="container">
         <tr>
-          <th><div class="col-auto my-1"><input type="date" name="date" value="{{$esport->date}}"></div></div></th>
-          <th><div class="col-auto my-1"><input type="time" name="time" value="{{$esport->time}}"></div></th>
+          <th><div class="col-auto my-1">วันที่ :: <input type="date" name="date" value="{{$esport->date}}"></div></div></th>
+          <th><div class="col-auto my-1">เวลา :: <input type="time" name="time" value="{{$esport->time}}"></div></th>
           <th><div class="col-auto my-1">
             <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
             <select class="custom-select mr-sm-2" name="category" id="inlineFormCustomSelect">
@@ -85,12 +85,9 @@
           </th>
         </tr>
       </table>
-      
+      <br>
       <table style="width:50%" class="container">
         <tr>
-          <th>
-            
-          </th>
           <th><div class="col">
               <label>{{$esport->team}}</label>
               <input type="text" value="{{$esport->resports1}}" name="resports1" class="form-control">
@@ -102,9 +99,7 @@
                   <input type="text" value="{{$esport->resports2}}" name="resports2" class="form-control" >
                 </div>
            </th>
-           <th>
-             
-             <br>
+           <th><br><br><br>
               <div class="col-auto my-1">
                   <button type="submit" class="btn btn-primary">ตกลง</button>
                 </div>
