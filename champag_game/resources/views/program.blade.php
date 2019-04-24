@@ -38,8 +38,8 @@
 
 
                     <th>{{$football->id}}</th>
-                    <td>{{$football->time}}</td>
                     <td>{{$football->date}}</td>
+                    <td>{{$football->time}}</td>
                     <td>{{$football->team}}</td>
 
                     <td>VS</td>
@@ -95,8 +95,8 @@
 
 
           <th>{{$Basketball->id}}</th>
-          <td>{{$Basketball->time}}</td>
           <td>{{$Basketball->date}}</td>
+          <td>{{$Basketball->time}}</td>
           <td>{{$Basketball->team}}</td>
           <td>VS</td>
           <td>{{$Basketball->pair}}</td>
@@ -148,8 +148,8 @@
                 @foreach($post_Volleyball as $Volleyball)
               <tr>
                 <th>{{$Volleyball->id}}</th>
-                <td>{{$Volleyball->time}}</td>
                 <td>{{$Volleyball->date}}</td>
+                <td>{{$Volleyball->time}}</td>
                 <td>{{$Volleyball->team}}</td>
                 <td>VS</td>
                 <td>{{$Volleyball->pair}}</td>
@@ -205,8 +205,8 @@
 
 
                           <th>{{$Badminton->id}}</th>
-                          <td>{{$Badminton->time}}</td>
                           <td>{{$Badminton->date}}</td>
+                          <td>{{$Badminton->time}}</td>
                           <td>{{$Badminton->team}}</td>
                           <td>VS</td>
                           <td>{{$Badminton->pair}}</td>
@@ -259,8 +259,8 @@
                 @foreach($post_esport as $esport)
               <tr>
                   <th>{{$esport->id}}</th>
-                  <td>{{$esport->time}}</td>
                   <td>{{$esport->date}}</td>
+                  <td>{{$esport->time}}</td>
                   <td>{{$esport->team}}</td>
                   <td>VS</td>
                   <td>{{$esport->pair}}</td>
@@ -314,8 +314,8 @@
 
 
                     <th>{{$Futsal->id}}</th>
-                    <td>{{$Futsal->time}}</td>
                     <td>{{$Futsal->date}}</td>
+                    <td>{{$Futsal->time}}</td>
                     <td>{{$Futsal->team}}</td>
 
                     <td>VS</td>

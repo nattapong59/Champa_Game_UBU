@@ -32,8 +32,8 @@
               @foreach($post_football as $football)
                 <tr>
                   <th><?=$indexfbl++?></th>
-                  <td>{{$football->time}}</td>
                   <td>{{$football->date}}</td>
+                  <td>{{$football->time}}</td>
                   <td>{{$football->team}}</td>
                    <td>VS</td>
                   <td>{{$football->pair}}</td>
@@ -74,8 +74,8 @@
             @foreach($post_Basketball as $Basketball)
               <tr>
                 <th><?=$indexbkb++?></th>
-                <td>{{$Basketball->time}}</td>
                 <td>{{$Basketball->date}}</td>
+                <td>{{$Basketball->time}}</td>
                 <td>{{$Basketball->team}}</td>
                 <td>VS</td>
                 <td>{{$Basketball->pair}}</td>
@@ -115,8 +115,8 @@
             @foreach($post_Volleyball as $Volleyball)
           <tr>
             <th><?=$indexvlb++?></th>
-            <td>{{$Volleyball->time}}</td>
             <td>{{$Volleyball->date}}</td>
+            <td>{{$Volleyball->time}}</td>
             <td>{{$Volleyball->team}}</td>
             <td>VS</td>
             <td>{{$Volleyball->pair}}</td>
@@ -156,8 +156,8 @@
             @foreach($post_Badminton as $Badminton)
               <tr>
                 <th><?=$indexbnt++?></th>
-                <td>{{$Badminton->time}}</td>
                 <td>{{$Badminton->date}}</td>
+                <td>{{$Badminton->time}}</td>
                 <td>{{$Badminton->team}}</td>
                 <td>VS</td>
                 <td>{{$Badminton->pair}}</td>
@@ -199,8 +199,8 @@
 
 
                 <th><?=$indexesp++?></th>
-                <td>{{$esport->time}}</td>
                 <td>{{$esport->date}}</td>
+                <td>{{$esport->time}}</td>
                 <td>{{$esport->team}}</td>
                 <td>VS</td>
                 <td>{{$esport->pair}}</td>
@@ -241,8 +241,8 @@
             @foreach($post_Futsal as $Futsal)
               <tr>
                 <th><?=$indexfts++?></th>
-                <td>{{$Futsal->time}}</td>
                 <td>{{$Futsal->date}}</td>
+                <td>{{$Futsal->time}}</td>
                 <td>{{$Futsal->team}}</td>
                 <td>VS</td>
                 <td>{{$Futsal->pair}}</td>
