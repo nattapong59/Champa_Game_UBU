@@ -17,24 +17,8 @@ Route::get('/add-player', function(){
   return view('add_player');
 })->middleware('auth');
 
-Route::get('/user', function(){
-  return view('user_manager');
-});
-
-Route::get('/fb', function(){
-  return view('football');
-});
 
 Route::resource('add','UserController');
-
-Route::get('/addinformation', function () {
-    return view('addinformation');
-});
-
-
-Route::get('/ShowUser', function () {
-  return view('ShowUser');
-});
 
 
 Auth::routes();
@@ -45,12 +29,12 @@ Route::get('/admin', 'AdminController@admin')
 
 
 
-Route::resource('/addfootball', 'FootballController');
-Route::resource('/addbasketball', 'BasketballController');
-Route::resource('/addesport', 'EsportController');
-Route::resource('/addfutsal', 'FutsalController');
-Route::resource('/addvolleyball', 'VolleyballController');
-Route::resource('/addbadminton', 'BadmintonController');
-Route::resource('/program', 'ProgramController');
+Route::resource('/addfootball', 'FootballController')->middleware('is_admin');;
+Route::resource('/addbasketball', 'BasketballController')->middleware('is_admin');;
+Route::resource('/addesport', 'EsportController')->middleware('is_admin');;
+Route::resource('/addfutsal', 'FutsalController')->middleware('is_admin');;
+Route::resource('/addvolleyball', 'VolleyballController')->middleware('is_admin');;
+Route::resource('/addbadminton', 'BadmintonController')->middleware('is_admin');;
+Route::resource('/program', 'ProgramController')->middleware('is_admin');
 Route::resource('/ShowTable', 'ShowTableController');
 Route::resource('/players','PlayerController');
